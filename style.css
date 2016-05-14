@@ -1600,14 +1600,17 @@ form label.error {
 }
 
 .smallprint {
-	color: #999;
+	color: #fffdf5;
 	width: 90%;
 	max-width: 1200px;
+	text-transform: uppercase;
+
 }
 
 .smallprint p {
 	font-size: 14px;
 	font-size: 0.875rem;
+	letter-spacing: .3em;
 }
 
 .smallprint a { 

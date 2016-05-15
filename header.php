@@ -55,7 +55,7 @@
 	<div id="headercontainer">
 
 		<header id="masthead" class="site-header row" role="banner">
-			<div class="col grid_5_of_12 site-title">
+			<div class="col grid-5 site-title">
 				<h1>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 						<?php 
@@ -70,7 +70,7 @@
 				</h1>
 			</div> <!-- /.col.grid_5_of_12 -->
 
-			<div class="col grid_7_of_12">
+			<div class="col grid-7">
 				<div class="social-media-icons">
 					<?php echo quark_get_social_media(); ?>
 				</div>

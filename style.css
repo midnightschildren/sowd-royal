@@ -34,6 +34,14 @@ menu { padding: 0; }
 
 td { vertical-align: top; }
 
+/* ==========================================================================
+   Hannah page styles
+   ========================================================================== */
+
+.home .site-content {
+	background-color: #e3f5dd;
+}
+
 
 /* ==========================================================================
    Basic page styles
@@ -798,10 +806,9 @@ select {
 
 .site-content {
 	clear: both;
-	width: 90%;
+	width: 100%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 32px 0;
 	padding: 2rem 0;

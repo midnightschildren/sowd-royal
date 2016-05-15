@@ -127,6 +127,14 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
+.home .entry-content p {
+	letter-spacing: .035em;
+	font-size: 30px;
+	font-size: 1.875em;
+	line-height: 1.66666667;
+	text-align: center;
+}
+
 
 /* ==========================================================================
    Basic page styles

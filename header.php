@@ -38,8 +38,16 @@
 
 <div id="wrapper" class="hfeed site">
 
-	<div id="headerimage">
-		
+<div id="headerimage">
+		<?php 
+
+		$image = get_field('header_image');
+
+		if( !empty($image) ): ?>
+
+			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+		<?php endif; ?>
 	</div>	
 
 	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'quark' ); ?>"><?php esc_html_e( 'Skip to main content', 'quark' ); ?></a></div>

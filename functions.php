@@ -399,10 +399,10 @@ function quark_scripts_styles() {
 	 * }
 	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
 	 */
-	$fonts_url = quark_fonts_url();
-	if ( !empty( $fonts_url ) ) {
-		wp_enqueue_style( 'quark-fonts', esc_url_raw( $fonts_url ), array(), null );
-	}
+	//$fonts_url = quark_fonts_url();
+	//if ( !empty( $fonts_url ) ) {
+	//	wp_enqueue_style( 'quark-fonts', esc_url_raw( $fonts_url ), array(), null );
+	//}
 
 	// If using a child theme, auto-load the parent theme style.
 	// Props to Justin Tadlock for this recommendation - http://justintadlock.com/archives/2014/11/03/loading-parent-styles-for-child-themes

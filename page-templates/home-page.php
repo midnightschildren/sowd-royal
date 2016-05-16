@@ -58,17 +58,16 @@ get_header(); ?>
 		<div class="grid-12 pad-3-vert">
 			<?php if( get_field('testimonial_section_title') ): ?>
 	
-			<h4 class="center"><?php the_field('testimonial_section_title'); ?></h4>
+			<h5 class="center hsblue"><?php the_field('testimonial_section_title'); ?></h5>
 	
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-12 pad-3-vert">
+		<div class="col grid-6 offset-3 pad-3-vert">
 			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'posts_per_page' => 0));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
 			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h2 class="eccWhite"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php the_content(); ?>
 
 			</div>

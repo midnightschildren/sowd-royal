@@ -140,6 +140,18 @@ td { vertical-align: top; }
 	text-align: center;
 }
 
+.testimonial-content p {
+	letter-spacing: .035em;
+	font-size: 24px;
+	font-size: 1.5em;
+	line-height: 1.33333333;
+}
+
+a.hsblue,
+.hsblue {
+	color: #96b9bc;
+}
+
 
 /* ==========================================================================
    Basic page styles
@@ -152,7 +164,7 @@ body {
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
-	color: #333;
+	color: #30333c;
 	text-align: left;
 }
 
@@ -251,11 +263,14 @@ h4 {
 }
 
 h5 { 
-	margin-bottom: 5px;
-	margin-bottom: 0.3125rem;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.25;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	line-height: 1.88235294;
+	text-transform: uppercase;
+	letter-spacing: .3em;
 }
 
 h6 { 

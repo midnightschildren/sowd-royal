@@ -127,6 +127,11 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
+.home .testimonial-content {
+	background-color: #fffdf5;
+	margin: 0;
+}
+
 .home .entry-content p {
 	letter-spacing: .035em;
 	font-size: 30px;
@@ -1701,9 +1706,9 @@ form label.error {
 
 .smallprint {
 	color: #fffdf5;
-	width: 90%;
-	max-width: 1200px;
+	width: 100%;
 	text-transform: uppercase;
+	margin: 0;
 
 }
 

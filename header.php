@@ -38,7 +38,7 @@
 
 <div id="wrapper" class="hfeed site">
 
-<div id="headerimage">
+	<div id="headerimage">
 		<?php 
 
 		$image = get_field('header_image');

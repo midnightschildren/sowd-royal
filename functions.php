@@ -58,6 +58,20 @@ if ( ! function_exists( 'quark_setup' ) ) {
 		// This theme supports a variety of post formats
 		add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
 
+        add_filter('pre_get_posts', 'query_post_type');
+        function query_post_type($query) {
+          if(is_category() || is_tag() || is_home() && empty( $query->query_vars['suppress_filters'] ) ) {
+            $post_type = get_query_var('post_type');
+        	if($post_type)
+        	    $post_type = $post_type;
+        	else
+        	    $post_type = array('post','testimonial', 'nav_menu_item');
+            $query->set('post_type',$post_type);
+        	return $query;
+            }
+        } 
+
+
 		// Add theme support for HTML5 markup for the search forms, comment forms, comment lists, gallery, and caption
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 

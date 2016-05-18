@@ -63,15 +63,18 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-6 offset-3 pad-3-vert">
+		<div class="col grid-6 offset-3">
 			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'posts_per_page' => 0));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-
+			<div class="pad-3-vert">
 			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<?php the_content(); ?>
+			<?php if( get_field('testimonial_author') ): ?>
+			<h6 class="hsgray"><a href="http://www.genbook.com/bookings/slot/reservation/30051977/reviews/?bookingSourceId=1000"><?php the_field('testimonial_author'); ?> — customer since <?php the_field('testimonial_date'); ?></a></h6>
+			<?php endif; ?>
 
 			</div>
-
+			</div>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); // reset the query ?>
 

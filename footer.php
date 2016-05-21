@@ -17,6 +17,7 @@
 	<div id="footercontainer">
 
 		<footer class="site-footer row" role="contentinfo">
+			<div class="offset-1 grid-10 pad-3-vert">
 
 			<?php
 			// Count how many footer sidebars are active so we can work out how many containers we need
@@ -31,7 +32,7 @@
 			if ( $footerSidebars > 0 ) { ?>
 				<?php
 				// Work out the container class name based on the number of active footer sidebars
-				$containerClass = "grid_" . 12 / $footerSidebars . "_of_12";
+				$containerClass = "grid-6 pad-3-vert";
 
 				// Display the active footer sidebars
 				for ( $x=1; $x<=4; $x++ ) {
@@ -45,7 +46,7 @@
 				} ?>
 
 			<?php } ?>
-
+			</div>
 		</footer> <!-- /.site-footer.row -->
 
 		<?php if ( of_get_option( 'footer_content', quark_get_credits() ) ) {

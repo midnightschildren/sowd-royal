@@ -55,22 +55,9 @@
 	<div id="headercontainer">
 
 		<header id="masthead" class="site-header row" role="banner">
-			<div class="col grid-5 site-title">
-				<h1>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
-						<?php 
-						$headerImg = get_header_image();
-						if( !empty( $headerImg ) ) { ?>
-							<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						<?php } 
-						else {
-							echo get_bloginfo( 'name' );
-						} ?>
-					</a>
-				</h1>
-			</div> <!-- /.col.grid_5_of_12 -->
+			
 
-			<div class="col grid-7">
+			<div class="col grid-12 pad-3-vert">
 				<div class="social-media-icons">
 					<?php echo quark_get_social_media(); ?>
 				</div>

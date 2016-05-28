@@ -60,6 +60,61 @@
 </div> <!-- /.#wrapper.hfeed.site -->
 
 <?php wp_footer(); ?>
-</body>
 
+<style type="text/css">
+    @media only screen and (max-width: 800px) {
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item,
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item,
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item,
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item,
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item {
+            width: 50% !important
+        }
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item:nth-child(3n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item:nth-child(4n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item:nth-child(5n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item:nth-child(6n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item:nth-child(3n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item:nth-child(4n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item:nth-child(5n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item:nth-child(6n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item:nth-child(3n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item:nth-child(4n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item:nth-child(5n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item:nth-child(6n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item:nth-child(3n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item:nth-child(4n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item:nth-child(5n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item:nth-child(6n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item:nth-child(3n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item:nth-child(4n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item:nth-child(5n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item:nth-child(6n+1) {
+            clear: none !important
+        }
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item:nth-child(2n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item:nth-child(2n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item:nth-child(2n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-5-columns .envira-gallery-item:nth-child(2n+1),
+        .envira-gallery-wrap .envira-gallery-public.envira-gallery-6-columns .envira-gallery-item:nth-child(2n+1) {
+            clear: both !important
+        }
+        .envira-gallery-wrap .envira-gallery-public.enviratope .envira-gallery-item {
+            clear: none !important
+        }
+    }
+</style>
+
+<script>
+jQuery(document).ready(function() {
+	jQuery("#headercontainer").sticky({
+		topSpacing: 0,
+		getWidthFrom: '#wrapper',
+		zIndex: '999'
+	});
+});
+
+</script>
+
+</body>
 </html>

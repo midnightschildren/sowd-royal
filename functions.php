@@ -435,7 +435,7 @@ function quark_scripts_styles() {
 	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
 	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-2.8.3-min.js', array(), '2.8.3', false );
 	wp_enqueue_script( 'modernizr' );
-	wp_register_script( 'sticky', trailingslashit( get_template_directory_uri() ) . 'js/jquery.sticky.js', array('jquery'), '1.0.4', false );
+	wp_register_script( 'sticky', trailingslashit( get_template_directory_uri() ) . 'js/jquery.sticky.js', array('jquery'), '1.0.4', true );
 	wp_enqueue_script( 'sticky' );
 	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

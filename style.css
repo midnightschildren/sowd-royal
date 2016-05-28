@@ -890,6 +890,7 @@ select {
 
 #headercontainer {
 	width: 100%;
+	background-color: #fff;
 }
 
 .site-header {
@@ -973,6 +974,11 @@ select {
 
 #maincontentcontainer {
 	width: 100%;
+}
+
+.page-template-services-page .site-content {
+	padding: 0 0 32px 0;
+	padding: 0 0 2rem 0;
 }
 
 .site-content {

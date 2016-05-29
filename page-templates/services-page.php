@@ -17,30 +17,7 @@ get_header(); ?>
 		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '34' ); } ?>
 	</div>	
 		
-		<div class="offset-1 grid-10 pad-3-vert pad-2-sides">
-
-			<?php if ( have_posts() ) : ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-				<div class="entry-content">
-					<?php the_content(); ?>
-					<?php wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'quark' ),
-					'after' => '</div>',
-					'link_before' => '<span class="page-numbers">',
-					'link_after' => '</span>'
-					) ); ?>
-				</div><!-- /.entry-content -->
-	
-				</article><!-- /#post -->		
-				<?php endwhile; // end of the loop. ?>
-
-			<?php endif; // end have_posts() check ?>
-
-		</div> <!-- /.col.grid_12_of_12 -->
-	
 	
 
 	</div><!-- /#primary.site-content.row -->
@@ -57,18 +34,36 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-6 offset-3">
-			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'posts_per_page' => 0));
+		<div class="col grid-8 offset-2">
+			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-vert">
-			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<?php the_content(); ?>
-			<?php if( get_field('testimonial_author') ): ?>
-			<h6 class="hsgray"><a href="http://www.genbook.com/bookings/slot/reservation/30051977/reviews/?bookingSourceId=1000"><?php the_field('testimonial_author'); ?> — customer since <?php the_field('testimonial_date'); ?></a></h6>
+			
+			<?php the_title(); ?>	
+			<?php if( get_field('service_duration') ): ?>
+			<?php the_field('service_duration'); ?> minutes $<?php the_field('service_price'); ?>
 			<?php endif; ?>
+			<?php the_content(); ?>
+			
+			<?php 	
+				$content = apply_filters( 'the_content', get_the_content() );
+				$content = str_replace( ']]>', ']]&gt;', $content );
+				$stitle = apply_filters( 'the_title', get_the_title() );
+				$stitle = str_replace( ']]>', ']]&gt;', $stitle );
+				$position = get_field( "service_duration" );
+				$t = '[toggle title= \'<div class=\"grid-12\">';
+				$t.= $stitle;
+				$t.= ', <span class=\"position\">';
+				$t.= $position;
+				$t.= '</span>';
+				$t.= '</div>';
+				$t.= '\']';
+			   	$t.= $content;
+			   	$t.= '[/toggle]';
+			   	echo do_shortcode ($t); ?>
 
 			</div>
-			</div>
+			
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); // reset the query ?>
 

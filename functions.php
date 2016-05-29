@@ -65,7 +65,7 @@ if ( ! function_exists( 'quark_setup' ) ) {
         	if($post_type)
         	    $post_type = $post_type;
         	else
-        	    $post_type = array('post','testimonial', 'nav_menu_item');
+        	    $post_type = array('post','testimonial', 'service', 'nav_menu_item');
             $query->set('post_type',$post_type);
         	return $query;
             }

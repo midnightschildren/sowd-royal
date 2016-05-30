@@ -199,6 +199,31 @@ function quark_fonts_url() {
 	return $fonts_url;
 }
 
+/**
+* Remove image links on all Envira Gallery images if the Lightbox is disabled for mobile devices
+*
+* @since 1.0.0
+*/
+function envira_gallery_remove_image_links_mobile( $item, $id, $data, $i ) {
+
+	// Don't do anything if we're not on a mobile device
+//	if ( ! wp_is_mobile() ) {
+//		return $item;
+//	}
+
+	// Don't do anything if the Lightbox is enabled on mobile
+	if ( Envira_Gallery_Shortcode::get_instance()->get_config( 'mobile_lightbox', $data ) ) {
+		return $item;
+	}
+
+	// Remove the link from the image and return
+	$item['link'] = '';
+	return $item;
+
+}
+
+add_filter( 'envira_gallery_output_item_data', 'envira_gallery_remove_image_links_mobile', 10, 4 );
+
 
 /**
  * Adds additional stylesheets to the TinyMCE editor if needed.

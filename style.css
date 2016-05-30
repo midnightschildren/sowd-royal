@@ -142,6 +142,7 @@ td { vertical-align: top; }
 	font-size: 1.875em;
 	line-height: 1.66666667;
 	text-align: center;
+	color: #30333c;
 }
 
 .testimonial-content p {
@@ -152,9 +153,22 @@ td { vertical-align: top; }
 	margin-bottom: .5rem;
 }
 
+.services-content p {
+	letter-spacing: .035em;
+	font-size: 19px;
+	font-size: 1.1875em;
+	line-height: 1.42105263;
+	
+}
+
 a.hsblue,
 .hsblue {
 	color: #96b9bc;
+}
+
+a.hsslate,
+.hsslate {
+	color: #76929b;
 }
 
 a.hsgray,
@@ -211,12 +225,26 @@ a.hsgray,
 
 .price {
 	margin-left: 2rem;
+	color: #877f7c;
+	font-size: 21px;
+	font-size: 1.3125rem;
+	line-height: 1.71428571;
+	letter-spacing: .035em;
+}
+
+.duration {
+	color: #c4c2ba;
+	font-size: 19px;
+	font-size: 1.1875rem;
+	line-height: 1.89473684;
+	letter-spacing: .035em;
 }
 
 .azc_tsh_toggle, .azc_tsh_toggle_open, .azc_tsh_toggle_active, .azc_tsh_toggle_open_active {
     margin: 0px !important;
-	border: 0px solid #ffffff;
-    font-weight:600;
+    border: none;
+	border-top: 1px solid #dbe0d9;
+    font-weight:400;
     font-size: 14px;
     padding: 0px;
     background-repeat: no-repeat;
@@ -323,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: 400;
-	color: #333;
+	color: #30333c;
 	margin-top: 0;
 }
 
@@ -353,11 +381,12 @@ h3 {
 
 
 h4 { 
-	margin-bottom: 5px;
-	margin-bottom: 0.3125rem;
-	font-size: 24px;
-	font-size: 1.5rem;
-	line-height: 1.25;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.2;
+	letter-spacing: .025em;
 }
 
 h5 { 
@@ -369,6 +398,12 @@ h5 {
 	line-height: 1.88235294;
 	text-transform: uppercase;
 	letter-spacing: .3em;
+}
+
+.medium {
+	font-size: 24px;
+	font-size: 1.5rem;
+	line-height: 1.33333333;
 }
 
 h6 { 
@@ -1032,7 +1067,7 @@ select {
 	margin: 0 auto;
 	padding: 32px 0;
 	padding: 2rem 0;
-	color: #333;
+	color: #30333c;
 	line-height: 1.5;
 	position: relative;
 }

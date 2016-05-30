@@ -22,14 +22,14 @@ get_header(); ?>
 
 	</div><!-- /#primary.site-content.row -->
 
-	<div id="testimonials" class="testimonial-content row">
+	<div id="services" class="services-content row">
 
 	<div class="grid-12 pad-3-vert">	
 
 		<div class="grid-12 pad-3-vert">
 			<?php if( get_field('services_section_title') ): ?>
 	
-			<h5 class="center hsblue"><?php the_field('services_section_title'); ?></h5>
+			<h5 class="center medium hsslate"><?php the_field('services_section_title'); ?></h5>
 	
 			<?php endif; ?>
 			
@@ -47,9 +47,9 @@ get_header(); ?>
 				$stitle = str_replace( ']]>', ']]&gt;', $stitle );
 				$duration = get_field( "service_duration" );
 				$price = get_field( "service_price" );
-				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\">';
+				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\"><h4>';
 				$t.= $stitle;
-				$t.= '</div><div class=\"grid-3 right\"><span class=\"duration\">';
+				$t.= '</h4></div><div class=\"grid-3 right\"><span class=\"duration\">';
 				$t.= $duration;
 				$t.= ' minutes</span>';
 				$t.= ' <span class=\"price\">$';

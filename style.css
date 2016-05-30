@@ -184,6 +184,7 @@ a.hsgray,
 	line-height: 1.47058824;
 	margin-top: -25px;
 	letter-spacing: .15em;
+	hyphens: none;
 }
 
 #text-2 {
@@ -206,6 +207,48 @@ a.hsgray,
 #text-2 a:hover {
 	color: #97999d;
 	text-decoration: underline;
+}
+
+.price {
+	margin-left: 2rem;
+}
+
+.azc_tsh_toggle, .azc_tsh_toggle_open, .azc_tsh_toggle_active, .azc_tsh_toggle_open_active {
+    margin: 0px !important;
+	border: 0px solid #ffffff;
+    font-weight:600;
+    font-size: 14px;
+    padding: 0px;
+    background-repeat: no-repeat;
+	background-position: 10px 10px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+.azc_tsh_toggle {
+    background-image: none ;
+}
+.azc_tsh_toggle_open {
+    background-image: none !important;
+}
+.azc_tsh_toggle_active {
+    background-image: none !important;
+}
+.azc_tsh_toggle_open_active {
+    background-image: none;
+}
+.azc_tsh_toggle a,.azc_tsh_toggle_open a, .azc_tsh_toggle_open_active a {
+	color: #000;
+}
+.azc_tsh_toggle_container, .azc_tsh_toggle_container_open {
+	margin: auto;
+    margin-bottom: 5px !important;
+	padding: 15px 0px;
+	border-right: 0px solid #fff;
+	border-bottom: 0px solid #fff;
+	border-left: 0px solid #fff;
+	overflow: auto;
+	width: 100%;
 }
 
 /* ==========================================================================
@@ -1747,10 +1790,9 @@ form label.error {
 
 .site-footer {
 	clear: both;
-	width: 90%;
+	width: 100%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 30px 0 0 0;
 	padding: 1.875rem 0 0 0;

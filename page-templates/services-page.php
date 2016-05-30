@@ -38,25 +38,24 @@ get_header(); ?>
 			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-vert">
-			
-			<?php the_title(); ?>	
-			<?php if( get_field('service_duration') ): ?>
-			<?php the_field('service_duration'); ?> minutes $<?php the_field('service_price'); ?>
-			<?php endif; ?>
-			<?php the_content(); ?>
+
 			
 			<?php 	
 				$content = apply_filters( 'the_content', get_the_content() );
 				$content = str_replace( ']]>', ']]&gt;', $content );
 				$stitle = apply_filters( 'the_title', get_the_title() );
 				$stitle = str_replace( ']]>', ']]&gt;', $stitle );
-				$position = get_field( "service_duration" );
-				$t = '[toggle title= \'<div class=\"grid-12\">';
+				$duration = get_field( "service_duration" );
+				$price = get_field( "service_price" );
+				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\">';
 				$t.= $stitle;
-				$t.= ', <span class=\"position\">';
-				$t.= $position;
+				$t.= '</div><div class=\"grid-3 right\"><span class=\"duration\">';
+				$t.= $duration;
+				$t.= ' minutes</span>';
+				$t.= ' <span class=\"price\">$';
+				$t.= $price;
 				$t.= '</span>';
-				$t.= '</div>';
+				$t.= '</div></div>';
 				$t.= '\']';
 			   	$t.= $content;
 			   	$t.= '[/toggle]';

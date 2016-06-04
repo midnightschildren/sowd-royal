@@ -161,6 +161,21 @@ td { vertical-align: top; }
 	
 }
 
+.book {
+	letter-spacing: .035em;
+	font-size: 19px;
+	font-size: 1.1875em;
+	line-height: 1.42105263;
+}
+
+.book a {
+	color: #76929b;
+}
+
+.book a:visited {
+	color: #76929b;
+}
+
 a.hsblue,
 .hsblue {
 	color: #96b9bc;
@@ -290,8 +305,8 @@ body {
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
-	color: #30333c;
 	text-align: left;
+	color: #30333c;
 }
 
 /* Set the default behavior for touch-based browsing in IE10 on devices running Windows 8 */

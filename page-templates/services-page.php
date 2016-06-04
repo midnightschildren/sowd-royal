@@ -48,7 +48,7 @@ get_header(); ?>
 				$duration = get_field( "service_duration" );
 				$price = get_field( "service_price" );
 				$link = get_field( "service_link" );
-				$htmllink = "<a href='{$link}' target='_blank'>Book Now</a>";
+				$htmllink = "<p class='book'><a href='{$link}' target='_blank'>Book Now</a></p>";
 				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\"><h4>';
 				$t.= $stitle;
 				$t.= '</h4></div><div class=\"grid-3 right\"><span class=\"duration\">';

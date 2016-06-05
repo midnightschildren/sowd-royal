@@ -239,7 +239,6 @@ a.hsgray,
 }
 
 .price {
-	margin-left: 2rem;
 	color: #877f7c;
 	font-size: 21px;
 	font-size: 1.3125rem;
@@ -253,6 +252,7 @@ a.hsgray,
 	font-size: 1.1875rem;
 	line-height: 1.89473684;
 	letter-spacing: .035em;
+	float: left;
 }
 
 .azc_tsh_toggle, .azc_tsh_toggle_open, .azc_tsh_toggle_active, .azc_tsh_toggle_open_active {

@@ -45,18 +45,25 @@ get_header(); ?>
 				$content = str_replace( ']]>', ']]&gt;', $content );
 				$stitle = apply_filters( 'the_title', get_the_title() );
 				$stitle = str_replace( ']]>', ']]&gt;', $stitle );
-				$duration = get_field( "service_duration" );
-				$price = get_field( "service_price" );
+				$duration = null;
+				if (get_field("service_duration")) {
+				$duration .= '<span class=\"duration\">';	
+				$duration .= get_field( "service_duration" );
+				$duration .= ' minutes</span>';
+				}
+				$price = null;
+				if (get_field("service_price")) {
+				$price .= ' <span class=\"price\">$';	
+				$price .= get_field( "service_price" );
+				$price .= '</span>';
+				}
 				$link = get_field( "service_link" );
 				$htmllink = "<p class='book'><a href='{$link}' target='_blank'>Book Now</a></p>";
 				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\"><h4>';
 				$t.= $stitle;
-				$t.= '</h4></div><div class=\"grid-3 right\"><span class=\"duration\">';
+				$t.= '</h4></div><div class=\"grid-3 right\">';
 				$t.= $duration;
-				$t.= ' minutes</span>';
-				$t.= ' <span class=\"price\">$';
 				$t.= $price;
-				$t.= '</span>';
 				$t.= '</div></div>';
 				$t.= '\']';
 			   	$t.= $content;

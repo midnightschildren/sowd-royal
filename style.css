@@ -136,6 +136,10 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
+.business-content {
+	background-color: #ebf8fa;
+}
+
 .home .entry-content p {
 	letter-spacing: .035em;
 	font-size: 30px;

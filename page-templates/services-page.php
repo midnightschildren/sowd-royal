@@ -82,6 +82,44 @@ get_header(); ?>
 		
 	</div>
 
+	<div class="business-content row">
+
+		<div class="grid-8 offset-2 pad-3-vert center">
+
+		<?php if( get_field('services_section_2_title') ): ?>
+	
+			<h5 class="hsslate pad-2-vert"><?php the_field('services_section_2_title'); ?></h5>
+	
+		<?php endif; ?>	
+
+		<?php if( get_field('services_section_2_content') ): ?>
+	
+			<?php the_field('services_section_2_content'); ?>
+	
+		<?php endif; ?>	
+
+		<?php if( get_field('services_section_2_sub_content') ): ?>
+	
+			<?php the_field('services_section_2_sub_content'); ?>
+	
+		<?php endif; ?>	
+
+		<?php if( get_field('services_section_2b_title') ): ?>
+	
+			<h5 class="hsslate pad-2-vert"><?php the_field('services_section_2b_title'); ?></h5>
+	
+		<?php endif; ?>	
+
+		<?php if( get_field('services_section_2b_content') ): ?>
+	
+			<?php the_field('services_section_2b_content'); ?>
+	
+		<?php endif; ?>	
+
+		</div>	
+
+	</div>	
+
 	<div id="secondaryimage">
 		<?php 
 

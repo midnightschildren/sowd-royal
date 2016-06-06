@@ -180,6 +180,22 @@ td { vertical-align: top; }
 	color: #76929b;
 }
 
+.hours p {
+	letter-spacing: .035em;
+	font-size: 27px;
+	font-size: 1.6875em;
+	line-height: 1.22222223;
+	color: #30333c;
+}
+
+.b_info p {
+	letter-spacing: .035em;
+	font-size: 21px;
+	font-size: 1.3125em;
+	line-height: 1.28571429;
+	color: #30333c;
+}
+
 a.hsblue,
 .hsblue {
 	color: #96b9bc;

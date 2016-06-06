@@ -94,13 +94,13 @@ get_header(); ?>
 
 		<?php if( get_field('services_section_2_content') ): ?>
 	
-			<?php the_field('services_section_2_content'); ?>
+			<div class="hours"><?php the_field('services_section_2_content'); ?></div>
 	
 		<?php endif; ?>	
 
 		<?php if( get_field('services_section_2_sub_content') ): ?>
 	
-			<?php the_field('services_section_2_sub_content'); ?>
+			<div class="b_info"><?php the_field('services_section_2_sub_content'); ?></div>
 	
 		<?php endif; ?>	
 
@@ -112,7 +112,7 @@ get_header(); ?>
 
 		<?php if( get_field('services_section_2b_content') ): ?>
 	
-			<?php the_field('services_section_2b_content'); ?>
+			<div class="hours"><?php the_field('services_section_2b_content'); ?></div>
 	
 		<?php endif; ?>	
 

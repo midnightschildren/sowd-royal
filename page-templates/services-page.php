@@ -37,7 +37,7 @@ get_header(); ?>
 		<div class="col grid-8 offset-2">
 			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
-			<div class="pad-3-vert">
+			<div class="pad-3-top pad-2-bottom">
 
 			
 			<?php 	
@@ -57,8 +57,25 @@ get_header(); ?>
 				$price .= get_field( "service_price" );
 				$price .= '</span>';
 				}
+				$htmllink = null;
+				if (get_field( "service_link" )) {
 				$link = get_field( "service_link" );
-				$htmllink = "<p class='book'><a href='{$link}' target='_blank'>Book Now</a></p>";
+				$linktext = get_field( "service_link_text" );
+				$htmllink = "<p class='book'><a href='{$link}' target='_blank'>$linktext</a></p>";
+				}
+
+				if (get_field( "service_link_2" )) {
+				$link2 = get_field( "service_link_2" );
+				$linktext2 = get_field( "service_link_text_2" );
+				$htmllink .= "<p class='book pad-2-top'><a href='{$link2}' target='_blank'>$linktext2</a></p>";
+				}
+
+				if (get_field( "service_link_3" )) {
+				$link3 = get_field( "service_link_3" );
+				$linktext3 = get_field( "service_link_text_3" );
+				$htmllink .= "<p class='book pad-2-top'><a href='{$link3}' target='_blank'>$linktext3</a></p>";
+				}
+
 				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\"><h4>';
 				$t.= $stitle;
 				$t.= '</h4></div><div class=\"grid-3 right\">';

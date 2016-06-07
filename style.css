@@ -170,6 +170,7 @@ td { vertical-align: top; }
 	font-size: 19px;
 	font-size: 1.1875em;
 	line-height: 1.42105263;
+	margin-bottom: 0px;
 }
 
 .book a {
@@ -305,8 +306,8 @@ a.hsgray,
 }
 .azc_tsh_toggle_container, .azc_tsh_toggle_container_open {
 	margin: auto;
-    margin-bottom: 5px !important;
-	padding: 15px 0px;
+    margin-bottom: -16px !important;
+	padding: 5px 0px;
 	border-right: 0px solid #fff;
 	border-bottom: 0px solid #fff;
 	border-left: 0px solid #fff;

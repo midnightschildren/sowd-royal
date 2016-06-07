@@ -35,7 +35,7 @@ get_header(); ?>
 			
 		</div>	
 		<div class="col grid-8 offset-2">
-			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0));
+			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0, 'orderby' => 'menu_order', 'order' => 'ASC'  ));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-top pad-2-bottom">
 

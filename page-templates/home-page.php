@@ -64,7 +64,7 @@ get_header(); ?>
 			
 		</div>	
 		<div class="col grid-6 offset-3">
-			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'posts_per_page' => 0));
+			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'orderby' => 'rand', 'posts_per_page' => '2'));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-vert">
 			<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">

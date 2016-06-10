@@ -131,13 +131,19 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
-.home .testimonial-content {
+.home .testimonial-content, .services-content {
 	background-color: #fffdf5;
 	margin: 0;
 }
 
-.business-content {
+.business-content, .about-content {
 	background-color: #ebf8fa;
+	margin: 0;
+}
+
+.about_hannah-content {
+	background-color: #fffdf5;
+	margin: 0;
 }
 
 .home .entry-content p {
@@ -155,6 +161,15 @@ td { vertical-align: top; }
 	font-size: 1.5em;
 	line-height: 1.33333333;
 	margin-bottom: .5rem;
+}
+
+.about-content p, .about_hannah-content p {
+	letter-spacing: .035em;
+	font-size: 21px;
+	font-size: 1.3125em;
+	line-height: 1.42857143;
+	margin-bottom: 1rem;
+	color: #30333c;
 }
 
 .services-content p {
@@ -206,6 +221,12 @@ a.hsslate,
 .hsslate {
 	color: #76929b;
 }
+
+a.bluegreen,
+.bluegreen {
+color: #5abd8b;
+}
+
 
 a.hsgray,
 .hsgray, .hsgray a {
@@ -1009,10 +1030,9 @@ select {
 
 .site-header {
 	clear: both;
-	width: 90%;
+	width: 100%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
@@ -1090,9 +1110,10 @@ select {
 	width: 100%;
 }
 
-.page-template-services-page .site-content {
-	padding: 0 0 32px 0;
-	padding: 0 0 2rem 0;
+
+.page-template-services-page .site-content, .page-template-about-page .site-content {
+	padding: 0;
+	padding: 0;
 }
 
 .site-content {

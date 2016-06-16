@@ -521,10 +521,10 @@ if ( ! function_exists( 'quark_content_nav' ) ) {
 
 			<?php if ( is_single() ) { // navigation links for single posts ?>
 
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left"></i>', 'Previous post link', 'quark' ) . '</span> %title' ); ?>
-				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right"></i>', 'Next post link', 'quark' ) . '</span>' ); ?>
+				<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="fa fa-angle-left" aria-hidden="true"></i>', 'Previous post link', 'quark' ) . '</span> %title' ); ?>
+				<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '<i class="fa fa-angle-right" aria-hidden="true"></i>', 'Next post link', 'quark' ) . '</span>' ); ?>
 
-			<?php } 
+			<?php }
 			elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) { // navigation links for home, archive, and search pages ?>
 
 				<?php echo paginate_links( array(
@@ -533,10 +533,10 @@ if ( ! function_exists( 'quark_content_nav' ) ) {
 					'current' => max( 1, get_query_var( 'paged' ) ),
 					'total' => $wp_query->max_num_pages,
 					'type' => 'list',
-					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i> Previous', 'quark' ), array( 'i' => array( 
-						'class' => array() ) ) ),
-					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right"></i>', 'quark' ), array( 'i' => array( 
-						'class' => array() ) ) )
+					'prev_text' => wp_kses( __( '<i class="fa fa-angle-left" aria-hidden="true"></i> Previous', 'quark' ), array( 'i' => array(
+						'class' => array(), 'aria-hidden' => array() ) ) ),
+					'next_text' => wp_kses( __( 'Next <i class="fa fa-angle-right" aria-hidden="true"></i>', 'quark' ), array( 'i' => array(
+						'class' => array(), 'aria-hidden' => array() ) ) )
 				) ); ?>
 
 			<?php } ?>

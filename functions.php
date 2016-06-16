@@ -157,46 +157,48 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
  *
  * @return string Font stylesheet or empty string if disabled.
  */
-function quark_fonts_url() {
-	$fonts_url = '';
-	$subsets = 'latin';
+if ( ! function_exists( 'quark_fonts_url' ) ) {
+	function quark_fonts_url() {
+		$fonts_url = '';
+		$subsets = 'latin';
 
-	/* translators: If there are characters in your language that are not supported by PT Sans, translate this to 'off'.
-	 * Do not translate into your own language.
-	 */
-	$pt_sans = _x( 'on', 'PT Sans font: on or off', 'quark' );
+		/* translators: If there are characters in your language that are not supported by PT Sans, translate this to 'off'.
+		 * Do not translate into your own language.
+		 */
+		$pt_sans = _x( 'on', 'PT Sans font: on or off', 'quark' );
 
-	/* translators: To add an additional PT Sans character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
-	 * Do not translate into your own language.
-	 */
-	$subset = _x( 'no-subset', 'PT Sans font: add new subset (cyrillic)', 'quark' );
+		/* translators: To add an additional PT Sans character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
+		 * Do not translate into your own language.
+		 */
+		$subset = _x( 'no-subset', 'PT Sans font: add new subset (cyrillic)', 'quark' );
 
-	if ( 'cyrillic' == $subset )
-		$subsets .= ',cyrillic';
+		if ( 'cyrillic' == $subset )
+			$subsets .= ',cyrillic';
 
-	/* translators: If there are characters in your language that are not supported by Arvo, translate this to 'off'.
-	 * Do not translate into your own language.
-	 */
-	$arvo = _x( 'on', 'Arvo font: on or off', 'quark' );
+		/* translators: If there are characters in your language that are not supported by Arvo, translate this to 'off'.
+		 * Do not translate into your own language.
+		 */
+		$arvo = _x( 'on', 'Arvo font: on or off', 'quark' );
 
-	if ( 'off' !== $pt_sans || 'off' !== $arvo ) {
-		$font_families = array();
+		if ( 'off' !== $pt_sans || 'off' !== $arvo ) {
+			$font_families = array();
 
-		if ( 'off' !== $pt_sans )
-			$font_families[] = 'PT+Sans:400,400italic,700,700italic';
+			if ( 'off' !== $pt_sans )
+				$font_families[] = 'PT+Sans:400,400italic,700,700italic';
 
-		if ( 'off' !== $arvo )
-			$font_families[] = 'Arvo:400';
+			if ( 'off' !== $arvo )
+				$font_families[] = 'Arvo:400';
 
-		$protocol = is_ssl() ? 'https' : 'http';
-		$query_args = array(
-			'family' => implode( '|', $font_families ),
-			'subset' => $subsets,
-		);
-		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+			$protocol = is_ssl() ? 'https' : 'http';
+			$query_args = array(
+				'family' => implode( '|', $font_families ),
+				'subset' => $subsets,
+			);
+			$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
+		}
+
+		return $fonts_url;
 	}
-
-	return $fonts_url;
 }
 
 /**

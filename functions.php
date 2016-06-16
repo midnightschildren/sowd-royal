@@ -412,86 +412,91 @@ add_action( 'widgets_init', 'quark_widgets_init' );
  *
  * @return void
  */
-function quark_scripts_styles() {
+if ( ! function_exists( 'quark_scripts_styles' ) ) {
+	function quark_scripts_styles() {
 
-	/**
-	 * Register and enqueue our stylesheets
-	 */
+		/**
+		 * Register and enqueue our stylesheets
+		 */
 
-	// Start off with a clean base by using normalise. If you prefer to use a reset stylesheet or something else, simply replace this
-	wp_register_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '3.0.2', 'all' );
-	wp_enqueue_style( 'normalize' );
+		// Start off with a clean base by using normalise. If you prefer to use a reset stylesheet or something else, simply replace this
+		wp_register_style( 'normalize', trailingslashit( get_template_directory_uri() ) . 'css/normalize.css' , array(), '4.1.1', 'all' );
+		wp_enqueue_style( 'normalize' );
 
-	// Register and enqueue our icon font
-	// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
-	wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.2.0', 'all' );
-	wp_enqueue_style( 'fontawesome' );
+		// Register and enqueue our icon font
+		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
+		wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/font-awesome.min.css' , array( 'normalize' ), '4.6.3', 'all' );
+		wp_enqueue_style( 'fontawesome' );
 
-	// Our styles for setting up the grid.
-	// If you prefer to use a different grid system, simply replace this and perform a find/replace in the php for the relevant styles. I'm nice like that!
-	wp_register_style( 'gridsystem', trailingslashit( get_template_directory_uri() ) . 'css/grid.css' , array( 'fontawesome' ), '1.0.0', 'all' );
-	wp_enqueue_style( 'gridsystem' );
+		// Our styles for setting up the grid.
+		// If you prefer to use a different grid system, simply replace this and perform a find/replace in the php for the relevant styles. I'm nice like that!
+		wp_register_style( 'gridsystem', trailingslashit( get_template_directory_uri() ) . 'css/grid.css' , array( 'fontawesome' ), '1.0.0', 'all' );
+		wp_enqueue_style( 'gridsystem' );
 
-	/*
-	 * Load our Google Fonts.
-	 *
-	 * To disable in a child theme, use wp_dequeue_style()
-	 * function mytheme_dequeue_fonts() {
-	 *     wp_dequeue_style( 'quark-fonts' );
-	 * }
-	 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
-	 */
-	//$fonts_url = quark_fonts_url();
-	//if ( !empty( $fonts_url ) ) {
-	//	wp_enqueue_style( 'quark-fonts', esc_url_raw( $fonts_url ), array(), null );
-	//}
+		/*
+		 * Load our Google Fonts.
+		 *
+		 * To disable in a child theme, use wp_dequeue_style()
+		 * function mytheme_dequeue_fonts() {
+		 *     wp_dequeue_style( 'quark-fonts' );
+		 * }
+		 * add_action( 'wp_enqueue_scripts', 'mytheme_dequeue_fonts', 11 );
+		 */
+		$fonts_url = quark_fonts_url();
+		if ( !empty( $fonts_url ) ) {
+			wp_enqueue_style( 'quark-fonts', esc_url_raw( $fonts_url ), array(), null );
+		}
 
-	// If using a child theme, auto-load the parent theme style.
-	// Props to Justin Tadlock for this recommendation - http://justintadlock.com/archives/2014/11/03/loading-parent-styles-for-child-themes
-	if ( is_child_theme() ) {
-		wp_enqueue_style( 'parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+		// If using a child theme, auto-load the parent theme style.
+		// Props to Justin Tadlock for this recommendation - http://justintadlock.com/archives/2014/11/03/loading-parent-styles-for-child-themes
+		if ( is_child_theme() ) {
+			wp_enqueue_style( 'parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+		}
+
+		// Enqueue the default WordPress stylesheet
+		wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+
+		/**
+		 * Register and enqueue our scripts
+		 */
+
+		// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
+		wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-min.js', array(), '3.3.1', false );
+		wp_enqueue_script( 'modernizr' );
+
+		// Load Stick.js for Sowd-royal
+		wp_register_script( 'sticky', trailingslashit( get_template_directory_uri() ) . 'js/jquery.sticky.js', array('jquery'), '1.0.4', true );
+		wp_enqueue_script( 'sticky' );
+
+		// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+
+		// Load jQuery Validation as well as the initialiser to provide client side comment form validation
+		// You can change the validation error messages below
+		if ( is_singular() && comments_open() ) {
+			wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.13.0.js', array( 'jquery' ), '1.13.0', true );
+			wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.13.0', true );
+
+			wp_enqueue_script( 'commentvalidate' );
+			wp_localize_script( 'commentvalidate', 'comments_object', array(
+				'req' => get_option( 'require_name_email' ),
+				'author'  => esc_html__( 'Please enter your name', 'quark' ),
+				'email'  => esc_html__( 'Please enter a valid email address', 'quark' ),
+				'comment' => esc_html__( 'Please add a comment', 'quark' ) )
+			);
+		}
+
+		// Include this script to envoke a button toggle for the main navigation menu on small screens
+		//wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '20130130', true );
+		//wp_enqueue_script( 'small-menu' );
+
 	}
-
-	// Enqueue the default WordPress stylesheet
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
-
-	/**
-	 * Register and enqueue our scripts
-	 */
-
-	// Load Modernizr at the top of the document, which enables HTML5 elements and feature detects
-	wp_register_script( 'modernizr', trailingslashit( get_template_directory_uri() ) . 'js/modernizr-2.8.3-min.js', array(), '2.8.3', false );
-	wp_enqueue_script( 'modernizr' );
-	wp_register_script( 'sticky', trailingslashit( get_template_directory_uri() ) . 'js/jquery.sticky.js', array('jquery'), '1.0.4', true );
-	wp_enqueue_script( 'sticky' );
-	// Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use)
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	// Load jQuery Validation as well as the initialiser to provide client side comment form validation
-	// You can change the validation error messages below
-	if ( is_singular() && comments_open() ) {
-		wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.13.0.js', array( 'jquery' ), '1.13.0', true );
-		wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.13.0', true );
-
-		wp_enqueue_script( 'commentvalidate' );
-		wp_localize_script( 'commentvalidate', 'comments_object', array(
-			'req' => get_option( 'require_name_email' ),
-			'author'  => esc_html__( 'Please enter your name', 'quark' ),
-			'email'  => esc_html__( 'Please enter a valid email address', 'quark' ),
-			'comment' => esc_html__( 'Please add a comment', 'quark' ) )
-		);
-	}
-
-	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	//wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '20130130', true );
-	//wp_enqueue_script( 'small-menu' );
 
 }
 add_action( 'wp_enqueue_scripts', 'quark_scripts_styles' );
-
 
 /**
  * Displays navigation to next/previous pages when applicable.

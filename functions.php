@@ -260,149 +260,150 @@ add_filter( 'mce_css', 'quark_mce_css' );
  *
  * @return void
  */
-function quark_widgets_init() {
-	register_sidebar( array(
-			'name' => esc_html__( 'Main Sidebar', 'quark' ),
-			'id' => 'sidebar-main',
-			'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+if ( ! function_exists( 'quark_widgets_init' ) ) {
+	function quark_widgets_init() {
+		register_sidebar( array(
+				'name' => esc_html__( 'Main Sidebar', 'quark' ),
+				'id' => 'sidebar-main',
+				'description' => esc_html__( 'Appears in the sidebar on posts and pages except the optional Front Page template, which has its own widgets', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Blog Sidebar', 'quark' ),
-			'id' => 'sidebar-blog',
-			'description' => esc_html__( 'Appears in the sidebar on the blog and archive pages only', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Blog Sidebar', 'quark' ),
+				'id' => 'sidebar-blog',
+				'description' => esc_html__( 'Appears in the sidebar on the blog and archive pages only', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Single Post Sidebar', 'quark' ),
-			'id' => 'sidebar-single',
-			'description' => esc_html__( 'Appears in the sidebar on single posts only', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Single Post Sidebar', 'quark' ),
+				'id' => 'sidebar-single',
+				'description' => esc_html__( 'Appears in the sidebar on single posts only', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Page Sidebar', 'quark' ),
-			'id' => 'sidebar-page',
-			'description' => esc_html__( 'Appears in the sidebar on pages only', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Page Sidebar', 'quark' ),
+				'id' => 'sidebar-page',
+				'description' => esc_html__( 'Appears in the sidebar on pages only', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'First Front Page Banner Widget', 'quark' ),
-			'id' => 'frontpage-banner1',
-			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'quark' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'First Front Page Banner Widget', 'quark' ),
+				'id' => 'frontpage-banner1',
+				'description' => esc_html__( 'Appears in the banner area on the Front Page', 'quark' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget' => '</div>',
+				'before_title' => '<h1 class="widget-title">',
+				'after_title' => '</h1>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Second Front Page Banner Widget', 'quark' ),
-			'id' => 'frontpage-banner2',
-			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'quark' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Second Front Page Banner Widget', 'quark' ),
+				'id' => 'frontpage-banner2',
+				'description' => esc_html__( 'Appears in the banner area on the Front Page', 'quark' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget' => '</div>',
+				'before_title' => '<h1 class="widget-title">',
+				'after_title' => '</h1>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'First Front Page Widget Area', 'quark' ),
-			'id' => 'sidebar-homepage1',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'First Front Page Widget Area', 'quark' ),
+				'id' => 'sidebar-homepage1',
+				'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Second Front Page Widget Area', 'quark' ),
-			'id' => 'sidebar-homepage2',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Second Front Page Widget Area', 'quark' ),
+				'id' => 'sidebar-homepage2',
+				'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Third Front Page Widget Area', 'quark' ),
-			'id' => 'sidebar-homepage3',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Third Front Page Widget Area', 'quark' ),
+				'id' => 'sidebar-homepage3',
+				'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Fourth Front Page Widget Area', 'quark' ),
-			'id' => 'sidebar-homepage4',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Fourth Front Page Widget Area', 'quark' ),
+				'id' => 'sidebar-homepage4',
+				'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'First Footer Widget Area', 'quark' ),
-			'id' => 'sidebar-footer1',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'First Footer Widget Area', 'quark' ),
+				'id' => 'sidebar-footer1',
+				'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Second Footer Widget Area', 'quark' ),
-			'id' => 'sidebar-footer2',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Second Footer Widget Area', 'quark' ),
+				'id' => 'sidebar-footer2',
+				'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Third Footer Widget Area', 'quark' ),
-			'id' => 'sidebar-footer3',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Third Footer Widget Area', 'quark' ),
+				'id' => 'sidebar-footer3',
+				'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
 
-	register_sidebar( array(
-			'name' => esc_html__( 'Fourth Footer Widget Area', 'quark' ),
-			'id' => 'sidebar-footer4',
-			'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
+		register_sidebar( array(
+				'name' => esc_html__( 'Fourth Footer Widget Area', 'quark' ),
+				'id' => 'sidebar-footer4',
+				'description' => esc_html__( 'Appears in the footer sidebar', 'quark' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget' => '</aside>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>'
+			) );
+	}
 }
 add_action( 'widgets_init', 'quark_widgets_init' );
-
 
 /**
  * Enqueue scripts and styles

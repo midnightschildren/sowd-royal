@@ -645,7 +645,7 @@ add_action( 'comment_form_default_fields', 'quark_comment_form_default_fields' )
 
 
 /**
- * Update the Comments form to add a 'required' span to the Comment textarea within the form label, because it's pointless 
+ * Update the Comments form to add a 'required' span to the Comment textarea within the form label, because it's pointless
  * submitting a comment that doesn't actually have any text in the comment field!
  *
  * @since Quark 1.0
@@ -655,8 +655,9 @@ add_action( 'comment_form_default_fields', 'quark_comment_form_default_fields' )
  */
 function quark_comment_form_field_comment( $field ) {
 
-	$field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'quark' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
-
+	if ( !quark_is_woocommerce_active() || ( quark_is_woocommerce_active() && !is_product() ) ) {
+		$field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'quark' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
+	}
 	return $field;
 
 }
@@ -707,7 +708,7 @@ if ( ! function_exists( 'quark_posted_on' ) ) {
 		}
 
 		// Translators: 1: Icon 2: Permalink 3: Post date and time 4: Publish date in ISO format 5: Post date
-		$date = sprintf( '<i class="fa %1$s"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
+		$date = sprintf( '<i class="fa %1$s" aria-hidden="true"></i> <a href="%2$s" title="Posted %3$s" rel="bookmark"><time class="entry-date" datetime="%4$s" itemprop="datePublished">%5$s</time></a>',
 			$post_icon,
 			esc_url( get_permalink() ),
 			sprintf( esc_html__( '%1$s @ %2$s', 'quark' ), esc_html( get_the_date() ), esc_attr( get_the_time() ) ),
@@ -716,7 +717,7 @@ if ( ! function_exists( 'quark_posted_on' ) ) {
 		);
 
 		// Translators: 1: Date link 2: Author link 3: Categories 4: No. of Comments
-		$author = sprintf( '<i class="fa fa-pencil"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
+		$author = sprintf( '<i class="fa fa-pencil" aria-hidden="true"></i> <address class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></address>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'quark' ), get_the_author() ) ),
 			get_the_author()
@@ -726,17 +727,17 @@ if ( ! function_exists( 'quark_posted_on' ) ) {
 		$categories_list = get_the_category_list( esc_html__( ' ', 'quark' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
-		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
+		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment" aria-hidden="true"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' , 'quark' ) . the_title_attribute( 'echo=0' ) ),
 			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number(), 'quark' ), get_comments_number() ) : esc_html__( 'No Comments', 'quark' ) )
 		);
 
 		// Translators: 1: Date 2: Author 3: Categories 4: Comments
-		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'quark' ), array( 
-			'div' => array ( 
-				'class' => array() ), 
-			'span' => array( 
+		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'quark' ), array(
+			'div' => array (
+				'class' => array() ),
+			'span' => array(
 				'class' => array() ) ) ),
 			$date,
 			$author,
@@ -764,10 +765,11 @@ if ( ! function_exists( 'quark_entry_meta' ) ) {
 
 		// Translators: 1 is tag
 		if ( $tag_list ) {
-			printf( wp_kses( __( '<i class="fa fa-tag"></i> %1$s', 'quark' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
+			printf( wp_kses( __( '<i class="fa fa-tag" aria-hidden="true"></i> %1$s', 'quark' ), array( 'i' => array( 'class' => array() ) ) ), $tag_list );
 		}
 	}
 }
+
 
 
 /**

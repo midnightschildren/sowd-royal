@@ -16,13 +16,29 @@
 
 get_header(); ?>
 
+	<div id="primary" class="blog-content row">
+
+		<div class="grid-12 pad-3-vert">
+			<?php if( get_field('blog_section_title') ): ?>
+	
+			<h5 class="center medium hsslate"><?php the_field('blog_section_title'); ?></h5>
+	
+			<?php endif; ?>
+			
+		</div>	
+		
+		
+	
+
+	</div><!-- /#primary.site-content.row -->
+
 	<div id="primary" class="site-content row" role="main">
 		<div class="col grid_12_of_12">
 
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'blog' ); ?>
 					<?php comments_template( '', true ); ?>
 				<?php endwhile; // end of the loop. ?>
 

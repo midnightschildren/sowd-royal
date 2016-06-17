@@ -146,6 +146,21 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
+.blog-posts-content {
+	background-color: #f9fdf8;
+	margin: 0;
+}
+
+.blog-content {
+	background-color: #ddf3f7;
+	margin: 0;
+}
+
+.blog_header-content {
+	background-color: #eeefef;
+	margin: 0;
+}
+
 .home .entry-content p {
 	letter-spacing: .035em;
 	font-size: 30px;
@@ -391,6 +406,11 @@ img.header-image,
 img.wp-post-image {
 	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.size-post_feature_full_width {
+	width: 100%;
+	height: auto;
 }
 
 img.wp-smiley,
@@ -781,28 +801,15 @@ input[type="submit"] {
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	vertical-align: middle;
 	cursor: pointer;
-	background-color: #f5f5f5;
-	*background-color: #e6e6e6;
-	background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-repeat: repeat-x;
+	background-color: #ebe9eb;
+	*background-color: #ebe9eb;
 	border: 1px solid #cccccc;
 	*border: 0;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-bottom-color: #b3b3b3;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: #e6e6e6 ;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6');
-	*zoom: 1;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .menu-toggle, a.btn {
@@ -816,8 +823,8 @@ input[type="submit"] {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-	background-color: #e6e6e6;
-	*background-color: #d9d9d9;
+	background-color: #dad8da;
+	*background-color: #dad8da;
 }
 
 .btn:first-child {
@@ -829,14 +836,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	color: #333333;
 	text-decoration: none;
-	background-color: #e6e6e6;
-	*background-color: #d9d9d9; /* Buttons in IE7 don't get borders, so darken on hover */
-	background-position: 0 -15px;
-	-webkit-transition: background-position 0.1s linear;
-	-moz-transition: background-position 0.1s linear;
-	-ms-transition: background-position 0.1s linear;
-	-o-transition: background-position 0.1s linear;
-	transition: background-position 0.1s linear;
+	background-color: #dad8da;
+	*background-color: #dad8da; /* Buttons in IE7 don't get borders, so darken on hover */
 }
 
 .menu-toggle:focus,
@@ -851,20 +852,17 @@ input[type="submit"]:focus {
 .btn.active,
 .btn:active,
 input[type="submit"]:active {
-	background-color: #e6e6e6;
-	background-color: #d9d9d9 \9;
+	background-color: #dad8da;
+	background-color: #dad8da \9;
 	background-image: none;
 	outline: 0;
-	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 	position:relative;
 	top:1px;
 }
 
 .btn.disabled, .btn[disabled] {
 	cursor: default;
-	background-color: #e6e6e6;
+	background-color: #dad8da;
 	background-image: none;
 	opacity: 0.65;
 	filter: alpha(opacity=65);
@@ -1955,11 +1953,9 @@ form label.error {
 
 .widget-area .widget {
 	-moz-hyphens: auto;
-	-ms-word-break: break-all;
 	-webkit-hyphens: auto;
 	hyphens: auto;
-	word-wrap:break-word;
-	word-break: break-word;
+	word-wrap: break-word;
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
 }
@@ -2030,7 +2026,6 @@ form label.error {
 }
 
 .widget_search label {
-	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -2408,18 +2403,10 @@ h1.page-title {
 .woocommerce-page input.button.alt {
 	background-color: #2997ab;
 	*background-color: #2997ab;
-	background-image: -ms-linear-gradient(top, #36c1da, #2997ab);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#36c1da), to(#2997ab));
-	background-image: -webkit-linear-gradient(top, #36c1da, #2997ab);
-	background-image: -o-linear-gradient(top, #36c1da, #2997ab);
-	background-image: linear-gradient(top, #36c1da, #2997ab);
-	background-image: -moz-linear-gradient(top, #36c1da, #2997ab);
 	border: 1px solid #237e8f;
 	*border: 0;
-	border-color: rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.25);
-	border-color: #2997ab #2997ab #237e8f;
-	border-bottom-color: #237e8f;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#36c1da', endColorstr='#2997ab');
+	border-color: rgba(35, 126, 143, 0.1);
+	border-color: #2997ab;
 	color: #fff;
 	text-shadow: none;
 	padding: 0.5em 0.75em;
@@ -2441,18 +2428,10 @@ h1.page-title {
 	color: #fff;
 	background-color: #208294;
 	*background-color: #208294;
-	background-image: -ms-linear-gradient(top, #2caec5, #208294);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2caec5), to(#208294));
-	background-image: -webkit-linear-gradient(top, #2caec5, #208294);
-	background-image: -o-linear-gradient(top, #2caec5, #208294);
-	background-image: linear-gradient(top, #2caec5, #208294);
-	background-image: -moz-linear-gradient(top, #2caec5, #208294);
 	border: 1px solid #237e8f;
 	*border: 0;
-	border-color: rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.1) rgba(35, 126, 143, 0.25);
-	border-color: #208294 #208294 #237e8f;
-	border-bottom-color: #237e8f;
-	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2caec5', endColorstr='#208294');
+	border-color: rgba(35, 126, 143, 0.1);
+	border-color: #208294;
 }
 
 .woocommerce span.onsale,
@@ -2460,14 +2439,8 @@ h1.page-title {
 	line-height: 2.6;
 	min-height: 3em;
 	min-width: 3em;
-	background-color: #2997ab;
-	*background-color: #2997ab;
-	background-image: -ms-linear-gradient(top, #36c1da, #2997ab);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#36c1da), to(#2997ab));
-	background-image: -webkit-linear-gradient(top, #36c1da, #2997ab);
-	background-image: -o-linear-gradient(top, #36c1da, #2997ab);
-	background-image: linear-gradient(top, #36c1da, #2997ab);
-	background-image: -moz-linear-gradient(top, #36c1da, #2997ab);
+	background-color: #36c1da;
+	*background-color: #36c1da;
 }
 
 .woocommerce #content nav.woocommerce-pagination ul li span.current,
@@ -2522,19 +2495,23 @@ h1.page-title {
    ========================================================================== */
 
 /* Divi Builder - Resize rows to match Quark */
-.page-template-page-builders.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row {
+.page-template-page-builderfullwidth.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
+.page-template-page-builderblank.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row,
+.page-template-page-builderboxed.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row {
 	max-width: 1200px;
 	width: 90%;
 }
 
 /* Visual Composer - Remove the negative margin when using the full-width page builder template */
-.page-template-page-builders.wpb-js-composer .vc_row {
+.page-template-page-builderfullwidth.wpb-js-composer .vc_row,
+.page-template-page-builderblank.wpb-js-composer .vc_row {
 	margin-left: 0;
 	margin-right: 0;
 }
 
 /* SiteOrigin Page Builder - Ensure the grid only extends 100% */
-.page-template-page-builders.siteorigin-panels .panel-grid {
+.page-template-page-builderfullwidth.siteorigin-panels .panel-grid,
+.page-template-page-builderblank.siteorigin-panels .panel-grid {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 }

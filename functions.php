@@ -779,10 +779,12 @@ if ( ! function_exists( 'quark_entry_meta' ) ) {
  *
  * @return void
  */
-function quark_content_width() {
-	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() ) {
-		global $content_width;
-		$content_width = 1200;
+if ( ! function_exists( 'quark_content_width' ) ) {
+	function quark_content_width() {
+		if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() ) {
+			global $content_width;
+			$content_width = 1200;
+		}
 	}
 }
 add_action( 'template_redirect', 'quark_content_width' );
@@ -817,7 +819,7 @@ add_filter( 'the_content_more_link', 'quark_remove_more_jump_link' );
  * @return string The 'Continue reading' link
  */
 function quark_continue_reading_link() {
-	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'quark' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'quark' ), array( 'span' => array( 
+	return '&hellip;<p><a class="more-link" href="'. esc_url( get_permalink() ) . '" title="' . esc_html__( 'Continue reading', 'quark' ) . ' &lsquo;' . get_the_title() . '&rsquo;">' . wp_kses( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'quark' ), array( 'span' => array(
 			'class' => array() ) ) ) . '</a></p>';
 }
 
@@ -844,20 +846,21 @@ add_filter( 'excerpt_more', 'quark_auto_excerpt_more' );
  * @param array List of user contact methods
  * @return array The filtered list of updated user contact methods
  */
-function quark_new_contactmethods( $contactmethods ) {
-	// Add Twitter
-	$contactmethods['twitter'] = 'Twitter';
+ if ( ! function_exists( 'quark_new_contactmethods' ) ) {
+	function quark_new_contactmethods( $contactmethods ) {
+		// Add Twitter
+		$contactmethods['twitter'] = 'Twitter';
 
-	//add Facebook
-	$contactmethods['facebook'] = 'Facebook';
+		//add Facebook
+		$contactmethods['facebook'] = 'Facebook';
 
-	//add Google Plus
-	$contactmethods['googleplus'] = 'Google+';
+		//add Google Plus
+		$contactmethods['googleplus'] = 'Google+';
 
-	return $contactmethods;
+		return $contactmethods;
+	}
 }
 add_filter( 'user_contactmethods', 'quark_new_contactmethods', 10, 1 );
-
 
 /**
  * Add a filter for wp_nav_menu to add an extra class for menu items that have children (ie. sub menus)
@@ -912,13 +915,21 @@ if ( ! function_exists( 'quark_get_social_media' ) ) {
 			array( 'url' => of_get_option( 'social_googleplus', '' ), 'icon' => 'fa-google-plus', 'title' => esc_html__( 'Connect with me on Google+', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_slideshare', '' ), 'icon' => 'fa-slideshare', 'title' => esc_html__( 'Follow me on SlideShare', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_slack', '' ), 'icon' => 'fa-slack', 'title' => esc_html__( 'Join me on Slack', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_dribbble', '' ), 'icon' => 'fa-dribbble', 'title' => esc_html__( 'Follow me on Dribbble', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow me on Tumblr', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_reddit', '' ), 'icon' => 'fa-reddit', 'title' => esc_html__( 'Join me on Reddit', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_twitch', '' ), 'icon' => 'fa-twitch', 'title' => esc_html__( 'Follow me on Twitch', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_bitbucket', '' ), 'icon' => 'fa-bitbucket', 'title' => esc_html__( 'Fork me on Bitbucket', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_stackoverflow', '' ), 'icon' => 'fa-stack-overflow', 'title' => esc_html__( 'Join me on Stack Overflow', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_codepen', '' ), 'icon' => 'fa-codepen', 'title' => esc_html__( 'Follow me on CodePen', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_foursquare', '' ), 'icon' => 'fa-foursquare', 'title' => esc_html__( 'Follow me on Foursquare', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_youtube', '' ), 'icon' => 'fa-youtube', 'title' => esc_html__( 'Subscribe to me on YouTube', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_vimeo', '' ), 'icon' => 'fa-vimeo', 'title' => esc_html__( 'Follow me on Vimeo', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_instagram', '' ), 'icon' => 'fa-instagram', 'title' => esc_html__( 'Follow me on Instagram', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_vine', '' ), 'icon' => 'fa-vine', 'title' => esc_html__( 'Follow me on Vine', 'quark' ) ),
+			array( 'url' => of_get_option( 'social_snapchat', '' ), 'icon' => 'fa-snapchat', 'title' => esc_html__( 'Add me on Snapchat', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_flickr', '' ), 'icon' => 'fa-flickr', 'title' => esc_html__( 'Connect with me on Flickr', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_pinterest', '' ), 'icon' => 'fa-pinterest', 'title' => esc_html__( 'Follow me on Pinterest', 'quark' ) ),
 			array( 'url' => of_get_option( 'social_rss', '' ), 'icon' => 'fa-rss', 'title' => esc_html__( 'Subscribe to my RSS Feed', 'quark' ) )
@@ -1091,7 +1102,7 @@ if ( ! function_exists( 'quark_setup_woocommerce_wrappers' ) ) {
 	function quark_setup_woocommerce_wrappers() {
 		if ( quark_is_woocommerce_active() && is_woocommerce() ) {
 				add_action( 'quark_before_woocommerce', 'quark_before_woocommerce_wrapper', 10, 0 );
-				add_action( 'quark_after_woocommerce', 'quark_after_woocommerce_wrapper', 10, 0 );		
+				add_action( 'quark_after_woocommerce', 'quark_after_woocommerce_wrapper', 10, 0 );
 		}
 	}
 	add_action( 'template_redirect', 'quark_setup_woocommerce_wrappers', 9 );

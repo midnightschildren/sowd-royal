@@ -37,6 +37,7 @@
 	<div class="entry-content">
 		<div class="grid-8 offset-2 pad-3-vert">
 			<?php the_content(); ?>
+			<?php quark_posted_on(); ?>
 			<?php wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'quark' ),
 				'after' => '</div>',

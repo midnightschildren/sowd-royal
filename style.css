@@ -198,6 +198,10 @@ td { vertical-align: top; }
 
 }
 
+.blog-posts-content i.fa.fa-calendar, .blog-posts-content .entry-date, .blog-posts-content i.fa.fa-pencil, .blog-posts-content .author, .blog-posts-content .post-categories {
+	display: none;
+}
+
 .home .entry-content p {
 	letter-spacing: .035em;
 	font-size: 30px;
@@ -748,7 +752,6 @@ sub {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1.5;
-	color: #777;
 	text-align: center;
 }
 
@@ -1222,12 +1225,21 @@ select {
 }
 
 .comments-link {
-	font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
-	font-size: 0.875rem;
-	float: right;
+	font-size: 10px;
+	font-size: 0..625rem;
+	line-height: 3;
+	letter-spacing: .3em
+	float: left;
+	color: #96b9bc;
+	text-transform: uppercase;
+}
+
+.comments-link a {
+	color: #96b9bc;
+	text-decoration: underline;
 }
 
 .entry-header {
@@ -1275,13 +1287,13 @@ article.sticky {
 }
 
 .header-meta {
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
 	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
 	padding: 5px 0;
 	padding: 0.3125rem 0;
 	*zoom: 1;
+	margin-right: 0;
+    margin-left: 0;
 }
 
 .header-meta:before,
@@ -1293,11 +1305,11 @@ article.sticky {
 .header-meta:after { clear: both; }
 
 .header-meta a {
-	text-decoration:none;
+
 }
 
 .header-meta a:visited {
-	color: #333;
+	color: #96b9bc;
 }
 
 .header-meta a:hover {

@@ -727,14 +727,14 @@ if ( ! function_exists( 'quark_posted_on' ) ) {
 		$categories_list = get_the_category_list( esc_html__( ' ', 'quark' ) );
 
 		// Translators: 1: Permalink 2: Title 3: No. of Comments
-		$comments = sprintf( '<span class="comments-link"><i class="fa fa-comment" aria-hidden="true"></i> <a href="%1$s" title="%2$s">%3$s</a></span>',
+		$comments = sprintf( '<span class="comments-link"> <a href="%1$s" class="c_link" title="%2$s">Leave a Comment</a>&nbsp; / %3$s</span>',
 			esc_url( get_comments_link() ),
 			esc_attr( esc_html__( 'Comment on ' , 'quark' ) . the_title_attribute( 'echo=0' ) ),
-			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number(), 'quark' ), get_comments_number() ) : esc_html__( 'No Comments', 'quark' ) )
+			( get_comments_number() > 0 ? sprintf( _n( '%1$s Comment', '%1$s Comments', get_comments_number(), 'quark' ), get_comments_number() ) : esc_html__( 'No Comments Yet!', 'quark' ) )
 		);
 
 		// Translators: 1: Date 2: Author 3: Categories 4: Comments
-		printf( wp_kses( __( '<div class="header-meta">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'quark' ), array(
+		printf( wp_kses( __( '<div class="header-meta row">%1$s%2$s<span class="post-categories">%3$s</span>%4$s</div>', 'quark' ), array(
 			'div' => array (
 				'class' => array() ),
 			'span' => array(

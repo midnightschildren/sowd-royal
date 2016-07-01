@@ -1040,10 +1040,44 @@ add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'do_shortcode' );
 
 /**
+ * WooCommerce Breadcrumb Home Text
+ */
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_home_text' );
+function jk_change_breadcrumb_home_text( $defaults ) {
+    // Change the breadcrumb home text from 'Home' to ''
+	$defaults['home'] = '';
+	return $defaults;
+}
+
+
+/**
  * Unhook the WooCommerce Wrappers
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+add_action('woocommerce_before_shop_loop', 'woocommerce_breadcrumb', 20 );
+add_action('woocommerce_before_single_product', 'woocommerce_breadcrumb', 20 );
+remove_action( 'woocommerce_pagination', 'woocommerce_catalog_ordering', 20 );
+
+/**
+ * Product Tabs
+ */
+
+
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'Hannah Says' );		// Rename the description tab
+	$tabs['reviews']['title'] = __( 'Customer Reviews' );				// Rename the reviews tab
+	$tabs['reviews']['priority'] = 10;			// Reviews second
+	$tabs['description']['priority'] = 5;			// Description first
+	//$tabs['additional_information']['title'] = __( 'Additional Information' );	// Rename the additional information tab
+
+	return $tabs;
+
+}
 
 
 /**
@@ -1118,11 +1152,11 @@ if ( ! function_exists( 'quark_setup_woocommerce_wrappers' ) ) {
  */
 if ( ! function_exists( 'quark_woocommerce_before_main_content' ) ) {
 	function quark_woocommerce_before_main_content() {
-		if( ( is_shop() && !of_get_option( 'woocommerce_shopsidebar', '1' ) ) || ( is_product() && !of_get_option( 'woocommerce_productsidebar', '1' ) ) ) {
-			echo '<div class="col grid_12_of_12">';
+		if( ( is_shop() && !of_get_option( 'woocommerce_shopsidebar', '1' ) ) ) {
+			echo '<div class="grid-12">';
 		}
 		else {
-			echo '<div class="col grid_8_of_12">';
+			echo '<div class="grid-8 offset-2">';
 		}
 	}
 	add_action( 'woocommerce_before_main_content', 'quark_woocommerce_before_main_content', 10 );

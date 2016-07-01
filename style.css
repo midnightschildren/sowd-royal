@@ -131,6 +131,15 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
+.post-type-archive .site-content {
+	padding: 0;
+}
+
+.shop-content-top {
+	margin: 0;
+	background-color: #e3f5dd;
+}
+
 .home .testimonial-content, .services-content {
 	background-color: #fffdf5;
 	margin: 0;
@@ -183,6 +192,10 @@ td { vertical-align: top; }
     padding-left: 10%;
     letter-spacing: .05em;
     color: #30333c;
+}
+
+.shop-title {
+	letter-spacing: .05em;
 }
 
 .p_time {
@@ -252,12 +265,16 @@ td { vertical-align: top; }
 	color: #76929b;
 }
 
-.hours p {
+.hours p, .shop-description {
 	letter-spacing: .035em;
 	font-size: 27px;
 	font-size: 1.6875em;
 	line-height: 1.22222223;
 	color: #30333c;
+}
+
+.shop-description {
+	line-height: 1.55555556;
 }
 
 .b_info p {
@@ -390,6 +407,34 @@ a.hsgray,
 	border-left: 0px solid #fff;
 	overflow: auto;
 	width: 100%;
+}
+
+.woocommerce ul.products {
+	padding: 2em;
+}
+
+.woocommerce ul.products li.product a img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: none;
+}
+
+.woocommerce ul.products li.product h3 {
+    padding: .5em 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-size: 1.0625rem;
+	line-height: 1.47058824;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+}
+
+.woocommerce ul.products li.product {
+	margin: 0 auto;
 }
 
 /* ==========================================================================
@@ -1213,6 +1258,10 @@ select {
 
 .social-media-icons a:hover, .social-media-icons a:active { 
 	color: #2997ab;
+}
+
+.woocommerce-result-count, .count, .post-type-archive-product .woocommerce-breadcrumb {
+	display: none;
 }
 
 

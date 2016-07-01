@@ -15,7 +15,7 @@
 		<?php } ?>
 		<header class="entry-header">
 			<?php if ( is_single() ) { ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title test"><?php the_title(); ?></h1>
 			<?php }
 			else { ?>
 				<h1 class="entry-title">

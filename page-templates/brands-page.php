@@ -14,8 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $woocommerce;
 
-get_header(); 
+get_header(); ?>
 
-echo do_shortcode('[product_brand_thumbnails_description class="alignright"]');
+<div class="brand-title-content row">
+	<div class="grid-12 pad-3-vert">
+		<a href="http://hannahsowdinc.wpengine.com/shop/">Shop</a> / Brands
+		<h1 class="center shop-title"><?php the_title(); ?></h1>
+	</div>	
+</div>	
+
+<?php echo do_shortcode('[btc class="alignright"]');
 
 get_footer(); ?>

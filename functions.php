@@ -1050,6 +1050,47 @@ function jk_change_breadcrumb_home_text( $defaults ) {
 	return $defaults;
 }
 
+/**
+	 * output_product_brand_thumbnails_description function for reference.
+	 *
+	 * @access public
+	 * @param mixed $atts
+	 * @return void
+	 */
+
+
+function shortcode_handler($atts) {
+  //code goes here
+
+
+		extract( shortcode_atts( array(
+			'show_empty' => true,
+			'columns'    => 1,
+			'hide_empty' => 0,
+			'orderby'    => 'name',
+			'exclude'    => '',
+			'number'     => ''
+		 ), $atts ) );
+
+		$exclude = array_map( 'intval', explode(',', $exclude) );
+		$order = $orderby == 'name' ? 'asc' : 'desc';
+		
+		$brands = get_terms( 'product_brand', array( 'hide_empty' => $hide_empty, 'orderby' => $orderby, 'exclude' => $exclude, 'number' => $number, 'order' => $order ) );
+
+		if ( ! $brands )
+			return;
+
+		ob_start();
+
+		woocommerce_get_template( 'brand-thumbnails-description.php', array(
+			'brands'  => $brands,
+			'columns' => $columns
+		), 'woocommerce-brands', untrailingslashit( get_stylesheet_directory ( dirname( __FILE__ ) ) ) . '/woocommerce/' );
+
+		return ob_get_clean();
+ }
+
+add_shortcode('btc','shortcode_handler');
 
 /**
  * Unhook the WooCommerce Wrappers
@@ -1207,6 +1248,20 @@ if ( ! function_exists( 'quark_remove_woocommerce_breadcrumbs' ) ) {
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
 }
+
+/**
+ * Custom Breadcrumbs
+ *
+ * @since Quark 1.3
+ *
+ * @return void
+ */
+
+function woocommerce_custom_breadcrumb(){
+    woocommerce_breadcrumb();
+}
+
+add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
 
 /**

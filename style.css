@@ -150,9 +150,13 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
-.about_hannah-content {
+.about_hannah-content, .brand-page-content {
 	background-color: #fffdf5;
 	margin: 0;
+}
+
+.brand-row {
+	border-bottom: 1px solid #e2e4e4;
 }
 
 .blog-posts-content {
@@ -167,6 +171,11 @@ td { vertical-align: top; }
 
 .blog_header-content {
 	background-color: #eeefef;
+	margin: 0;
+}
+
+.brand-title-content {
+	background-color: #faf4e1;
 	margin: 0;
 }
 
@@ -185,6 +194,13 @@ td { vertical-align: top; }
 	display: table-cell; 
 	width: 50%; 
 	vertical-align: top; 
+}
+
+.b_child_image {
+	display: table-cell; 
+	width: 100%; 
+	vertical-align: middle;
+	text-align: center; 
 }
 
 .blog-title {
@@ -232,7 +248,7 @@ td { vertical-align: top; }
 	margin-bottom: .5rem;
 }
 
-.about-content p, .about_hannah-content p {
+.about-content p, .about_hannah-content p, .brand-row p {
 	letter-spacing: .035em;
 	font-size: 21px;
 	font-size: 1.3125em;
@@ -561,6 +577,28 @@ h5 {
 	line-height: 1.88235294;
 	text-transform: uppercase;
 	letter-spacing: .3em;
+}
+
+.vp-button {
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 15px;
+	font-size: .9375rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+	color: #96b9bc;
+	background-color: #f1faee;
+}
+
+.brand-row a {
+	text-decoration: none;
+	color: #96b9bc;
+}
+
+.brand-row a:visited {
+	color: #96b9bc;
 }
 
 .medium {

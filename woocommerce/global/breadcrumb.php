@@ -26,21 +26,21 @@ if ( ! empty( $breadcrumb ) ) {
 	echo $wrap_before;
 
 	foreach ( $breadcrumb as $key => $crumb ) {
+		$link_tit = null;
 		$link_tit = esc_html($crumb[0]);
 		echo $before;
 
-		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key ) {
-			if (empty( $crumb[1] ) && $link_tit ='Brands'){ ;
-			echo '<a href="http://hannahsowdinc.wpengine.com/brand/">' . esc_html( $crumb[0] ) . '</a>';	
-				}else {	
+		if ( ! empty( $crumb[1] ) && sizeof( $breadcrumb ) !== $key +1 ) {
+	
 			echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
-			}
+			
 
 		} else {
-			if (empty( $crumb[1] ) && $link_tit ='Brands'){ ;
+			if ($link_tit ='Brands' && sizeof( $breadcrumb ) !== $key +1 ){ ;
 			echo '<a href="http://hannahsowdinc.wpengine.com/brand/">' . esc_html( $crumb[0] ) . '</a>';	
-				}else {	
-			echo esc_html( $crumb[0] );}
+				}else {
+			echo esc_html( $crumb[0] );
+			}
 		}
 
 		echo $after;

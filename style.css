@@ -131,7 +131,7 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
-.post-type-archive .site-content {
+.post-type-archive .site-content, .woocommerce .site-content {
 	padding: 0;
 }
 
@@ -176,6 +176,16 @@ td { vertical-align: top; }
 
 .brand-title-content {
 	background-color: #faf4e1;
+	margin: 0;
+}
+
+.product-menu-content {
+	background-color: #e2e4e4;
+	margin: 0;
+}
+
+.footer-menu-content {
+	background-color: #dbe0d9;
 	margin: 0;
 }
 
@@ -599,6 +609,22 @@ h5 {
 
 .brand-row a:visited {
 	color: #96b9bc;
+}
+
+.brand_bc {
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 10px;
+	font-size: .625rem;
+	line-height: 1.8;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+	color: #b9b6ad;
+}
+
+.brand_bc a, .brand_bc a:visited {
+	color: #b9b6ad;
 }
 
 .medium {
@@ -2300,6 +2326,21 @@ li span.dots {
 	line-height: 1.2;
 	letter-spacing: .3em;
 	text-transform:uppercase;
+}
+
+.product-menu-content .nav-menu, .footer-menu-content .nav-menu {
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	font-size: .8125rem;
+	line-height: 2.3706;
+	letter-spacing: .3em;
+	text-transform:uppercase;
+}
+
+.border-rule-footer {
+	border-bottom: 1px solid #97999d;
 }
 
 .main-navigation ul {

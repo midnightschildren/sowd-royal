@@ -52,7 +52,9 @@ if ( ! function_exists( 'quark_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'quark' )
+				'primary' => esc_html__( 'Primary Menu', 'quark' ),
+				'secondary' => esc_html__( 'Product Menu', 'quark' ),
+				'footer' => esc_html__( 'Footer Nav Menu', 'quark' )
 			) );
 
 		// This theme supports a variety of post formats

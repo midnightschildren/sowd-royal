@@ -21,13 +21,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
+<div class="product-menu-content row">
+	<div class="pad-3-vert grid-10 offset-1 center">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>	
+	</div>
+</div>
 
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>

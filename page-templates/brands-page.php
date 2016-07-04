@@ -16,13 +16,28 @@ global $woocommerce;
 
 get_header(); ?>
 
+<div class="product-menu-content row">
+	<div class="pad-3-vert grid-10 offset-1 center">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>	
+	</div>
+</div>
 <div class="brand-title-content row">
 	<div class="grid-12 pad-3-vert">
-		<a href="http://hannahsowdinc.wpengine.com/shop/">Shop</a> / Brands
-		<h1 class="center shop-title"><?php the_title(); ?></h1>
+		<div class="center brand_bc pad-3-bottom"><a href="http://hannahsowdinc.wpengine.com/shop/">Shop</a> / Brands</div>
+		<h1 class="center shop-title pad-2-bottom"><?php the_title(); ?></h1>
 	</div>	
 </div>	
 
-<?php echo do_shortcode('[btc class="alignright"]');
+<?php echo do_shortcode('[btc class="alignright"]'); ?>
 
-get_footer(); ?>
+<div class="footer-menu-content row">
+	<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>	
+	</div>
+</div>
+
+<?php get_footer(); ?>

@@ -633,6 +633,12 @@ h5 {
 	line-height: 1.33333333;
 }
 
+.br_title {
+	text-align: center;
+	line-height: 1.23076923;
+	padding-top: 1.5em;
+}
+
 h6 { 
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;

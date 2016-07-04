@@ -1052,6 +1052,17 @@ function jk_change_breadcrumb_home_text( $defaults ) {
 	return $defaults;
 }
 
+
+/**
+ * Add product's brand name below thumbnail and above title on product list pages.
+ */
+add_action( 'woocommerce_shop_loop_item_title', 'mycode_add_brand_above_product_title', 5 );
+function mycode_add_brand_above_product_title() {
+	global $product;
+	$brand = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'names' ) ) );
+	echo '<h6 class="br_title">' . $brand . '</h6>';
+}
+
 /**
 	 * output_product_brand_thumbnails_description function for reference.
 	 *
@@ -1100,7 +1111,6 @@ add_shortcode('btc','shortcode_handler');
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
-add_action('woocommerce_before_shop_loop', 'woocommerce_breadcrumb', 20 );
 add_action('woocommerce_before_single_product', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_pagination', 'woocommerce_catalog_ordering', 20 );
 
@@ -1199,7 +1209,7 @@ if ( ! function_exists( 'quark_woocommerce_before_main_content' ) ) {
 			echo '<div class="grid-12">';
 		}
 		else {
-			echo '<div class="grid-8 offset-2">';
+			echo '<div class="grid-12">';
 		}
 	}
 	add_action( 'woocommerce_before_main_content', 'quark_woocommerce_before_main_content', 10 );

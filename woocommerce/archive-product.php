@@ -73,16 +73,17 @@ get_header( 'shop' ); ?>
 						</div>
 	
 					<?php endif; ?>
-			</div>		
+				
 
 			<?php } else { ?>
-			<?php woocommerce_breadcrumb(); ?>
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
+			<div class="shop-content-top row">
+				<div class="center brand_bc pad-3-top"><?php woocommerce_breadcrumb(); ?></div>
+				<h1 class="center page-title pad-2-top pad-3-bottom"><?php woocommerce_page_title(); ?></h1>
+				
 
 
 		<?php } endif; ?>
-
+		
 		<?php
 			/**
 			 * woocommerce_archive_description hook.
@@ -92,7 +93,7 @@ get_header( 'shop' ); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
-
+		</div>
 		<?php if ( have_posts() ) : ?>
 
 			<?php

@@ -1042,6 +1042,22 @@ add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'do_shortcode' );
 
 /**
+* Show an archive description on taxonomy archives.
+*
+* @subpackage  Archives
+*/
+    function woocommerce_taxonomy_archive_description() {
+        if ( is_tax( array( 'product_cat', 'product_tag' ) ) && 0 === absint( get_query_var( 'paged' ) ) ) {
+            $description = wc_format_content( term_description() );
+            if ( $description ) {
+            	echo '<div class="grid-8 center offset-2 pad-3-vert">';
+                echo '<div class="term-description">' . $description . '</div>';
+                echo '</div>';
+            }
+        }
+    }
+
+/**
  * WooCommerce Breadcrumb Home Text
  */
 
@@ -1105,15 +1121,19 @@ function shortcode_handler($atts) {
 
 add_shortcode('btc','shortcode_handler');
 
+
+
+
 /**
- * Unhook the WooCommerce Wrappers
+ * Unhook the WooCommerce Wrappers + Other Modifications
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 add_action('woocommerce_before_single_product', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_pagination', 'woocommerce_catalog_ordering', 20 );
-
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 8 );
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 25 );
 /**
  * Product Tabs
  */

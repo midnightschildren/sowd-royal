@@ -26,13 +26,13 @@ body { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 ::-moz-selection { background: #5784FE; color: #fff; text-shadow: none; }
 ::selection { background: #5784FE; color: #fff; text-shadow: none; }
 
-a { color: #333; text-decoration: underline; }
-a:visited { color: #666; }
-a:hover { color: #b40101; }
+a { color: #30333c; text-decoration: underline; }
+a:visited { color: #30333c; }
+a:hover { color: #5abd8b; }
 
 .testimonial a { color: #97999d; text-decoration: none; }
 .testimonial a:visited { color: #97999d; }
-.testimonial a:hover { color: #97999d; text-decoration: underline; }
+.testimonial a:hover { color: #5abd8b; text-decoration: underline; }
 
 menu { padding: 0; }
 
@@ -138,6 +138,11 @@ td { vertical-align: top; }
 .shop-content-top {
 	margin: 0;
 	background-color: #e3f5dd;
+}
+
+.tax-product_brand .shop-content-top {
+	margin: 0;
+	background-color: #faf4e1;
 }
 
 .home .testimonial-content, .services-content {
@@ -623,7 +628,19 @@ h5 {
 	color: #b9b6ad;
 }
 
-.brand_bc a, .brand_bc a:visited {
+.brand_bc a, .brand_bc a:visited, .woocommerce .woocommerce-breadcrumb a, .woocommerce .woocommerce-breadcrumb a:visited {
+	color: #b9b6ad;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 10px;
+	font-size: .625rem;
+	line-height: 1.8;
+	text-transform: uppercase;
+	letter-spacing: .3em;
 	color: #b9b6ad;
 }
 
@@ -637,6 +654,13 @@ h5 {
 	text-align: center;
 	line-height: 1.23076923;
 	padding-top: 1.5em;
+}
+
+.loop_cat_button {
+	width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -50px;
 }
 
 h6 { 
@@ -701,25 +725,6 @@ strong em, b em {
 ins {
 	background: none repeat scroll 0 0 #FFF9C0;
 	text-decoration: none;
-}
-
-a { 
-	color: #333;
-	outline: none;
-}
-
-a:visited { 
-	color: #666;
-}
-
-a:focus { 
-	outline: thin dotted;
-	color: #2997ab;
-}
-
-a:hover, a:active { 
-	outline: 0;
-	color: #2997ab;
 }
 
 .alignleft {

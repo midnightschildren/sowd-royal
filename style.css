@@ -644,10 +644,18 @@ h5 {
 	color: #b9b6ad;
 }
 
-.medium {
+.medium, .term-description p{
 	font-size: 24px;
 	font-size: 1.5rem;
 	line-height: 1.33333333;
+}
+
+.term-description p{
+	font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #30333c;
+	letter-spacing: .035em;
 }
 
 .br_title {
@@ -657,10 +665,18 @@ h5 {
 }
 
 .loop_cat_button {
-	width: 50%;
+	width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -63px;
+}
+
+.purchasable .loop_cat_button {
+	visibility: hidden;
+}
+
+.purchasable:hover .loop_cat_button {
+	visibility: visible;
 }
 
 h6 { 
@@ -2576,7 +2592,7 @@ h1.page-title {
 	color: #2997ab;
 }
 
-.woocommerce a.button,
+
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce #content input.button.alt,
@@ -2600,7 +2616,48 @@ h1.page-title {
 	padding: 0.5em 0.75em;
 }
 
-.woocommerce a.button:hover,
+
+.woocommerce a.button, .woocommerce a.button:hover {
+
+	/* Fallback for web browsers that doesn't support RGBa */
+
+	background: rgba(48, 51, 60, 0.8);
+
+	/* RGBa with 0.6 opacity */
+
+	background: rgba(48, 51, 60, 0.8);
+
+	/* For IE 5.5 - 7*/
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+
+	/* For IE 8*/
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+	background-color: rgba(48, 51, 60, 0.8);
+	*background-color: rgba(48, 51, 60, 0.8);
+	border: 0;
+	*border: 0;
+	border-color: rgba(48, 51, 60, 0.8);
+	border-color: #30333c;
+	color: #fff;
+	text-shadow: none;
+	padding: 1em 0.75em;
+	border-radius: 0px;
+	width: 100%;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	font-size: .9375rem;
+	line-height: 1.2;
+	letter-spacing: .3em;
+	text-transform:uppercase;
+}
+
+
+
 .woocommerce button.button:hover,
 .woocommerce input.button:hover,
 .woocommerce #content input.button.alt:hover,

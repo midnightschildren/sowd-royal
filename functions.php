@@ -1076,7 +1076,10 @@ add_action( 'woocommerce_shop_loop_item_title', 'mycode_add_brand_above_product_
 function mycode_add_brand_above_product_title() {
 	global $product;
 	$brand = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'names' ) ) );
-	echo '<h6 class="br_title">' . $brand . '</h6>';
+	$link = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'slugs' ) ) );
+	$url = get_term_link( $link, 'product_brand' );
+	echo '<a href="' . $url .'">';
+	echo '<h6 class="br_title">' . $brand . '</h6></a>';
 }
 
 /**
@@ -1134,6 +1137,7 @@ add_action('woocommerce_before_single_product', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_pagination', 'woocommerce_catalog_ordering', 20 );
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 8 );
 add_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 25 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 /**
  * Product Tabs
  */

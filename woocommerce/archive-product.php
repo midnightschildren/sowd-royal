@@ -102,7 +102,6 @@ get_header( 'shop' ); ?>
 				 *
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
-				 * @hooked woocommerce_breadcrumb - 20
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
 			?>

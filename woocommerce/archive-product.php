@@ -141,6 +141,12 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
+<div class="footer-menu-content row">
+	<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>	
+	</div>
+</div>
 
 <?php get_footer( 'shop' ); ?>

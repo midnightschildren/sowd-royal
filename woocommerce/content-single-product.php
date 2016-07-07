@@ -27,7 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 * woocommerce_before_single_product hook.
 	 *
 	 * @hooked wc_print_notices - 10
-	 * @hooked woocommerce_breadcrumb - 20
 	 */
 	 do_action( 'woocommerce_before_single_product' );
 
@@ -38,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+<div class="single-content-product row">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
@@ -49,12 +48,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary pad-3">
 
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
-			 *
+			 * @hooked woocommerce_breadcrumb - 1
 			 * @hooked woocommerce_template_single_title - 5
 			 * @hooked woocommerce_template_single_rating - 10
 			 * @hooked woocommerce_template_single_price - 10
@@ -67,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 
 	</div><!-- .summary -->
-
+</div>
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.

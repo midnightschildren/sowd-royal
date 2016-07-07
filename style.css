@@ -34,6 +34,11 @@ a:hover { color: #5abd8b; }
 .testimonial a:visited { color: #97999d; }
 .testimonial a:hover { color: #5abd8b; text-decoration: underline; }
 
+.woocommerce ul.products li.product a:hover .br_title, .woocommerce ul.products li.product a:hover h3 {
+	color: #5abd8b;
+} 
+
+
 menu { padding: 0; }
 
 td { vertical-align: top; }
@@ -136,6 +141,11 @@ td { vertical-align: top; }
 }
 
 .shop-content-top {
+	margin: 0;
+	background-color: #e3f5dd;
+}
+
+.single-content-product {
 	margin: 0;
 	background-color: #e3f5dd;
 }
@@ -468,6 +478,21 @@ a.hsgray,
 	margin: 0 auto;
 }
 
+.woocommerce div.product div.images, .woocommerce div.product div.summary {
+	margin-bottom: 0;
+}
+.woocommerce div.product div.images {
+	background-color: #f9fdf8;
+}
+
+.woocommerce div.product div.images img {
+    display: block;
+    width: 50%;
+    height: auto;
+    box-shadow: none;
+    margin: 0 auto;
+}
+	
 /* ==========================================================================
    Basic page styles
    ========================================================================== */

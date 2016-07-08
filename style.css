@@ -483,16 +483,26 @@ a.hsgray,
 }
 .woocommerce div.product div.images {
 	background-color: #f9fdf8;
+	width: 50%;
 }
 
 .woocommerce div.product div.images img {
     display: block;
-    width: 50%;
+    width: 60%;
     height: auto;
     box-shadow: none;
     margin: 0 auto;
 }
-	
+
+.product_meta .posted_in {
+	display: none;
+}
+
+.product_meta {
+	padding-top: 4em;
+}
+
+
 /* ==========================================================================
    Basic page styles
    ========================================================================== */
@@ -667,6 +677,11 @@ h5 {
 	text-transform: uppercase;
 	letter-spacing: .3em;
 	color: #b9b6ad;
+}
+
+.single-content-product .woocommerce-breadcrumb, .single-content-product .woocommerce-breadcrumb a, .single-content-product .woocommerce-breadcrumb a:visited {
+	text-align: center;
+	color: #96b9bc;
 }
 
 .medium, .term-description p{

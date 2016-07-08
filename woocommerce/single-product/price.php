@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<div itemprop="offers" class="center pad-3-top" itemscope itemtype="http://schema.org/Offer">
 
 	<p class="price"><?php echo $product->get_price_html(); ?></p>
 

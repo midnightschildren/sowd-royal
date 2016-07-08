@@ -19,5 +19,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-the_title( '<h1 itemprop="name" class="product_title entry-title">', '</h1>' );
+?>
+<div class="row pad-3-bottom">
+<?php the_title( '<h1 itemprop="name" class="product_title entry-title center grid-10 offset-1">', '</h1>' ); ?>
+</div>

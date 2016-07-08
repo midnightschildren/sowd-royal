@@ -26,7 +26,7 @@ $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
 $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 ?>
-<div class="product_meta">
+<div class="product_meta center">
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
@@ -34,7 +34,7 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 		<span class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku" itemprop="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : __( 'N/A', 'woocommerce' ); ?></span></span>
 
-	<?php endif; ?>
+	<?php endif; ?> 
 
 	<?php echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $cat_count, 'woocommerce' ) . ' ', '</span>' ); ?>
 

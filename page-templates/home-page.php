@@ -84,4 +84,40 @@ get_header(); ?>
 		
 	</div>	
 
+	<div id="featured" class="featured-content row">
+		<div class="grid-12 pad-3-vert">
+			<div class="woocommerce columns-2">
+			<ul class="products">
+
+			<?php
+     $args = array( 'post_type' => 'product', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
+     $loop = new WP_Query( $args );
+     while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+
+                        <li <?php post_class(); ?>>   
+                            <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+                                <h3><?php the_title(); ?></h3><br /><span class="price"><?php echo $product->get_price_html(); ?></span><br />
+                                <?php woocommerce_show_product_sale_flash( $post, $product ); ?>
+                                <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?></a>
+                                <span class="motangan"><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?></span><br />
+                        </li>
+                <?php
+            /**
+             * woocommerce_pagination hook
+             *
+             * @hooked woocommerce_pagination - 10
+             * @hooked woocommerce_catalog_ordering - 20
+             */
+            do_action( 'woocommerce_pagination' );
+        ?>
+<?php endwhile; ?>
+<?php wp_reset_query(); ?>
+
+			</ul>
+			</div>
+			<?php echo do_shortcode('[featured_products per_page="12" columns="4"]'); ?>
+		
+		</div>
+	</div>
+
 <?php get_footer(); ?>

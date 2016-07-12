@@ -38,6 +38,8 @@ if ( ! $product->is_purchasable() ) {
 
 <?php if ( $product->is_in_stock() ) : ?>
 
+<div class="pad-2 center">
+
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<form class="cart" method="post" enctype='multipart/form-data'>
@@ -61,5 +63,7 @@ if ( ! $product->is_purchasable() ) {
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+
+</div>
 
 <?php endif; ?>

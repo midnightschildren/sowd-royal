@@ -96,7 +96,7 @@ get_header(); ?>
      $loop = new WP_Query( $args );
      while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
-                        <li <?php post_class(); ?>> 
+                        <li data-mh="my-group" <?php post_class(); ?>> 
                         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">	
                         <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?></a>
                         <?php do_action( 'woocommerce_shop_loop_item_title' );?> 

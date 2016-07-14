@@ -86,6 +86,8 @@ get_header(); ?>
 
 	<div id="featured" class="featured-content row">
 		<div class="grid-12 pad-3-vert">
+			<div class="grid-12 pad-3-vert"><h5 class="center pinkorange">featured products</h5></div>
+			<div class="offset-1 grid-10 pad-3-vert pad-2-sides">
 			<div class="woocommerce columns-2">
 			<ul class="products">
 
@@ -94,12 +96,19 @@ get_header(); ?>
      $loop = new WP_Query( $args );
      while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
-                        <li <?php post_class(); ?>>   
-                            <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-                                <h3><?php the_title(); ?></h3><br /><span class="price"><?php echo $product->get_price_html(); ?></span><br />
-                                <?php woocommerce_show_product_sale_flash( $post, $product ); ?>
-                                <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?></a>
-                                <span class="motangan"><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?></span><br />
+                        <li <?php post_class(); ?>> 
+                        <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">	
+                        <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?></a>
+                        <?php do_action( 'woocommerce_shop_loop_item_title' );?> 
+                        <div class="fpdesc pad-3">
+                        <h6 class="center hsslate">hannah says</h6>	
+                        <div class="pad-2-vert"><?php the_content();?></div>
+                            <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
+                        </div>        
+
+
+
+                                
                         </li>
                 <?php
             /**
@@ -114,10 +123,9 @@ get_header(); ?>
 <?php wp_reset_query(); ?>
 
 			</ul>
+			</div>		
 			</div>
-			<?php echo do_shortcode('[featured_products per_page="12" columns="4"]'); ?>
-		
-		</div>
 	</div>
+</div>
 
 <?php get_footer(); ?>

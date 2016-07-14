@@ -184,6 +184,11 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
+.featured-content {
+	background-color: #faf4e1;
+	margin: 0;
+}
+
 .tab-content {
 	background-color: #ebf8fa;
 	margin: 0;
@@ -334,7 +339,7 @@ td { vertical-align: top; }
 	line-height: 1.55555556;
 }
 
-.b_info p {
+.b_info p, .fpdesc p {
 	letter-spacing: .035em;
 	font-size: 21px;
 	font-size: 1.3125em;
@@ -350,6 +355,11 @@ a.hsblue,
 a.hsslate,
 .hsslate {
 	color: #76929b;
+}
+
+a.pinkorange,
+.pinkorange {
+	color: #dc9e7f;
 }
 
 a.bluegreen,
@@ -481,6 +491,14 @@ a.hsgray,
     box-shadow: none;
 }
 
+.featured-content .woocommerce ul.products li.product a img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+    box-shadow: none;
+}
+
 .woocommerce ul.products li.product h3 {
     padding: .5em 0;
     margin: 0;
@@ -495,6 +513,22 @@ a.hsgray,
 
 .woocommerce ul.products li.product {
 	margin: 0 auto;
+}
+
+.featured-content .woocommerce ul.products li.product {
+	background-color: #fffdf5;
+	margin: 2%;
+}
+
+.featured-content .woocommerce-page.columns-2 ul.products li.product, .featured-content .woocommerce.columns-2 ul.products li.product {
+    width: 46%;
+}
+
+.fpdesc {
+	position: absolute;
+    top: 0;
+    background-color: #fff;
+    height: 100%;
 }
 
 .woocommerce div.product div.images, .woocommerce div.product div.summary {
@@ -736,6 +770,14 @@ h5 {
 }
 
 .purchasable:hover .loop_cat_button {
+	visibility: visible;
+}
+
+.purchasable .fpdesc {
+	visibility: hidden;
+}
+
+.purchasable:hover .fpdesc {
 	visibility: visible;
 }
 

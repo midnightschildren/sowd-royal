@@ -511,6 +511,18 @@ a.hsgray,
 	letter-spacing: .3em;
 }
 
+.featured-content .woocommerce ul.products li.product h3 {
+    padding: .25em 1em;
+    margin: 0;
+    text-align: center;
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+	font-size: 27px;
+	font-size: 1.6875rem;
+	line-height: 1.22222222;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+
 .woocommerce ul.products li.product {
 	margin: 0 auto;
 }
@@ -518,6 +530,28 @@ a.hsgray,
 .featured-content .woocommerce ul.products li.product {
 	background-color: #fffdf5;
 	margin: 2%;
+}
+
+.vlink {
+	position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 3em;
+    padding-right: 4em;
+}
+
+.featured-content .vlink a {
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    color: #fffdf5;
+    background-color: #b7d0d2;
+    padding: 1em;
 }
 
 .featured-content .woocommerce-page.columns-2 ul.products li.product, .featured-content .woocommerce.columns-2 ul.products li.product {
@@ -1301,6 +1335,7 @@ select {
 #headercontainer {
 	width: 100%;
 	background-color: #fff;
+	opacity: .95;
 }
 
 .site-header {

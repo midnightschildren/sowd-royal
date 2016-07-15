@@ -86,8 +86,8 @@ get_header(); ?>
 
 	<div id="featured" class="featured-content row">
 		<div class="grid-12 pad-3-vert">
-			<div class="grid-12 pad-3-vert"><h5 class="center pinkorange">featured products</h5></div>
-			<div class="offset-1 grid-10 pad-3-vert pad-2-sides">
+			<div class="grid-12 pad-3-top pad-2-bottom"><h5 class="center pinkorange">featured products</h5></div>
+			<div class="offset-1 grid-10">
 			<div class="woocommerce columns-2">
 			<ul class="products">
 
@@ -100,10 +100,12 @@ get_header(); ?>
                         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">	
                         <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?></a>
                         <?php do_action( 'woocommerce_shop_loop_item_title' );?> 
-                        <div class="fpdesc pad-3">
+                        <div data-mh="my-group" class="fpdesc pad-3">
                         <h6 class="center hsslate">hannah says</h6>	
                         <div class="pad-2-vert"><?php the_content();?></div>
-                            <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
+                        	<div class="vlink">
+                            	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
+                           	</div> 
                         </div>        
 
 

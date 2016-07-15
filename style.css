@@ -590,6 +590,64 @@ a.hsgray,
 	padding-top: 4em;
 }
 
+.search-form {
+	position: absolute;
+	right: 20px;
+	top: 0px;
+}
+
+.search-field {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	height: 18px;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+	width: 5em;
+    margin-top: -6px;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    color: #30333c;
+}
+
+.search-field:focus {
+	background-color: #fff;
+	border: 1px solid #30333c;
+	cursor: text;
+	outline: 0;
+	width: 230px;
+}
+
+.search-submit {
+  display: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]:placeholder-shown {
+  color: #30333c !important;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+   color: #30333c !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #30333c !important;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #30333c !important;  
+}
+
+:-ms-input-placeholder {  
+   color: #30333c !important;  
+}
 
 /* ==========================================================================
    Basic page styles

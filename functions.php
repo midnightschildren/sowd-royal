@@ -408,6 +408,19 @@ if ( ! function_exists( 'quark_widgets_init' ) ) {
 add_action( 'widgets_init', 'quark_widgets_init' );
 
 /**
+ * BOP Search Box
+ *
+ * @since Sowd 1.0
+ *
+ * Hide Submit button  for search
+ */
+
+add_filter( 'bop_nav_search_show_submit_button', function( $bool, $item, $depth, $args ){
+  $bool = false;
+  return $bool;
+}, 10, 4 );
+
+/**
  * Enqueue scripts and styles
  *
  * @since Quark 1.0

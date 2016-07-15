@@ -614,8 +614,8 @@ a.hsgray,
 }
 
 .search-field:focus {
-	background-color: #fff;
-	border: 1px solid #30333c;
+	background-color: #e3f5dd;
+	border: none;
 	cursor: text;
 	outline: 0;
 	width: 230px;
@@ -647,6 +647,12 @@ input[type="search"]::-webkit-input-placeholder {
 
 :-ms-input-placeholder {  
    color: #30333c !important;  
+}
+
+.cart_nav {
+	position: absolute;
+	right: 2em;
+    margin-top: -1em;
 }
 
 /* ==========================================================================

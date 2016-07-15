@@ -421,6 +421,21 @@ add_filter( 'bop_nav_search_show_submit_button', function( $bool, $item, $depth,
 }, 10, 4 );
 
 /**
+ * SVG
+ *
+ * @since Sowd 1.0
+ *
+ * 
+ */
+
+function cc_mime_types( $mimes ){
+$mimes['svg'] = 'image/svg+xml';
+return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+
+/**
  * Enqueue scripts and styles
  *
  * @since Quark 1.0

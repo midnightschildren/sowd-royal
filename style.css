@@ -233,7 +233,8 @@ td { vertical-align: top; }
 
 }.child_p {
 	display: table-cell; 
-	width: 50%;  
+	width: 50%;
+	vertical-align: top;  
 }
 
 .child_image {

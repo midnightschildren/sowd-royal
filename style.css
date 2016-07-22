@@ -485,10 +485,10 @@ a.hsgray,
 }
 
 .woocommerce ul.products li.product a img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0;
     box-shadow: none;
 }
 
@@ -571,16 +571,19 @@ a.hsgray,
 }
 .woocommerce div.product div.images {
 	background-color: #f9fdf8;
-	width: 100%;
+	width: 50%;
 	display: table-cell;
+	vertical-align: middle;
+	float: none;
+	padding: 3em;
 }
 
 .woocommerce div.product div.images img {
     display: block;
-    width: 60%;
+    width: 100%;
     height: auto;
     box-shadow: none;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .product_meta .posted_in {

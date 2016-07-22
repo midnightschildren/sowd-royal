@@ -493,10 +493,10 @@ a.hsgray,
 }
 
 .featured-content .woocommerce ul.products li.product a img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: block;
-    margin: 2em auto;
+    padding: 2em;
     box-shadow: none;
 }
 
@@ -529,7 +529,7 @@ a.hsgray,
 }
 
 .featured-content .woocommerce ul.products li.product {
-	background-color: #fffdf5;
+	background-color: #ffffff;
 	margin: 2%;
 }
 

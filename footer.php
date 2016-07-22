@@ -114,6 +114,17 @@ jQuery(document).ready(function() {
 	});
 });
 
+jQuery(window).resize(function() {
+	jQuery("#headercontainer").sticky({
+		topSpacing: 0,
+		getWidthFrom: '#wrapper',
+		zIndex: '999'
+	});
+
+    jQuery('.featured').matchHeight();
+
+});
+
 </script>
 
 

@@ -1341,12 +1341,33 @@ function woocommerce_custom_breadcrumb(){
 add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
 /**
- * WooCommerce Online Consult Modifications
+ * Online Consult
  */
 
-add_action ('woocommerce_checkout_after_customer_details', 'my_func');
-function my_func () {
-  print '<p>Message</p>';
+function has_bought() {
+
+    $count = 0;
+    $bought = false;
+
+    // Get all customer orders
+    $customer_orders = get_posts( array(
+        'numberposts' => -1,
+        'meta_key'    => '_customer_user',
+        'meta_value'  => get_current_user_id(),
+        'post_type'   => 'shop_order', // WC orders post type
+        'post_status' => array('wc-completed', 'wc-processing') // Only orders with status "completed"
+    ) );
+
+    // Going through each current customer orders
+    foreach ( $customer_orders as $customer_order ) {
+        $count++;
+    }
+
+    // return "true" when customer has already one order
+    if ( $count > 0 ) {
+        $bought = true;
+    }
+    return $bought;
 }
 
 

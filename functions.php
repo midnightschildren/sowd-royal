@@ -484,7 +484,8 @@ if ( ! function_exists( 'quark_scripts_styles' ) ) {
 		}
 
 		// Enqueue the default WordPress stylesheet
-		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'style', get_stylesheet_uri() , false , filemtime( get_stylesheet_directory() . '/style.css' ) );
+
 
 
 		/**
@@ -1107,8 +1108,14 @@ function mycode_add_brand_above_product_title() {
 	$brand = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'names' ) ) );
 	$link = array_shift( wc_get_product_terms( $product->id, 'product_brand', array( 'fields' => 'slugs' ) ) );
 	$url = get_term_link( $link, 'product_brand' );
+
+	if (!empty($brand)) {
 	echo '<a href="' . $url .'">';
 	echo '<h6 class="br_title">' . $brand . '</h6></a>';
+	}
+	else {
+	echo '<h6 class="br_title">&nbsp;</h6>';	
+	}
 }
 
 /**
@@ -1333,6 +1340,15 @@ function woocommerce_custom_breadcrumb(){
 
 add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
 
+/**
+ * WooCommerce Online Consult Modifications
+ */
+
+add_action ('woocommerce_checkout_after_customer_details', 'my_func');
+function my_func () {
+  print '<p>Message</p>';
+}
+
 
 /**
  * Set the number of products to display on the WooCommerce shop page
@@ -1350,3 +1366,5 @@ if ( ! function_exists( 'quark_set_number_woocommerce_products' ) ) {
 	}
 	add_action( 'init', 'quark_set_number_woocommerce_products' );
 }
+
+?>

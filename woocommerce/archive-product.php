@@ -141,6 +141,49 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
+<div class="online-consult-content row">
+	<div class="grid-12 pad-3-vert">
+	<div class="grid-12 pad-3-vert center">
+
+		<?php if( get_field('consult_section_title', 21) ): ?>
+	
+			<h5 class="center hsblue"><?php the_field('consult_section_title', 21); ?></h5>
+	
+			<?php endif; ?>
+	</div>
+
+	<div class="pad-3-vert grid-8 offset-2">
+
+		<div class="grid-8 pad-3-bottom">
+			<?php if( get_field('consult_section_intro', 21) ): ?>
+	
+			<p><?php the_field('consult_section_intro', 21); ?></p>
+	
+			<?php endif; ?>
+		</div>
+
+		<div class="grid-2 offset-1" id="headshot">
+					<?php 
+
+					$image = get_field('headshot', 21);
+
+					if( !empty($image) ): ?>
+						<div class="pad-3-bottom">
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>	
+					<?php endif; ?>
+		</div>
+
+		<div class="grid-12 pad-3-vert center">
+			<div class="clink">
+				<a href="/shop/uncategorized/online-skin-care-consultation/">get started</a>
+			</div>	
+
+		</div>	
+	</div>	
+
+	</div>	
+</div>	
 <div class="footer-menu-content row">
 	<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
 	<nav id="product-navigation" class="main-navigation" role="navigation">

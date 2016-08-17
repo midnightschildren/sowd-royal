@@ -136,7 +136,7 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
-.post-type-archive .site-content, .woocommerce .site-content {
+.page-template-consult-page .site-content, .post-type-archive .site-content, .woocommerce .site-content {
 	padding: 0;
 }
 
@@ -695,6 +695,21 @@ input[type="search"]::-webkit-input-placeholder {
 	right: 2em;
     margin-top: -1em;
 }
+
+td.rating-number, td.rating-count {
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-size: .8125rem;
+	line-height: 2.46153846;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+	color: #30333c;
+}
+
+td.rating-count a {
+	text-decoration:none;
+}
+
 
 /* ==========================================================================
    Basic page styles

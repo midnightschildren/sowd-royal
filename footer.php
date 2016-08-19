@@ -62,6 +62,27 @@
 <?php wp_footer(); ?>
 
 <style type="text/css">
+
+.gform_wrapper.gf_browser_chrome select {
+    padding: 4px 0 4px 3px;
+}
+.gform_wrapper label.gfield_label {
+    font-weight: 400;
+    font-size: 21px;
+    font-size: 1.3125em;
+}
+.gform_wrapper .description, .gform_wrapper .gfield_description, .gform_wrapper .gsection_description, .gform_wrapper .instruction, .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label, .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+    display: block;
+    font-size: 13px;
+	font-size: .8125rem;
+	line-height: 2.46153846;
+	text-transform: uppercase;
+	letter-spacing: .3em;
+	color: #30333c;
+    white-space: nowrap;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+}
+
     @media only screen and (max-width: 800px) {
         .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item,
         .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item,

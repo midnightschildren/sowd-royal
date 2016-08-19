@@ -160,7 +160,7 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
-.business-content, .about-content {
+.vconsult-content, .business-content, .about-content {
 	background-color: #ebf8fa;
 	margin: 0;
 }
@@ -312,6 +312,15 @@ td { vertical-align: top; }
 	line-height: 1.42857143;
 	margin-bottom: 1rem;
 	color: #30333c;
+}
+
+.page-template-consult-page .about_hannah-content p {
+	letter-spacing: .035em;
+	font-size: 16px;
+	font-size: 1em;
+	line-height: 1.42105263;
+	margin-bottom: 1rem;
+	color: #b7b8bb;
 }
 
 .services-content p, .entry-content p, .single-content-product p {
@@ -706,10 +715,41 @@ td.rating-number, td.rating-count {
 	color: #30333c;
 }
 
-td.rating-count a {
-	text-decoration:none;
+.woocommerce #reviews .product-rating .product-rating-details table td.rating-count a, .woocommerce-page #reviews .product-rating .product-rating-details table td.rating-count a {
+    text-decoration: none;
 }
 
+.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar, .woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
+
+    background-color: #76929b;
+}
+
+
+.gform_wrapper .hs_input_select select, .gform_wrapper .hs_input_select textarea {
+    font-family: inherit;
+    letter-spacing: normal;
+    font-size: 16px;
+    padding: 4px;
+    color: #30333c;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #76929b;
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+	text-indent: 10px;
+}
+
+.gform_wrapper .hs_spec input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    font-size: inherit;
+    font-family: inherit;
+    padding: 5px 4px;
+    letter-spacing: normal;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #76929b;
+}
 
 /* ==========================================================================
    Basic page styles
@@ -1220,31 +1260,21 @@ input[type="button"] {
 input[type="submit"] {
 	display: inline-block;
 	*display: inline;
-	padding: 8px 14px;
-	padding: 0.5rem 0.875rem;
-	margin-bottom: 0;
-	*margin-left: .3em;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.25;
-	color: #333333;
-	text-align: center;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	vertical-align: middle;
-	cursor: pointer;
-	background-color: #ebe9eb;
-	*background-color: #ebe9eb;
-	border: 1px solid #cccccc;
-	*border: 0;
-	border-color: rgba(0, 0, 0, 0.1);
-	border-color: #e6e6e6 ;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	background-color: #76929b;
+    border: 1px solid #76929b;
+    border-color: #76929b;
+    border-color: #76929b;
+    color: #fff;
+    text-shadow: none;
+    padding: 0.5em 0.75em;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-weight: 400;
 }
 
 .menu-toggle, a.btn {
-	color: #333333;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -1254,8 +1284,8 @@ input[type="submit"] {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-	background-color: #dad8da;
-	*background-color: #dad8da;
+	background-color: #76929b;
+	*background-color: #76929b
 }
 
 .btn:first-child {
@@ -1265,10 +1295,10 @@ input[type="submit"] {
 .menu-toggle:hover,
 .btn:hover,
 input[type="submit"]:hover {
-	color: #333333;
+	color: #fff;
 	text-decoration: none;
-	background-color: #dad8da;
-	*background-color: #dad8da; /* Buttons in IE7 don't get borders, so darken on hover */
+	background-color: #76929b;
+	*background-color: #76929b; /* Buttons in IE7 don't get borders, so darken on hover */
 }
 
 .menu-toggle:focus,
@@ -1346,8 +1376,12 @@ textarea {
 	padding: 8px;
 	padding: 0.5rem;
 	font-family: inherit;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	border: 1px solid #76929b;
+	border-radius: 0px;
+}
+
+.commentlist textarea, .commentlist input, .form-contribution input, .form-contribution textarea {
+	background-color: #ebf8fa;
 }
 
 select {
@@ -2839,6 +2873,10 @@ h1.page-title {
 	
 }
 
+.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before, .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
+    color: #76929b;
+}
+
 .woocommerce div.product form.cart {
     margin-bottom: 2em;
     display: inline-block;
@@ -2930,15 +2968,19 @@ h1.page-title {
 .woocommerce-page a.button.alt,
 .woocommerce-page button.button.alt,
 .woocommerce-page input.button.alt {
-	background-color: #2997ab;
-	*background-color: #2997ab;
-	border: 1px solid #237e8f;
+	background-color: #76929b;
+	*background-color: #76929b;
+	border: 1px solid #76929b;
 	*border: 0;
-	border-color: rgba(35, 126, 143, 0.1);
-	border-color: #2997ab;
+	border-color: #76929b;
+	border-color: #76929b;
 	color: #fff;
 	text-shadow: none;
 	padding: 0.5em 0.75em;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	border-radius: 0px;
+	font-weight: 400;
 }
 
 .woocommerce div.product form.cart .button {
@@ -3032,6 +3074,28 @@ h1.page-title {
 .woocommerce #reviews h3 {
     margin: 0;
     letter-spacing: .035em;
+    font-size: 27px;
+    font-size: 1.6875rem;
+    line-height: 1.18518519;
+}
+
+.contribution-type-selector {
+	letter-spacing: .035em;
+    font-size: 27px;
+    font-size: 1.6875rem;
+    line-height: 1.18518519;
+}
+
+.star-rating-selector:not(:checked) label.checkbox:hover, .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox {
+    color: #76929b;
+}
+
+.star-rating-selector:not(:checked) input:checked ~ label.checkbox {
+    color: #76929b;
+}
+
+.star-rating-selector:not(:checked) input:checked+label.checkbox:hover, .star-rating-selector:not(:checked) input:checked+label.checkbox:hover ~ label.checkbox, .star-rating-selector:not(:checked) input:checked ~ label.checkbox:hover, .star-rating-selector:not(:checked) input:checked ~ label.checkbox:hover ~ label.checkbox, .star-rating-selector:not(:checked) label.checkbox:hover ~ input:checked ~ label.checkbox {
+    color: #76929b;
 }
 
 .tab-content .product-rating-summary p {
@@ -3045,6 +3109,114 @@ h1.page-title {
 	text-transform: uppercase;
 	letter-spacing: .3em;
 	color: #30333c;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text p {
+    margin: 1em 0 1em;
+    letter-spacing: .035em;
+    color: #30333c;
+    font-size: 19px;
+    font-size: 1.1875em;
+    line-height: 1.42105263;
+}
+
+.woocommerce #reviews .contribution-actions>a, .woocommerce-page #reviews .contribution-actions>a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #76929b;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.woocommerce #reviews input[type="button" i],.woocommerce #reviews input[type="submit" i],.woocommerce #reviews input[type="reset" i],.woocommerce #reviews input[type="file" i]::-webkit-file-upload-button, .woocommerce #reviews button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: #fff;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: #76929b;
+    box-sizing: border-box;
+    padding: 1em;
+    border: none;
+    border-width: 0px;
+    border-style: none;
+    border-color: #76929b;
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+}
+
+
+.woocommerce #reviews .form-contribution, .woocommerce-page #reviews .form-contribution {
+    border: 1px solid #76929b;
+    padding: 1.5em;
+}
+
+.woocommerce form .form-row .required {
+    color: #81cda9;
+    font-weight: 700;
+    border: 0;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: none;
+    text-decoration: underline dotted;
+}
+
+.gform_wrapper keygen, .gform_wrapper select {
+    border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: 0 0 0 50px;
+    border-top: 1px solid #76929b;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+    padding: 1em 1em 0;
+}
+
+.woocommerce #reviews #comments .form-contribution_comment, .woocommerce-page #reviews #comments .form-contribution_comment {
+    margin: 10px 0 0 10px;
+    padding: 0;
+    border: 0;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta {
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    font-size: 13px;
+    font-size: .8125rem;
+    line-height: 2.46153846;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    color: #30333c;
+}
+
+.woocommerce #reviews h3.contribution-title, .woocommerce-page #reviews h3.contribution-title {
+    margin-bottom: 0em;
+    clear: none;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta strong {
+	font-weight: 400;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 }
 
 .woocommerce #reviews #comments ol.commentlist li img.avatar, .woocommerce-page #reviews #comments ol.commentlist li img.avatar, #contributions-list-title {

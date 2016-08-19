@@ -24,7 +24,7 @@ if(is_user_logged_in() && has_bought()) { ?>
 
 	</div><!-- /#primary.site-content.row -->
 
-	<div id="services" class="about-content row">
+	<div id="Consult" class="about-content row">
 
 	<div class="grid-12 pad-3-vert">	
 
@@ -61,7 +61,7 @@ if(is_user_logged_in() && has_bought()) { ?>
 
 				<?php if( get_field('about_section_title') ): ?>
 	
-					<h5 class="center bluegreen pad-2-vert"><?php the_field('about_section_title'); ?></h5>
+					<h5 class="center hsslate pad-2-vert"><?php the_field('about_section_title'); ?></h5>
 	
 				<?php endif; ?>
 
@@ -86,12 +86,31 @@ if(is_user_logged_in() && has_bought()) { ?>
 
 if(is_user_logged_in() && !has_bought()) { ?>
 
-		<div id="primary" class="site-content row" role="main">
+		<div id="primary" class="vconsult-content row" role="main">
 
 			<div class="grid-12">
 				<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
 
-				<h5 class="center medium hsslate">Please purchase the <a href="/shop/uncategorized/online-skin-care-consultation/">Virtual Online Consult</a> to view this content. Thank you!</h5>
+				<div class="grid-10 offset-1 pad-3-vert">
+		
+					<?php if ( have_posts() ) : ?>
+
+					<?php while ( have_posts() ) : the_post(); ?>
+
+					<div class="grid-12 pad-3-vert">	
+	
+						<h5 class="center medium hsslate"><?php the_title(); ?></h5>
+			
+					</div>
+
+					<?php endwhile; // end of the loop. ?>
+
+					<?php endif; // end have_posts() check ?>
+
+						<p class="center shop-description">Please purchase the <a href="/shop/uncategorized/online-skin-care-consultation/">Virtual Online Consult</a> to view this content. Thank you!</p>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -100,12 +119,30 @@ if(is_user_logged_in() && !has_bought()) { ?>
 
 if(!is_user_logged_in()) { ?> 
     
-<div id="primary" class="site-content row" role="main">
+<div id="primary" class="vconsult-content row" role="main">
 
 	<div class="grid-12">
 		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
 
-		<h5 class="center medium hsslate">You must be logged in to view this content. Thank you!</h5>
+		<div class="grid-10 offset-1 pad-3-vert">
+		
+			<?php if ( have_posts() ) : ?>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
+			<div class="grid-12 pad-3-vert">	
+	
+				<h5 class="center medium hsslate"><?php the_title(); ?></h5>
+			
+			</div>
+
+			<?php endwhile; // end of the loop. ?>
+
+			<?php endif; // end have_posts() check ?>
+
+				<p class="center shop-description">You must be <a href="/my-account/">logged in</a> to view this content. Thank you!</p>
+		</div>
+
 	</div>
 
 </div>

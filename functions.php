@@ -1370,6 +1370,29 @@ function has_bought() {
     return $bought;
 }
 
+// Add login buttons to the Product Reviews Pro login modal
+function add_wc_social_login_buttons_prpro() {
+ 
+	if ( is_product() && function_exists( 'woocommerce_social_login_buttons' ) ) {
+		woocommerce_social_login_buttons( home_url( add_query_arg( array() ) ) . '#tab-reviews#comment-1' );
+	}
+}
+add_action( 'woocommerce_login_form_end', 'add_wc_social_login_buttons_prpro' );
+
+
+// Change the login text from what's set in our WooCommerce settings so we're not talking about checkout for a review.
+function prpro_change_social_login_text_option( $login_text ) {
+
+	// Only modify the text from this option if we're on a product page
+	if ( is_product() ) {
+   		$login_text = __( 'You can also create an account or log in with a social network.', 'woocommerce' );
+   		// Adjust the login text as desired
+   	}
+ 
+ 	return $login_text;
+}
+add_filter( 'pre_option_wc_social_login_text', 'prpro_change_social_login_text_option' );
+
 
 /**
  * Set the number of products to display on the WooCommerce shop page

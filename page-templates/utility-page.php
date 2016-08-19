@@ -11,8 +11,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="shop_menu-content row" role="main">
-		
+	<div id="primary" class="product-menu-content row" role="main">
+		<div class="pad-3-vert grid-10 offset-1 center">
+			<nav id="product-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+			</nav>	
+		</div>
 
 	</div><!-- /#primary.site-content.row -->
 
@@ -27,7 +31,7 @@ get_header(); ?>
 		<div class="grid-12 pad-3-vert">
 			
 	
-			<h5 class="center medium hsslate"><?php the_title(); ?></h5>
+			<h1 class="center"><?php the_title(); ?></h1>
 	
 			
 		</div>	
@@ -44,6 +48,12 @@ get_header(); ?>
 		<?php endif; // end have_posts() check ?>
 		
 	</div>	
-	
+	<div class="footer-menu-content row">
+		<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
+		<nav id="product-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav>	
+		</div>
+	</div>
 
 <?php get_footer(); ?>

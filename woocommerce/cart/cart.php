@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table shop_table_responsive cart" cellspacing="0">
-	<thead>
+	<thead class="hsowd_titles">
 		<tr>
 			<th class="product-remove">&nbsp;</th>
 			<th class="product-thumbnail">&nbsp;</th>

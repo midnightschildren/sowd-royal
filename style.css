@@ -140,7 +140,7 @@ td { vertical-align: top; }
 	padding: 0;
 }
 
-.shop-content-top {
+.page-template-terms-page .site-content, .shop-content-top {
 	margin: 0;
 	background-color: #e3f5dd;
 }
@@ -165,7 +165,7 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
-.about_hannah-content {
+.terms-content, .about_hannah-content {
 	background-color: #fffdf5;
 	margin: 0;
 }
@@ -305,7 +305,7 @@ td { vertical-align: top; }
 	margin-bottom: .5rem;
 }
 
-.about-content p, .about_hannah-content p, .brand-row p {
+.page-template-terms-page .site-content p, .about-content p, .about_hannah-content p, .brand-row p {
 	letter-spacing: .035em;
 	font-size: 21px;
 	font-size: 1.3125em;
@@ -323,7 +323,14 @@ td { vertical-align: top; }
 	color: #b7b8bb;
 }
 
-.services-content p, .entry-content p, .single-content-product p {
+.terms-content p {
+	letter-spacing: .035em;
+	font-size: 19px;
+	font-size: 1.1875em;
+	line-height: 1.42105263;
+}
+
+.services-content p, .entry-content p, .single-content-product p, .woocommerce-MyAccount-content p {
 	letter-spacing: .035em;
 	font-size: 19px;
 	font-size: 1.1875em;
@@ -2645,7 +2652,7 @@ li span.dots {
 	text-transform:uppercase;
 }
 
-.product-menu-content .nav-menu, .footer-menu-content .nav-menu {
+.product-menu-content .nav-menu, .footer-menu-content .nav-menu, .woocommerce-MyAccount-navigation li a {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -2654,6 +2661,10 @@ li span.dots {
 	line-height: 2.3706;
 	letter-spacing: .3em;
 	text-transform:uppercase;
+}
+
+.woocommerce-MyAccount-navigation li a {
+	text-decoration: none;
 }
 
 .border-rule-footer {

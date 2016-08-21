@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Utility Page Template
+ * Template Name: Terms Page Template
  *
  * Description: Displays a full-width page, with no sidebar. This template is great for pages
  * containing large amounts of content.
@@ -35,7 +35,7 @@ get_header(); ?>
 	
 			
 		</div>	
-		<div class="grid-10 offset-1 pad-3-vert">
+		<div class="grid-8 offset-2 pad-3-vert">
 
 			<?php the_content(); ?>	
 
@@ -43,11 +43,54 @@ get_header(); ?>
 
 	</div>
 
+	</div>
+
+	<div id="terms" class="terms-content row">
+
+	<?php if( get_field('terms_info') ): ?>	
+
+		<div class="grid-8 offset-2 pad-3-vert hsgray">
+				
+			<?php the_field('terms_info'); ?>
+		
+		</div>
+
+	<?php endif; ?>
+
+
+		<?php if( have_rows('terms') ):
+ 	
+    	while ( have_rows('terms') ) : the_row(); ?>
+
+    	<div class="grid-8 offset-2 pad-3-vert">
+				
+			<h5 class="center hsslate"><?php the_sub_field('terms_title'); ?></h5>
+				
+		</div>	
+
+		<div class="grid-8 offset-2 pad-3-vert">
+
+			<?php the_sub_field('terms_text'); ?>	
+
+		</div>
+        
+    <?php endwhile;
+
+			else :
+
+    		// no rows found
+
+	endif; ?>
+
+		
+
+	</div>	
+
 		<?php endwhile; // end of the loop. ?>
 
 		<?php endif; // end have_posts() check ?>
 		
-	</div>	
+		
 	<div class="footer-menu-content row">
 		<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
 		<nav id="product-navigation" class="main-navigation" role="navigation">

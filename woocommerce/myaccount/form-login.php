@@ -30,11 +30,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="u-columns col2-set" id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div class="u-column1 col-1 ucol">
 
 <?php endif; ?>
 
-		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
+		<h5 class="center brgray pad-3-top"><?php _e( 'Login', 'woocommerce' ); ?></h5>
 
 		<form method="post" class="login">
 
@@ -70,9 +70,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="u-column2 col-2 ucol">
 
-		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
+		<h5 class="center brgray pad-3-top"><?php _e( 'Register', 'woocommerce' ); ?></h5>
 
 		<form method="post" class="register">
 

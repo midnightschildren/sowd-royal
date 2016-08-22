@@ -32,9 +32,22 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<?php wp_head(); ?>
+
+	<script>
+	function loadPage()
+{
+    if (document.login)//if the form login exists, focus:
+    {
+        document.login.name.focus();//the username input
+        document.login.pass.focus();//the password input
+        document.login.login.focus();//the login button (submitbutton)
+    }
+}
+	</script>
+
 </head>
 
-<body <?php body_class(); ?>>
+<body onload="loadPage();" <?php body_class(); ?>>
 
 <div id="wrapper" class="hfeed site">
 

@@ -133,6 +133,8 @@ jQuery(document).ready(function() {
 		getWidthFrom: '#wrapper',
 		zIndex: '999'
 	});
+
+	jQuery('.ucol').matchHeight();
 });
 
 jQuery(window).resize(function() {
@@ -145,6 +147,7 @@ jQuery(window).resize(function() {
     jQuery('.featured').matchHeight();
 
 });
+
 
 </script>
 

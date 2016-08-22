@@ -12,7 +12,7 @@
 get_header(); ?>
 
 	<div id="primary" class="product-menu-content row" role="main">
-		<div class="pad-3-vert grid-10 offset-1 center">
+		<div class="pad-3-bottom grid-10 offset-1 center">
 			<nav id="product-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>	

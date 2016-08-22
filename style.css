@@ -136,7 +136,7 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
-.page-template-consult-page .site-content, .post-type-archive .site-content, .woocommerce .site-content {
+.page-template-consult-page .site-content, .post-type-archive .site-content, .woocommerce .site-content, .page-template-utility-page .site-content {
 	padding: 0;
 }
 
@@ -407,6 +407,11 @@ a.hsgray,
 .hsgray a:hover {
 	color: #97999d;
 	text-decoration: underline;
+}
+
+a.brgray, .brgray, .brgray a {
+	color: #8a8676;
+	text-decoration:none;
 }	
 
 .circle {
@@ -1385,6 +1390,20 @@ textarea {
 	font-family: inherit;
 	border: 1px solid #76929b;
 	border-radius: 0px;
+}
+
+#customer_login input:-webkit-autofill, #customer_login textarea:-webkit-autofill, #customer_login select:-webkit-autofill {
+    background-color: #fff !important;
+    background-image: none;
+    color: #30333c !important;
+}
+
+input:focus {
+    background-position: 0 0;
+}
+
+.login input[type="text"], .login input[type="password"], .register input[type="password"], .register input[type="email"] {
+	border: 1px solid #ddd8c3;
 }
 
 .commentlist textarea, .commentlist input, .form-contribution input, .form-contribution textarea {
@@ -3160,8 +3179,8 @@ h1.page-title {
 	color: transparent;
 } 
 
-.woocommerce .coupon input.button, .woocommerce .shop_table input.button {
-	display: block;
+.woocommerce .coupon input.button, .woocommerce .shop_table input.button, .woocommerce .login input.button, .woocommerce .register input.button {
+	
     text-align: center;
     margin-bottom: 1em;
     font-size: 16px;
@@ -3213,6 +3232,28 @@ h1.page-title {
     list-style: none!important;
     width: auto;
     word-wrap: break-word;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2, .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+	border: 1px solid #ddd8c3;
+}
+
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+    border: none;
+}
+
+.u-columns label, .woocommerce-LostPassword {
+	color: #30333c;
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 1.28571429;
+    letter-spacing: .035em;
+}
+
+.woocommerce-LostPassword a {
+	color: #8a8676;
+	font-weight: normal;
 }
 
 .woocommerce a.button, .woocommerce a.button:hover {

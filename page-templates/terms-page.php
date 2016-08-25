@@ -34,18 +34,29 @@ get_header(); ?>
 			<h1 class="center"><?php the_title(); ?></h1>
 	
 			
-		</div>	
+		</div>
+
+			<?php if($post->post_content=="") : ?>
+
+			<!-- Do stuff with empty posts (or leave blank to skip empty posts) -->
+
+			<?php else : ?>
+
 		<div class="grid-8 offset-2 pad-3-vert">
 
 			<?php the_content(); ?>	
 
 		</div>
 
+			<?php endif; ?>
+
 	</div>
 
 	</div>
 
 	<div id="terms" class="terms-content row">
+
+	<div class="grid-12 pad-3-vert">	
 
 	<?php if( get_field('terms_info') ): ?>	
 
@@ -62,13 +73,13 @@ get_header(); ?>
  	
     	while ( have_rows('terms') ) : the_row(); ?>
 
-    	<div class="grid-8 offset-2 pad-3-vert">
+    	<div class="grid-8 offset-2 pad-3-bottom pad-1-top">
 				
 			<h5 class="center hsslate"><?php the_sub_field('terms_title'); ?></h5>
 				
 		</div>	
 
-		<div class="grid-8 offset-2 pad-3-vert">
+		<div class="grid-8 offset-2 pad-2-vert">
 
 			<?php the_sub_field('terms_text'); ?>	
 
@@ -82,7 +93,7 @@ get_header(); ?>
 
 	endif; ?>
 
-		
+	</div>	
 
 	</div>	
 

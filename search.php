@@ -8,16 +8,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
+	<div id="primary" class="about-content row" role="main">
 
 
-		<div class="col grid_8_of_12">
+	
 
-			<?php if ( have_posts() ) : ?>
+		<div class="grid-8 offset-2 pad-3-vert">
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'quark' ), '<span>&ldquo;' . get_search_query() . '&rdquo;</span>' ); ?></h1>
-				</header>
+			<?php query_posts($query_string . '&showposts=3');
+				if ( have_posts() ) : ?>
+
+				
+				<div class="pad-3-vert">
+					<h5 class="center medium hsslate"><?php printf( esc_html__( 'Search Results for: %s', 'quark' ), '<span>&ldquo;' . get_search_query() . '&rdquo;</span>' ); ?></h5>
+				</div>
+				
 
 				<?php // Start the Loop ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -30,10 +35,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
-			<?php endif; // end have_posts() check ?>
+			<?php endif; wp_reset_query(); // end have_posts() check ?>
 
 		</div> <!-- /.col.grid_8_of_12 -->
-		<?php get_sidebar(); ?>
+	
+	
 
 	</div> <!-- /#primary.site-content.row -->
 

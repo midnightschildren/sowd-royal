@@ -145,6 +145,10 @@ td { vertical-align: top; }
 	background-color: #e3f5dd;
 }
 
+.page-template-terms-page .site-content {
+	padding: 0;
+}
+
 .single-content-product {
 	margin: 0;
 	background-color: #f9fdf8;
@@ -222,6 +226,47 @@ td { vertical-align: top; }
 .online-consult-content {
 	background-color: #faf4e1;
 	margin: 0;
+}
+
+.search-results .entry-header {
+	padding-top: 2em;
+}
+
+.search-results article {
+	border-bottom: 1px solid #b7d0d2;
+}
+
+.search-results article:last-of-type {
+    border-bottom: none;
+}
+
+.search-results .entry-title {
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 30px;
+	font-size: 1.875rem;
+	line-height: 1.2;
+	letter-spacing: .025em;
+}
+
+.search-results .fa-calendar, .search-results .vcard, .search-results .fa-pencil, .search-results .post-categories {
+	display: none;
+}
+
+.search-results .entry-header time {
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    margin: 0 20px 0 0;
+    margin: 0 1.25rem 0 0;
+    text-transform: uppercase;
+	letter-spacing: .3em;
+}
+
+.search-results .header-meta a {
+	text-decoration: none;
 }
 
 .parent {
@@ -751,8 +796,11 @@ td.rating-number, td.rating-count {
     border-width: 1px;
     border-style: solid;
     border-color: #76929b;
-    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
-	-moz-appearance: none; 
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2376929B'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+  	background-size: 12px;
+  	background-position: calc(100% - 15px) 14px;
+  	background-repeat: no-repeat;
+    -moz-appearance: none; 
 	-webkit-appearance: none; 
 	appearance: none;
 	text-indent: 10px;
@@ -1384,10 +1432,12 @@ input[type="submit"].btn-small {
 }
 
 /* Form fields */
+#reviews input[type="text"],
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="url"],
+#reviews textarea,
 textarea {
 	font-family: inherit;
 	padding: 8px;
@@ -1403,6 +1453,41 @@ textarea {
 .woocommerce input[type="url"],
 .woocommerce textarea {
 	border: 1px solid #ddd8c3;
+}
+
+.select2-search input {
+	background: none;
+	border: 1px solid #ddd8c3;
+}
+
+.select2-drop-active {
+    border: 1px solid #ddd8c3;
+    border-top: none;
+}
+
+.select2-results .select2-highlighted {
+	background-color: #e4e0cf;
+	color: #30333c;
+	border-radius: 0px;
+}
+
+.woocommerce div.product form.cart .variations select {
+    max-width: 100%;
+    min-width: 75%;
+    display: inline-block;
+    margin-right: 1em;
+    background: none;
+    border-radius: 0px;
+    color: #30333c; 
+    border: 1px solid #96b9bc;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%2396B9BC'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+  	background-size: 12px;
+  	background-position: calc(100% - 15px) 14px;
+  	background-repeat: no-repeat;
+    -moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+	text-indent: 10px; 
 }
 
 input#billing_phone.input-text {
@@ -1708,9 +1793,9 @@ select {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 10px;
-	font-size: 0..625rem;
+	font-size: 0.625rem;
 	line-height: 3;
-	letter-spacing: .3em
+	letter-spacing: .3em;
 	float: left;
 	color: #96b9bc;
 	text-transform: uppercase;
@@ -2627,19 +2712,27 @@ ul.page-numbers {
 
 li a.page-numbers,
 li span.page-numbers {
-	padding: 5px;
-	padding: 0.3125rem;
-	border: 1px solid #333;
+	color: #30333c;
+	padding: 0em 1em;
+	border-right: 1px solid #b7d0d2;
 	text-decoration: none;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+	margin-bottom: 0px;
+	margin-bottom: 0rem;
+	font-size: 14px;
+	font-size: .875rem; 
+	line-height: 1.35714286;
+	text-transform: uppercase;
+	letter-spacing: .3em;
 }
 
 li a:visited.page-numbers {
-	color: #333;
+	color: #30333c;
 }
 
 li a:hover.page-numbers {
-	background-color: #2997ab;
-	color: #fff;
+	background-color: #b7d0d2;
+	color: #30333c;
 }
 
 li a:hover.prev,
@@ -2653,8 +2746,8 @@ li a:hover.next {
 }
 
 li span.current {
-	background-color: #333;
-	color: #fff;
+	background-color: #b7d0d2;
+	color: #30333c;
 }
 
 li a.prev,
@@ -2904,6 +2997,10 @@ h1.page-title {
 	font-size: 48px;
 	font-size: 3rem;
 	line-height: 1.25;
+}
+
+.single-content-product .sku_wrapper, .woocommerce div.product .woocommerce-tabs ul.tabs li.additional_information_tab {
+	display: none;
 }
 
 .woocommerce .quantity .qty {
@@ -3182,7 +3279,7 @@ h1.page-title {
 }
 
 .woocommerce table.shop_table .hsowd_titles th, .woocommerce-MyAccount-orders thead, .woocommerce-view-order .woocommerce table.order_details thead, 
-.my_account_contributions thead, .woocommerce-checkout-review-order-table thead {
+.my_account_contributions thead, .woocommerce-checkout-review-order-table thead, .woocommerce-checkout .woocommerce table.shop_table tfoot th {
     font-weight: 400;
     padding: 9px 12px;
     text-transform: uppercase;
@@ -3220,6 +3317,10 @@ h1.page-title {
     padding: 12px 12px;
 }
 
+.woocommerce-checkout .woocommerce table.shop_table tfoot .order-total th, .woocommerce-checkout .woocommerce table.shop_table tfoot .order-total td {
+	color: #30333c;
+}
+
 .woocommerce .shop_table a.remove:hover {
     color: #30333c!important;
     background: transparent;
@@ -3246,7 +3347,8 @@ h1.page-title {
 .woocommerce .register input.button, .woocommerce .my_account_orders a.button, .woocommerce .my_account_orders a.button:hover, 
 .woocommerce .woocommerce-Address a.button, .woocommerce .woocommerce-Address a.button:hover,
 .woocommerce-edit-address .woocommerce input.button, .woocommerce-edit-account .woocommerce input.button,
-.woocommerce .checkout_coupon input.button {
+.woocommerce .checkout_coupon input.button, .woocommerce-checkout .woocommerce input.button, .woocommerce-checkout .woocommerce input.button.alt, 
+.woocommerce .return-to-shop a.button, .woocommerce .return-to-shop a.button:hover {
 	
     text-align: center;
     margin-bottom: 1em;
@@ -3256,6 +3358,11 @@ h1.page-title {
     color: #8a8676;
     border: none;
     letter-spacing: .3em;
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+    background: transparent; 
+    border-radius: 0px;
 }
 
 .woocommerce-edit-address .woocommerce input.button, .woocommerce-edit-account .woocommerce input.button {
@@ -3308,7 +3415,7 @@ h1.page-title {
     letter-spacing: .3em;
 }
 
-.woocommerce-error:before, .woocommerce-info:before, .woocommerce-message:before {
+.woocommerce-error:before, .woocommerce-info:before {
 	content: "";
 }
 

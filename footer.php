@@ -145,7 +145,7 @@ jQuery(window).resize(function() {
 	});
 
     jQuery('.featured').matchHeight();
-
+	
 });
 
 

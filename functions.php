@@ -15,6 +15,10 @@ if ( ! isset( $content_width ) )
 	$content_width = 790; /* Default the embedded content width to 790px */
 
 
+
+remove_filter(‘the_content’, ‘wptexturize’);
+
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

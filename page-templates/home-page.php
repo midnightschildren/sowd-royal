@@ -63,7 +63,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-6 offset-3">
+		<div class="col grid-6 m-grid-12 offset-3 m-offset-0 m-pad-3-sides">
 			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'orderby' => 'rand', 'posts_per_page' => '2'));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-vert">
@@ -106,11 +106,7 @@ get_header(); ?>
                         	<div class="vlink">
                             	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
                            	</div> 
-                        </div>        
-
-
-
-                                
+                        </div>                                        
                         </li>
                 <?php
             /**

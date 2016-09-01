@@ -3918,6 +3918,12 @@ abbr[title] {
 		margin: 2.375rem 0 0 0;
 		display: none;
 	}
+
+	.home .entry-content p {
+    font-size: 24px;
+    font-size: 1.5em;
+    line-height: 1.66666667;
+    }
 }
 
 @media only screen and (max-width: 900px) {

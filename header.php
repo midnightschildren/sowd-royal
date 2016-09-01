@@ -73,6 +73,7 @@
 
 			<div class="col grid-12 pad-3-vert center">
 				<div class="cart_nav"><a href="http://hannahsowdinc.wpengine.com/cart/"><img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" /></a></div>
+				<div class="rpm center"><?php echo do_shortcode('[responsive_menu_pro]'); ?></div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'quark' ); ?></h3>
 					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'quark' ); ?>"><?php esc_html_e( 'Skip to content', 'quark' ); ?></a></div>

@@ -435,7 +435,7 @@
     }
 }
 
-@media (min-width:481px) and (max-width:800px) {
+@media (min-width:481px) and (max-width:980px) {
     .m-grid-1,
     .m-grid-10,
     .m-grid-11,
@@ -617,7 +617,7 @@
     }
 }
 
-@media (min-width:801px) {
+@media (min-width:981px) {
     .l-grid-1,
     .l-grid-10,
     .l-grid-11,

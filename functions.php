@@ -1394,6 +1394,7 @@ function prpro_change_social_login_text_option( $login_text ) {
 add_filter( 'pre_option_wc_social_login_text', 'prpro_change_social_login_text_option' );
 
 
+
 /**
  * Set the number of products to display on the WooCommerce shop page
  *

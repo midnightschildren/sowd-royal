@@ -475,6 +475,11 @@
     .m-grid-2 {
         width: 16.66667%
     }
+
+    .m-offset-sp {
+    margin-left: 11.11111%;
+    }
+
     .m-offset-2 {
         margin-left: 16.66667%
     }

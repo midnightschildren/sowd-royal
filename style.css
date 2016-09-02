@@ -2604,6 +2604,7 @@ form label.error {
 	font-size: 14px;
 	font-size: 0.875rem;
 	letter-spacing: .3em;
+	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 }
 
 .smallprint a { 
@@ -3911,6 +3912,7 @@ abbr[title] {
 
 .featured-content .rpftab ul.products li.product {
 	margin: 1em 0;
+	width: 100%;
 }
 
 .rpftab ul.products {
@@ -3992,6 +3994,34 @@ abbr[title] {
     font-size: 1.5em;
     line-height: 1.66666667;
     }
+
+    .testimonial-content p {
+    font-size: 22px;
+    font-size: 1.375em;
+    line-height: 1.36363636;
+	}
+
+	#text-2 p {
+	text-align: center;
+	}
+
+	.smallprint p {
+    font-size: 10px;
+    font-size: 0.625rem;
+    line-height: 1.3;
+	}
+
+	.circle h5 {
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.533333333;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+	}	
+
 }
 
 @media only screen and (max-width: 900px) {

@@ -87,8 +87,8 @@ get_header(); ?>
 	<div id="featured" class="featured-content row">
 		<div class="grid-12 pad-3-vert">
 			<div class="grid-12 pad-3-top pad-2-bottom"><h5 class="center pinkorange">featured products</h5></div>
-			<div class="offset-1 grid-10">
-			<div class="woocommerce columns-2">
+			<div class="offset-1 grid-10 m-offset-0 m-grid-12 m-pad-3-sides">
+			<div class="rpf woocommerce columns-2">
 			<ul class="products">
 
 			<?php
@@ -121,7 +121,53 @@ get_header(); ?>
 <?php wp_reset_query(); ?>
 
 			</ul>
-			</div>		
+			</div>	
+
+			<div class="rpftab woocommerce columns-1">
+			<ul class="products">
+
+			<?php
+     $args = array( 'post_type' => 'product', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
+     $loop = new WP_Query( $args );
+     while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+
+                        <li  <?php post_class(); ?>> 
+                        <div class="grid-12 parent">
+                        	<div class="child">
+                        		<?php do_action( 'woocommerce_shop_loop_item_title' );?>
+                        	</div>	
+                       
+                        	<div class="child-image">	
+                        		<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">	
+                        		<?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?></a>
+                    		</div>
+                    	</div>
+
+                        <div  class="rfpdesc grid-12 pad-3">
+                        	
+                        <h6 class="center hsslate">hannah says</h6>	
+                        <div class="pad-2-vert"><?php the_content();?></div>
+                        	<div class="rvlink">
+                            	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
+                           	</div> 
+                        </div>
+                                                                
+                        </li>
+                <?php
+            /**
+             * woocommerce_pagination hook
+             *
+             * @hooked woocommerce_pagination - 10
+             * @hooked woocommerce_catalog_ordering - 20
+             */
+            do_action( 'woocommerce_pagination' );
+        ?>
+<?php endwhile; ?>
+<?php wp_reset_query(); ?>
+
+			</ul>
+			</div>
+
 			</div>
 	</div>
 </div>

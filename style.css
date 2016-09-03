@@ -4020,6 +4020,18 @@ abbr[title] {
     line-height: 1.533333333;
     text-transform: uppercase;
     letter-spacing: .3em;
+	}
+
+	.price { 
+	padding-left: 1em;		
+	}
+
+	.azc_tsh_toggle, .azc_tsh_toggle_open, .azc_tsh_toggle_active, .azc_tsh_toggle_open_active {
+	padding: 2px 0px 38px 0px;	
+	}
+
+	.rpbreak {
+	display: none;	
 	}	
 
 }
@@ -4087,6 +4099,10 @@ abbr[title] {
 		padding-left: 16px;
 		padding-left: 1rem;
 	}
+
+	.circle h5 {
+		letter-spacing: .035em;
+	}
 }
 
 
@@ -4127,6 +4143,16 @@ abbr[title] {
 	}
 	.social-media-icons {
 		text-align: center;
+	}
+
+	.azc_tsh_toggle h4 {
+		letter-spacing: -.025em;
+	}
+
+	.rpbreak {
+		display: block;
+		margin: 0 0 -36px 0;
+    	line-height: 0;	
 	}
 }
 

@@ -83,7 +83,7 @@
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 780px) {
         .envira-gallery-wrap .envira-gallery-public.envira-gallery-2-columns .envira-gallery-item,
         .envira-gallery-wrap .envira-gallery-public.envira-gallery-3-columns .envira-gallery-item,
         .envira-gallery-wrap .envira-gallery-public.envira-gallery-4-columns .envira-gallery-item,

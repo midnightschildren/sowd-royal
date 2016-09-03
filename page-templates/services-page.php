@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-8 offset-2">
+		<div class="col grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides">
 			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0, 'orderby' => 'menu_order', 'order' => 'ASC'  ));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-top pad-2-bottom">
@@ -76,9 +76,9 @@ get_header(); ?>
 				$htmllink .= "<p class='book pad-2-top'><a href='{$link3}' target='_blank'>$linktext3</a></p>";
 				}
 
-				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9\"><h4>';
+				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9 m-grid-12\"><h4>';
 				$t.= $stitle;
-				$t.= '</h4></div><div class=\"grid-3 right\">';
+				$t.= '</h4></div><div class=\"grid-3 m-grid-6 right m-left\">';
 				$t.= $duration;
 				$t.= $price;
 				$t.= '</div></div>';

@@ -66,7 +66,7 @@ get_header( 'shop' ); ?>
 
 					<?php if( get_field('shop_description', 21) ): ?>
 
-						<div class="grid-8 offset-2 pad-3-vert">
+						<div class="grid-8 m-grid-12 offset-2 m-offset-0 pad-3-vert m-pad-3-sides">
 	
 							<p class="center shop-description"><?php the_field('shop_description', 21); ?></p>
 
@@ -152,17 +152,9 @@ get_header( 'shop' ); ?>
 			<?php endif; ?>
 	</div>
 
-	<div class="pad-3-vert grid-8 offset-2">
+	<div class="pad-3-vert grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides">
 
-		<div class="grid-8 pad-3-bottom">
-			<?php if( get_field('consult_section_intro', 21) ): ?>
-	
-			<p><?php the_field('consult_section_intro', 21); ?></p>
-	
-			<?php endif; ?>
-		</div>
-
-		<div class="grid-2 offset-1" id="headshot">
+		<div class="grid-2 m-grid-4 offset-1 m-offset-4 flow-opposite m-padded-bottom" id="headshot">
 					<?php 
 
 					$image = get_field('headshot', 21);
@@ -173,6 +165,16 @@ get_header( 'shop' ); ?>
 						</div>	
 					<?php endif; ?>
 		</div>
+
+		<div class="grid-8 m-grid-12 pad-3-bottom flow-opposite">
+			<?php if( get_field('consult_section_intro', 21) ): ?>
+	
+			<p><?php the_field('consult_section_intro', 21); ?></p>
+	
+			<?php endif; ?>
+		</div>
+
+
 
 		<div class="grid-12 pad-3-vert center">
 			<div class="clink">

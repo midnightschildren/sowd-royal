@@ -1201,6 +1201,36 @@ function woo_rename_tabs( $tabs ) {
 
 add_filter( 'woocommerce_custom_product_tabs_lite_heading', '__return_empty_string' );
 
+/* This snippet removes the action that inserts thumbnails to products in teh loop
+ * and re-adds the function customized with our wrapper in it.
+ * It applies to all archives with products.
+ *
+ * @original plugin: WooCommerce
+ * @author of snippet: Brian Krogsard
+ */
+
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+
+
+if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
+    function woocommerce_template_loop_product_thumbnail() {
+        echo woocommerce_get_product_thumbnail();
+    } 
+}
+if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {   
+    function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $placeholder_width = 0, $placeholder_height = 0  ) {
+        global $post, $woocommerce;
+        $output = '<div class="imagewrapper">';
+
+        if ( has_post_thumbnail() ) {               
+            $output .= get_the_post_thumbnail( $post->ID, $size );              
+        }                       
+        $output .= '</div>';
+        return $output;
+    }
+}
+
 
 /**
  * Outputs the opening container div for WooCommerce

@@ -35,7 +35,7 @@
 		</header>
 	<?php } ?>
 	<div class="entry-content">
-		<div class="grid-8 offset-2 pad-3-vert">
+		<div class="grid-8 m-grid-12 offset-2 m-offset-0 pad-3-vert m-pad-3-sides">
 			<?php the_content(); ?>
 			<?php quark_posted_on(); ?>
 			<?php wp_link_pages( array(

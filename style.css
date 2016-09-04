@@ -1094,7 +1094,12 @@ h5 {
 	width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-top: -70px;
+    margin-top: -77px;
+}
+
+.woocommerce ul.products li.product .loop_cat_button a.button {
+	padding: 1.75em 0.75em;
+	margin-top: 0;
 }
 
 ul.products .purchasable .loop_cat_button {
@@ -1111,6 +1116,7 @@ ul.products .purchasable:hover .loop_cat_button {
   -ms-transform: scale(3);
   -o-transform: scale(3);
   transform: scale(3);
+
 }
 
 .imagewrapper {

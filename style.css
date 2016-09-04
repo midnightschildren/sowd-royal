@@ -4153,11 +4153,15 @@ abbr[title] {
 	}
 
 	.woocommerce ul.products li.type-product h3 {
-
 	font-size: 24px;
 	font-size: 1.5rem;
 	line-height: 1.25;
+	}
 
+	.term-description p {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 1.42857143;
 	}
 }
 

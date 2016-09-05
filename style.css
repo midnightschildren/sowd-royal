@@ -1119,6 +1119,15 @@ ul.products .purchasable:hover .loop_cat_button {
 
 }
 
+.featured-content .woocommerce ul.products .purchasable:hover a img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+
+}
+
 .imagewrapper {
 	overflow: hidden;
 	display: inline-block;
@@ -3207,7 +3216,7 @@ h1.page-title {
 	margin-bottom: 0rem;
 	font-size: 17px;
 	font-size: 1.0625rem;
-	line-height: 1.88235294;
+	line-height: 1.41176471;
 	text-transform: uppercase;
 	letter-spacing: .3em;
 	color: #30333c;
@@ -3668,9 +3677,9 @@ h1.page-title {
 
 .contribution-type-selector {
 	letter-spacing: .035em;
-    font-size: 27px;
-    font-size: 1.6875rem;
-    line-height: 1.18518519;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
 }
 
 .star-rating-selector:not(:checked) label.checkbox:hover, .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox {
@@ -3974,6 +3983,12 @@ abbr[title] {
     padding: 2em 0;
 }
 
+.woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.description_tab,
+.woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.reviews_tab, 
+.woocommerce div.post-1872 .woocommerce-tabs ul.tabs li.description_tab  {
+	display: none;
+}
+
 
 /* ==========================================================================
    Page Builders
@@ -4116,10 +4131,15 @@ abbr[title] {
 	}
 
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
-    width: 33%;
+    width: 30%;
     float: left;
     clear: right;
-    margin: 0 0 2.992em;
+    margin: 0 3% 2.992em 0;
+	}
+
+	.featured-content .rpftab ul.products li.product {
+    margin: 1em 0;
+    width: 100%;
 	}
 
 	.product-menu-content .nav-menu {
@@ -4163,6 +4183,45 @@ abbr[title] {
     font-size: 1.3125rem;
     line-height: 1.42857143;
 	}
+
+	.single-content-product .parent {
+	display: block;	
+	}
+	.woocommerce div.product .single-content-product div.images {
+	display: block;
+	width: 50%;
+	margin-left: 25%;	
+	}
+	.woocommerce div.product .single-content-product .child_p {
+    display: block;
+    width: 100%;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:visited {
+    font-size: 15px;
+    font-size: .9375rem;
+    line-height: 1.86666667;
+	}
+
+	.woocommerce #reviews h3 {
+
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+	}
+
+	.contribution-type-selector {
+	
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 1.42857143;
+	}
+
+	.search-results .entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -4202,10 +4261,10 @@ abbr[title] {
 
 @media only screen and (max-width: 768px) {
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
-    width: 50%;
+    width: 47.5%;
     float: left;
     clear: both;
-    margin: 0 0 2.992em;
+    margin: 0 2% 2.992em 0;
 }
 }
 /*  Go full Width at less than 650px */

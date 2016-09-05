@@ -27,6 +27,6 @@ if ( ! $post->post_excerpt ) {
 }
 
 ?>
-<div itemprop="description" class="pad-2">
+<div itemprop="description" class="pad-2 m-pad-3">
 	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
 </div>

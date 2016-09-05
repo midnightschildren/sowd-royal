@@ -63,8 +63,6 @@
 		<?php endif; ?>
 	</div>	
 
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'quark' ); ?>"><?php esc_html_e( 'Skip to main content', 'quark' ); ?></a></div>
-
 	<div id="headercontainer">
 
 		<header id="masthead" class="site-header row" role="banner">

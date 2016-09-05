@@ -35,7 +35,7 @@ get_header(); ?>
 	
 			
 		</div>	
-		<div class="grid-10 offset-1 pad-3-vert">
+		<div class="grid-10 m-grid-12 offset-1 m-offset-0 pad-3-vert m-pad-3-sides">
 
 			<?php the_content(); ?>	
 

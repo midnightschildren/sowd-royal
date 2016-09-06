@@ -272,8 +272,23 @@ td { vertical-align: top; }
 .rpm {
 		margin-top: -16px;
 		margin-bottom: -16px;
-		margin-right: 100px;
+		
 	}
+
+#responsive-menu-pro-header .responsive-menu-pro-header-box:last-child {
+	float: left;
+    margin-left: -50px;
+    margin-right: -50px;
+    width: 100%;
+}
+
+.cart_nav2 {
+    width: 48px;
+	text-align: right;
+    top: -5px;
+    position: absolute;
+    right: 3%;
+}
 
 .parent {
   	display: table;
@@ -4059,6 +4074,10 @@ abbr[title] {
 		display: none;
 	}
 
+	.cart_nav {
+		display: none;
+	}
+
 	.home .entry-content p {
     font-size: 24px;
     font-size: 1.5em;
@@ -4296,6 +4315,25 @@ abbr[title] {
 
 	.circle h5 {
 		letter-spacing: .035em;
+	}
+
+	#headerimage {
+		position: relative;
+    	overflow: hidden;
+    	width: 100%;
+    	padding-bottom: 100%;
+	}
+
+	#headerimage img {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    max-width: none;
+    -webkit-transform: translate(-50%,-55%) scale(1.25);
+    -ms-transform: translate(-50%,-55%) scale(1.25);
+    transform: translate(-50%,-55%) scale(1.25);
 	}
 }
 

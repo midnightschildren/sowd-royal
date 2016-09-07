@@ -138,6 +138,27 @@ if ( ! function_exists( 'quark_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'quark_setup' );
 
+/**
+ * Remove Howdy Text + Customize menu
+ *
+ * @since Quark 1.3
+ *
+ * @return void
+ */
+
+
+add_filter('admin_bar_menu','change_howdy_text_toolbar');
+function change_howdy_text_toolbar($wp_admin_bar)
+{
+	$getgreetings = $wp_admin_bar->get_node('my-account');
+	$rpctitle = str_replace('Howdy,','',$getgreetings->title);
+	$wp_admin_bar->add_node(array("id"=>"my-account","title"=>$rpctitle));
+}
+
+add_action( 'admin_bar_menu', 'remove_some_nodes_from_admin_top_bar_menu', 999 );
+function remove_some_nodes_from_admin_top_bar_menu( $wp_admin_bar ) {
+    $wp_admin_bar->remove_menu( 'customize' );
+}
 
 /**
  * Enable backwards compatability for title-tag support

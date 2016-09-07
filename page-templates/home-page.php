@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 		
-		<div class="offset-1 m-offset-0 grid-10 m-grid-12 pad-3-vert pad-2-sides m-pad-3-sides">
+		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-3-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -55,7 +55,7 @@ get_header(); ?>
 
 	<div class="grid-12 pad-3-vert">	
 
-		<div class="grid-12 pad-3-vert">
+		<div class="grid-12 pad-3-vert s-pad-2-vert">
 			<?php if( get_field('testimonial_section_title') ): ?>
 	
 			<h5 class="center hsblue"><?php the_field('testimonial_section_title'); ?></h5>
@@ -63,7 +63,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-6 m-grid-12 offset-3 m-offset-0 m-pad-3-sides">
+		<div class="col grid-6 m-grid-12 s-grid-12 offset-3 m-offset-0 s-offset-0 m-pad-3-sides s-pad-2-sides">
 			<?php $custom_query = new WP_Query(array('post_type' => 'testimonial', 'orderby' => 'rand', 'posts_per_page' => '2'));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-vert">
@@ -133,7 +133,7 @@ get_header(); ?>
 
                         <li  <?php post_class(); ?>> 
                         <div class="grid-12 parent">
-                        	<div class="child">
+                        	<div class="child cellphone_text_hide">
                         		<?php do_action( 'woocommerce_shop_loop_item_title' );?>
                         	</div>	
                        
@@ -141,6 +141,10 @@ get_header(); ?>
                         		<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">	
                         		<?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?></a>
                     		</div>
+
+                    		<div class="child cellphone_text_show">
+                        		<?php do_action( 'woocommerce_shop_loop_item_title' );?>
+                        	</div>
                     	</div>
 
                         <div  class="rfpdesc grid-12 pad-3">

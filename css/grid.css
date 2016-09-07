@@ -402,6 +402,10 @@
         float: none
     }
 
+    .s-padded-none {
+        padding: 0;
+    }
+
     .s-pad-2 { padding: 1em; }
 	.s-pad-2-left { padding-left: 1em; }
 	.s-pad-2-right { padding-right: 1em; }

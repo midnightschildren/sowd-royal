@@ -4422,6 +4422,15 @@ abbr[title] {
     text-align: center;
 	}
 
+	.blog .child_image {
+	width: 100%;
+	padding: 0;	
+	}
+
+	.blog .child {
+		padding: 3em 0 2em 0;
+	}
+
 	.cellphone_text_hide {
 	display: none;	
 	}
@@ -4433,6 +4442,9 @@ abbr[title] {
 
 	.featured-content .woocommerce ul.products li.product a img {
     padding: 1em;
+	}
+	.blog .parent{
+	display: block;	
 	}
 }
 

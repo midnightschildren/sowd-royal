@@ -14,28 +14,32 @@
 		<div id="primary" class="blog_header-content row">
 			
 			<div class="grid-12 parent">
-
+			
+			<div class="child_image cellphone_text_show">
+				<?php if ( has_post_thumbnail() && !is_search() && !post_password_required() ) { ?>
+					<?php the_post_thumbnail( 'post_feature_full_width' ); ?>
+				<?php } ?>
+			</div>
 				
 				<div class="child">
           			<h1 class="blog-title"><?php the_title(); ?></h1>
           			<p class="p_time hsblue"><?php the_date('F j, Y'); ?> / <?php the_time('g:i a'); ?></p>
           		</div>
-          		
-					
-			
+          			
 
-			<div class="child_image">
+			<div class="child_image cellphone_text_hide">
 				<?php if ( has_post_thumbnail() && !is_search() && !post_password_required() ) { ?>
 					<?php the_post_thumbnail( 'post_feature_full_width' ); ?>
 				<?php } ?>
 			</div>
+
 		</div>
 
 		</div>
 		</header>
 	<?php } ?>
 	<div class="entry-content">
-		<div class="grid-8 m-grid-12 offset-2 m-offset-0 pad-3-vert m-pad-3-sides">
+		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 			<?php the_content(); ?>
 			<?php quark_posted_on(); ?>
 			<?php wp_link_pages( array(

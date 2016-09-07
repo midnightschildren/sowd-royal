@@ -34,7 +34,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides">
+		<div class="col grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 m-pad-3-sides s-pad-2-sides">
 			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0, 'orderby' => 'menu_order', 'order' => 'ASC'  ));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-top pad-2-bottom">
@@ -76,9 +76,9 @@ get_header(); ?>
 				$htmllink .= "<p class='book pad-2-top'><a href='{$link3}' target='_blank'>$linktext3</a></p>";
 				}
 
-				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9 m-grid-12\"><h4>';
+				$t = '[toggle title= \'<div class=\"grid-12\"><div class=\"grid-9 m-grid-12 s-grid-12\"><h4>';
 				$t.= $stitle;
-				$t.= '</h4></div><div class=\"grid-3 m-grid-6 right m-left\">';
+				$t.= '</h4></div><div class=\"grid-3 m-grid-6 s-grid-8 right m-left s-left\">';
 				$t.= $duration;
 				$t.= $price;
 				$t.= '</div></div>';
@@ -101,7 +101,7 @@ get_header(); ?>
 
 	<div class="business-content row">
 
-		<div class="grid-8 offset-2 pad-3-vert center">
+		<div class="grid-8 s-grid-12 offset-2 s-offset-0 s-pad-2-sides pad-3-vert center">
 
 		<?php if( get_field('services_section_2_title') ): ?>
 	

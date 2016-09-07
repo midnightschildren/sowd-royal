@@ -4477,6 +4477,9 @@ abbr[title] {
 
 	.azc_tsh_toggle h4 {
 		letter-spacing: -.025em;
+		font-size: 28px;
+    	font-size: 1.75rem;
+    	line-height: 1.14285714;
 	}
 
 	.rpbreak {
@@ -4488,6 +4491,18 @@ abbr[title] {
 	.foot_fix {
 		width: 100%;
 		display: block;
+	}
+
+	.azc_tsh_toggle, .azc_tsh_toggle_open, .azc_tsh_toggle_active, .azc_tsh_toggle_open_active {
+	padding: 2px 0px 44px 0px;	
+	}
+
+	.hours p {
+    letter-spacing: .035em;
+    font-size: 24px;
+    font-size: 1.5em;
+    line-height: 1.29166667;
+    color: #30333c;
 	}
 }
 

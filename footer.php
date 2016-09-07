@@ -32,7 +32,7 @@
 			if ( $footerSidebars > 0 ) { ?>
 				<?php
 				// Work out the container class name based on the number of active footer sidebars
-				$containerClass = "grid-6 m-grid-12 s-grid-12 pad-3-vert";
+				$containerClass = "grid-6 m-grid-12 s-grid-12 pad-3-vert s-padded";
 
 				// Display the active footer sidebars
 				for ( $x=1; $x<=4; $x++ ) {

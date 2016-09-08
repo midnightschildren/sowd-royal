@@ -4286,6 +4286,10 @@ abbr[title] {
     font-size: 1.5rem;
     line-height: 1.25;
 	}
+
+	.term-description {
+	padding-bottom: 2em;	
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -4623,7 +4627,12 @@ abbr[title] {
     line-height: 1.5;
 	}
 
-	
+	.term-description p {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+	}
+
 }
 
 @media only screen and (max-width: 480px) {

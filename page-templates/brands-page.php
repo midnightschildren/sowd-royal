@@ -31,7 +31,7 @@ get_header(); ?>
 	</div>
 </div>
 <div class="brand-title-content row">
-	<div class="grid-12 pad-3-vert">
+	<div class="grid-12 pad-3-vert s-pad-3-sides">
 		<div class="center brand_bc pad-3-bottom"><a href="http://hannahsowdinc.wpengine.com/shop/">Shop</a> / Brands</div>
 		<h1 class="center shop-title pad-2-bottom"><?php the_title(); ?></h1>
 	</div>	

@@ -22,14 +22,14 @@
 
 		$width = floor( ( ( 100 - ( ( $columns - 1 ) * 2 ) ) / $columns ) * 100 ) / 100;
 		?>
-		<div class="grid-10 m-grid-12 offset-1 m-offset-0 pad-3-vert m-pad-3-sides">
+		<div class="grid-10 m-grid-12 s-grid-12 offset-1 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 		<div class="row brand-row">
-		<div class="grid-6 m-grid-12 pad-3 <?php echo $class; ?>">
+		<div class="grid-6 m-grid-12 s-grid-12 pad-3  <?php echo $class; ?>">
 				<a href="<?php echo get_term_link( $brand->slug, 'product_brand' ); ?>" title="<?php echo $brand->name; ?>" class="term-thumbnail">
 					<img src="<?php echo $thumbnail; ?>" alt="<?php echo $brand->name; ?>" />
 				</a>
 		</div>
-		<div class="grid-6 m-grid-12 pad-3">	
+		<div class="grid-6 m-grid-12 s-grid-12 pad-3">	
 			<div id="term-<?php echo $brand->term_id; ?>" class="term-description">
 				<?php echo wpautop( wptexturize( $brand->description ) ); ?>
 			</div>

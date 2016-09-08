@@ -23,10 +23,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 
 <div class="product-menu-content row">
-	<div class="pad-3-vert grid-10 offset-1 center">
+	<div class="pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-2 center">
+	<div class="desk_product_menu">	
 	<nav id="product-navigation" class="main-navigation" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
-	</nav>	
+	</nav>
+	</div>
+	<div class="rep_product_menu">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'responsive', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>	
 	</div>
 </div>
 
@@ -59,14 +66,14 @@ get_header( 'shop' ); ?>
 				</div>	
 
 					<?php if( get_field('shop_title', 21) ): ?>
-						<div class="grid-12 pad-3-vert">
+						<div class="grid-12 pad-3-vert s-pad-3-sides">
 							<h1 class="center shop-title"><?php the_field('shop_title', 21); ?></h1>
 						</div>
 					<?php endif; ?>
 
 					<?php if( get_field('shop_description', 21) ): ?>
 
-						<div class="grid-8 m-grid-12 offset-2 m-offset-0 pad-3-vert m-pad-3-sides">
+						<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 	
 							<p class="center shop-description"><?php the_field('shop_description', 21); ?></p>
 
@@ -143,7 +150,7 @@ get_header( 'shop' ); ?>
 	?>
 <div class="online-consult-content row">
 	<div class="grid-12 pad-3-vert">
-	<div class="grid-12 pad-3-vert center">
+	<div class="grid-12 s-grid-10 s-offset-1 pad-3-vert center">
 
 		<?php if( get_field('consult_section_title', 21) ): ?>
 	
@@ -152,9 +159,9 @@ get_header( 'shop' ); ?>
 			<?php endif; ?>
 	</div>
 
-	<div class="pad-3-vert grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides">
+	<div class="pad-3-vert grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides">
 
-		<div class="grid-2 m-grid-4 offset-1 m-offset-4 flow-opposite m-padded-bottom" id="headshot">
+		<div class="grid-2 m-grid-4 s-grid-10 offset-1 m-offset-4 s-offset-1 flow-opposite m-padded-bottom s-padded-bottom" id="headshot">
 					<?php 
 
 					$image = get_field('headshot', 21);
@@ -166,7 +173,7 @@ get_header( 'shop' ); ?>
 					<?php endif; ?>
 		</div>
 
-		<div class="grid-8 m-grid-12 pad-3-bottom flow-opposite">
+		<div class="grid-8 m-grid-12 s-grid-12 pad-3-bottom flow-opposite">
 			<?php if( get_field('consult_section_intro', 21) ): ?>
 	
 			<p><?php the_field('consult_section_intro', 21); ?></p>
@@ -187,7 +194,7 @@ get_header( 'shop' ); ?>
 	</div>	
 </div>	
 <div class="footer-menu-content row">
-	<div class="pad-3-vert grid-10 offset-1 center border-rule-footer">
+	<div class="pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-3-sides center border-rule-footer">
 	<nav id="product-navigation" class="main-navigation" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu' ) ); ?>
 	</nav>	

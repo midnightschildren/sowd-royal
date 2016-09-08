@@ -337,6 +337,10 @@ body.admin-bar .padsp  {
 	display: none;
 }
 
+.rep_product_menu {
+		display: none;
+	}
+
 .b_child_image {
 	display: table-cell; 
 	width: 100%; 
@@ -2981,6 +2985,20 @@ li span.dots {
 	margin: 0;
 }
 
+.rep_product_menu .main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	vertical-align: middle;
+	font-size: 32px;
+	font-size: 2rem;
+	content: " \25BD";
+	float: right;
+    margin-top: -.35em;
+}
+
+
 .main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
 	font-family: 'FontAwesome';
 	font-weight: normal;
@@ -3007,6 +3025,10 @@ li span.dots {
 	padding: 0; /* Padding around each top level menu option (if needed) */
 }
 
+.rep_product_menu .main-navigation ul a {
+	    padding: 1em 0em 1em 0em;
+}
+
 .main-navigation ul ul a {
 	padding: 0 5px; /* Padding around each dropdown menu option */
 	padding: 0 0.3125rem;
@@ -3025,8 +3047,8 @@ li span.dots {
 	z-index: 99999;
 	line-height: 1.7;
 	background-color: #333; /* Nav bar dropdown background color */
-	-webkit-box-shadow:2px 2px 5px 0px rgba(0, 0, 0, 0.6);
-	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow:none;
+	box-shadow: none;
 }
 
 .main-navigation ul ul ul {
@@ -3047,12 +3069,12 @@ li span.dots {
 }
 
 .main-navigation ul ul :hover > a {
-	color: #333; /* Nav bar dropdown level 2 link color on level 3 hover */
+	color: #30333c; /* Nav bar dropdown level 2 link color on level 3 hover */
 	background-color: #fff; /* Nav bar dropdown link background color on hover */
 }
 
 .main-navigation ul ul a:hover {
-	color: #2997ab; /* Nav bar dropdown link color on hover */
+	color: #5abd8b; /* Nav bar dropdown link color on hover */
 }
 
 .main-navigation ul li:hover > ul {
@@ -4351,10 +4373,6 @@ abbr[title] {
 		padding-left: 1rem;
 	}
 
-	.circle h5 {
-		letter-spacing: .035em;
-	}
-
 	.home #headerimage {
 		position: relative;
     	overflow: hidden;
@@ -4386,6 +4404,20 @@ abbr[title] {
     line-height: 2;
 	}
 
+	.online-consult-content h5 {
+	font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;	
+	}
+
+	.online-consult-content p {
+    letter-spacing: .035em;
+    font-size: 20px;
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: .5rem;
+}
+
 	.testimonial-content p {
     font-size: 20px;
     font-size: 1.25em;
@@ -4404,6 +4436,14 @@ abbr[title] {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
+
+	h1.page-title {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.25;
+    padding-right: .5em;
+    padding-left: .5em;
+}
 
 }
 
@@ -4446,6 +4486,7 @@ abbr[title] {
 	.blog .parent{
 	display: block;	
 	}
+
 }
 
 /*  Adjust the menu at less than 520px */
@@ -4472,6 +4513,28 @@ abbr[title] {
 		margin: 5px 0;
 		text-align: center;
 	}
+
+	.footer-menu-content .main-navigation ul li {
+    background-color: transparent;
+    margin: 5px 0;
+    text-align: center;
+	}
+
+	.rep_product_menu .main-navigation ul {
+		margin-top: .5em;
+	}
+
+	#menu-item-1961 {
+		border: 1px solid #30333c;
+	}
+
+	.rep_product_menu .main-small-navigation ul li,
+	.rep_product_menu .main-navigation ul li {
+		background-color: transparent;
+		margin: 0px;
+		text-align: center;
+	}
+
 	.main-navigation ul ul, .main-navigation ul ul li ul {
 		position: relative;
 	}
@@ -4479,9 +4542,13 @@ abbr[title] {
 		left: 0;
 	}
 	.main-navigation ul ul a {
-		color: #fff; /* Nav bar dropdown link color */
-		background-color: #333;  /* Nav bar dropdown background color */
+		color: #30333c; /* Nav bar dropdown link color */
+		background-color: transparent;  /* Nav bar dropdown background color */
 		width: 100%; /* Nav bar dropdown width */
+		font-size: 14px;
+    	font-size: .875rem;
+    	line-height: 2;
+    	letter-spacing: .3em;
 	}
 	.social-media-icons {
 		text-align: center;
@@ -4492,6 +4559,26 @@ abbr[title] {
 		font-size: 28px;
     	font-size: 1.75rem;
     	line-height: 1.14285714;
+	}
+
+	.rep_product_menu {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.rep_product_menu .main-navigation {
+		display: block;
+	}
+
+	.product-menu-content .nav-menu {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.35714286;
+    letter-spacing: .3em;
+	}
+
+	.desk_product_menu {
+	display: none;	
 	}
 
 	.rpbreak {
@@ -4516,6 +4603,27 @@ abbr[title] {
     line-height: 1.29166667;
     color: #30333c;
 	}
+
+	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
+    width: 96%;
+    float: left;
+    clear: both;
+    margin: 0 2% 2em 2%;
+	}
+
+	h1.shop-title {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.25;
+	}
+
+	.shop-description {
+    font-size: 20px;
+    font-size: 1.25em;
+    line-height: 1.5;
+	}
+
+	
 }
 
 @media only screen and (max-width: 480px) {

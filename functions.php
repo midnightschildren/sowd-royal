@@ -58,6 +58,7 @@ if ( ! function_exists( 'quark_setup' ) ) {
 		register_nav_menus( array(
 				'primary' => esc_html__( 'Primary Menu', 'quark' ),
 				'secondary' => esc_html__( 'Product Menu', 'quark' ),
+				'responsive' => esc_html__( 'Mobile Product Menu', 'quark' ),
 				'footer' => esc_html__( 'Footer Nav Menu', 'quark' )
 			) );
 

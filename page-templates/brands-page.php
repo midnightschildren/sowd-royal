@@ -17,10 +17,17 @@ global $woocommerce;
 get_header(); ?>
 
 <div class="product-menu-content row">
-	<div class="pad-3-vert grid-10 offset-1 center">
+	<div class="pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-2 center">
+	<div class="desk_product_menu">	
 	<nav id="product-navigation" class="main-navigation" role="navigation">
 		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
-	</nav>	
+	</nav>
+	</div>
+	<div class="rep_product_menu">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'responsive', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>	
 	</div>
 </div>
 <div class="brand-title-content row">

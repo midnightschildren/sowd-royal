@@ -31,7 +31,7 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $tabs ) ) : ?>
 
 <div class="tab-content row">
-	<div class="grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides pad-3-vert">
+	<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides pad-3-vert">
 	<div class="woocommerce-tabs wc-tabs-wrapper m-pad-3-sides">
 		<ul class="tabs wc-tabs center">
 			<?php foreach ( $tabs as $key => $tab ) : ?>

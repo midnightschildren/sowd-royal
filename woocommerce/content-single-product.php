@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="entry-summary pad-3 child_p shopgreen">
+	<div class="entry-summary pad-3 s-padded-none child_p shopgreen">
 
 		<?php
 			/**

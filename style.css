@@ -4290,6 +4290,10 @@ abbr[title] {
 	.term-description {
 	padding-bottom: 2em;	
 	}
+
+	.single-content-product .price {
+		padding-left: 0em;
+	}
 }
 
 @media only screen and (max-width: 900px) {
@@ -4348,6 +4352,12 @@ abbr[title] {
 	.featured-content .rpftab ul.products li.product {
     margin: 1em 0;
     width: 100%;
+	}
+
+	.woocommerce div.product .single-content-product div.images {
+    display: block;
+    width: 100%;
+    margin-left: 0%;
 	}
 }
 /*  Go full Width at less than 650px */
@@ -4447,7 +4457,11 @@ abbr[title] {
     line-height: 1.25;
     padding-right: .5em;
     padding-left: .5em;
-}
+	}
+
+	.woocommerce div.product .tab-content .woocommerce-tabs ul.tabs li {
+	width: 100%;	
+	}
 
 }
 
@@ -4490,6 +4504,7 @@ abbr[title] {
 	.blog .parent{
 	display: block;	
 	}
+
 
 }
 
@@ -4633,8 +4648,44 @@ abbr[title] {
     line-height: 1.4;
 	}
 
-}
+	.single-content-product p {
+	font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.4;	
+	}
 
+	.tab-content p {
+	font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+	}
+
+	.single-content-product h1 {
+	font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.25;	
+	}
+
+	.woocommerce div.product .tab-content .woocommerce-tabs ul.tabs li a, .woocommerce div.product .tab-content .woocommerce-tabs ul.tabs li a:visited {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 2.85714286;
+	}
+
+	.woocommerce div.product .single-content-product form.cart div.quantity {
+    float: left;
+    margin: 0 4px 0 0;
+    width: 100%;
+	}
+
+	.woocommerce div.product .single-content-product form.cart .button {
+    vertical-align: middle;
+    float: none;
+    margin-top: 2em;
+    padding: 1em 1.8em 1em 1.8em;
+	}
+
+}
 @media only screen and (max-width: 480px) {
 
 	.foot_space {

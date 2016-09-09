@@ -2985,6 +2985,12 @@ li span.dots {
 	margin: 0;
 }
 
+.page-template-utility-page .woocommerce .main-navigation li.menu-parent-item > a:after {
+	content: " \25BD";
+	float: right;
+    font-size: 1em;
+}
+
 .rep_product_menu .main-navigation li.menu-parent-item > a:after { /* If you don't want the arrows on the top level drop down, simply remove this style */
 	font-family: 'FontAwesome';
 	font-weight: normal;
@@ -4044,6 +4050,13 @@ abbr[title] {
 	display: none;
 }
 
+.ma-desktop {
+	display: block;
+}
+
+.ma-responsive {
+	display: none;	
+} 
 
 /* ==========================================================================
    Page Builders
@@ -4359,7 +4372,26 @@ abbr[title] {
     width: 100%;
     margin-left: 0%;
 	}
-}
+
+	.woocommerce .woocommerce-Address a.button, .woocommerce .woocommerce-Address a.button:hover {
+    display: block;
+    width: inherit;
+    margin-left: 0em;
+    margin-bottom: 2em;
+	}
+
+	.woocommerce .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-1, .woocommerce-page .col2-set .col-2 {
+    float: none;
+    width: 100%;
+    margin-bottom: 2em;
+	}
+
+	.ma-desktop ul li {
+	width: auto;
+    float: left;
+    padding-right: 1em;
+	}
+
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
 	.grid_1_of_12,
@@ -4685,6 +4717,13 @@ abbr[title] {
     padding: 1em 1.8em 1em 1.8em;
 	}
 
+	.ma-desktop {
+	display: none;
+	}
+
+	.ma-responsive {
+	display: block;	
+	} 
 }
 @media only screen and (max-width: 480px) {
 

@@ -12,11 +12,18 @@
 get_header(); ?>
 
 	<div id="primary" class="product-menu-content row" role="main">
-		<div class="pad-3-bottom grid-10 offset-1 center">
-			<nav id="product-navigation" class="main-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>	
-		</div>
+			<div class="pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-2 center">
+	<div class="desk_product_menu">	
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>
+	<div class="rep_product_menu">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'responsive', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>	
+	</div>
 
 	</div><!-- /#primary.site-content.row -->
 
@@ -35,7 +42,7 @@ get_header(); ?>
 	
 			
 		</div>	
-		<div class="grid-10 m-grid-12 offset-1 m-offset-0 pad-3-vert m-pad-3-sides">
+		<div class="grid-10 m-grid-12 s-grid-12 offset-1 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 
 			<?php the_content(); ?>	
 

@@ -12,11 +12,18 @@
 get_header(); ?>
 
 	<div id="primary" class="product-menu-content row" role="main">
-		<div class="pad-3-vert grid-10 offset-1 center">
-			<nav id="product-navigation" class="main-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>	
-		</div>
+	<div class="pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-2 center">
+	<div class="desk_product_menu">	
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>
+	<div class="rep_product_menu">
+	<nav id="product-navigation" class="main-navigation" role="navigation">
+		<?php wp_nav_menu( array( 'theme_location' => 'responsive', 'menu_class' => 'nav-menu' ) ); ?>
+	</nav>
+	</div>	
+	</div>
 
 	</div><!-- /#primary.site-content.row -->
 
@@ -42,7 +49,7 @@ get_header(); ?>
 
 			<?php else : ?>
 
-		<div class="grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides pad-3-vert">
+		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides pad-3-vert">
 
 			<?php the_content(); ?>	
 
@@ -60,7 +67,7 @@ get_header(); ?>
 
 	<?php if( get_field('terms_info') ): ?>	
 
-		<div class="grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides pad-3-vert hsgray">
+		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides pad-3-vert hsgray">
 				
 			<?php the_field('terms_info'); ?>
 		
@@ -73,13 +80,13 @@ get_header(); ?>
  	
     	while ( have_rows('terms') ) : the_row(); ?>
 
-    	<div class="grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides pad-3-bottom pad-1-top">
+    	<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides pad-3-bottom pad-1-top">
 				
 			<h5 class="center hsslate"><?php the_sub_field('terms_title'); ?></h5>
 				
 		</div>	
 
-		<div class="grid-8 m-grid-12 offset-2 m-offset-0 m-pad-3-sides pad-2-vert">
+		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 m-pad-3-sides s-pad-3-sides pad-2-vert">
 
 			<?php the_sub_field('terms_text'); ?>	
 

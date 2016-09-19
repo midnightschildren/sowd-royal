@@ -38,7 +38,7 @@ do_action( 'woocommerce_before_account_navigation' );
 <div class="ma-responsive pad-3-bottom">
 <nav class="woocommerce-MyAccount-navigation main-navigation">
 	<ul class="nav-menu">
-		<li id="menu-item-1961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-1961"><a href="#">My Account</a>
+		<li id="menu-item-1961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-parent-item menu-item-1961"><a href="#/">My Account</a>
 			<ul class="sub-menu">
 				<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 					<li class="<?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">

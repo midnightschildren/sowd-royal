@@ -13,11 +13,16 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 
+<div class="desktop_gal">
 	<div class="grid-12">
 		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '34' ); } ?>
 	</div>	
-		
-		
+</div>
+<div class="mobile_gal">
+	<div class="grid-12">
+		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '2022' ); } ?>
+	</div>	
+</div>		
 	
 
 	</div><!-- /#primary.site-content.row -->

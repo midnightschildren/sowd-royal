@@ -103,9 +103,7 @@ get_header(); ?>
                         <div data-mh="my-group" class="fpdesc pad-3">
                         <h6 class="center hsslate">hannah says</h6>	
                         <div class="pad-2-vert"><?php the_content();?></div>
-                        	<div class="vlink">
-                            	<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">View Product</a>
-                           	</div> 
+                        	
                         </div>                                        
                         </li>
                 <?php

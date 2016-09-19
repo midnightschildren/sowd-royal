@@ -1,6 +1,6 @@
 /*
 Theme Name: Sowd-Royal
-Theme URI: http://quarktheme.com
+Theme URI: http://hannahsowdinc.wpengine.com
 Author: Amarnath Ravva +Anthony Hortin
 Author URI: http://amarravva.com
 Description: Hannah Sowd website based on Quark theme & implementing RoyalAcadamy of Nuts & Bolts design.
@@ -302,6 +302,10 @@ body.admin-bar .padsp  {
     top: -5px;
     position: absolute;
     right: 3%;
+}
+
+.post-1938 .parent {
+	width: 100%;
 }
 
 .parent {
@@ -665,8 +669,8 @@ a.brgray, .brgray, .brgray a {
 	font-size: 27px;
 	font-size: 1.6875rem;
 	line-height: 1.22222222;
-	text-transform: uppercase;
 	letter-spacing: .05em;
+
 }
 
 .woocommerce ul.products li.type-product h3 {
@@ -694,12 +698,14 @@ a.brgray, .brgray, .brgray a {
 }
 
 .vlink {
-	position: absolute;
+	
     width: 100%;
     text-align: center;
-    bottom: 3em;
-    padding-right: 4em;
+    margin-top: 2em;
+    
 }
+
+
 
 .featured-content .vlink a {
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
@@ -790,7 +796,8 @@ a.brgray, .brgray, .brgray a {
 }
 
 .product_meta .posted_in {
-	display: none;
+	color: transparent;
+    margin-left: -69px;
 }
 
 .product_meta {
@@ -819,17 +826,17 @@ a.brgray, .brgray, .brgray a {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	height: 18px;
+	line-height: 18px;
 	margin: 0px;
 	padding: 0px;
 	position: relative;
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition:         width 400ms ease, background 400ms ease;
 	width: 5em;
-    margin-top: -6px;
     text-transform: uppercase;
     letter-spacing: .3em;
     color: #b7b8bb;
+    display: block;
 }
 
 .search-field:focus {
@@ -842,6 +849,11 @@ a.brgray, .brgray, .brgray a {
 
 .search-submit {
   display: none;
+}
+
+.gform_wrapper .field_description_below .gfield_description {
+    padding-top: 16px;
+    white-space: normal;
 }
 
 input[type="search"] {
@@ -3177,12 +3189,10 @@ h1.page-title {
 	font-weight: 400;
 	color: #333;
 	margin-top: 0;
-}
-
-h1.page-title { 
 	font-size: 48px;
 	font-size: 3rem;
 	line-height: 1.25;
+	text-transform: none;
 }
 
 .tax-product_brand .online-consult-content, .tax-product_cat .online-consult-content{
@@ -3621,6 +3631,7 @@ h1.page-title {
     color: #8a8676;
     border: none;
     letter-spacing: .3em;
+    white-space: normal;
 }
 
 .woocommerce-error:before, .woocommerce-info:before {
@@ -4044,6 +4055,9 @@ abbr[title] {
     padding: 2em 0;
 }
 
+
+.woocommerce div.post-2002 .woocommerce-tabs ul.tabs li.description_tab,
+.woocommerce div.post-2002 .woocommerce-tabs ul.tabs li.reviews_tab,
 .woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.description_tab,
 .woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.reviews_tab, 
 .woocommerce div.post-1872 .woocommerce-tabs ul.tabs li.description_tab  {
@@ -4056,6 +4070,10 @@ abbr[title] {
 
 .ma-responsive {
 	display: none;	
+}
+
+.mobile_gal {
+	display: none;
 } 
 
 /* ==========================================================================
@@ -4101,6 +4119,13 @@ abbr[title] {
 	.banner h2 {
 		font-size: 24px;
 		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 981px) and (max-width: 1100px) {
+		.foot_fix {
+		width: 100%;
+		display: block;
 	}
 }
 
@@ -4354,6 +4379,14 @@ abbr[title] {
 }
 
 @media only screen and (max-width: 768px) {
+
+	.desktop_gal {
+		display: none;
+	}
+
+	.mobile_gal {
+		display: block;
+	}
 
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
     width: 47.5%;

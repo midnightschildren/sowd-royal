@@ -39,7 +39,7 @@ if(is_user_logged_in() && has_bought()) { ?>
 	
 			
 		</div>	
-		<div class="grid-8 offset-2 pad-3-vert">
+		<div class="grid-8 m-grid-10 s-grid-12 offset-2 m-offset-1 s-offset-0 s-pad-3-sides pad-3-vert">
 
 			<?php the_content(); ?>	
 
@@ -67,7 +67,7 @@ if(is_user_logged_in() && has_bought()) { ?>
 
 			</div>
 
-		<div class="grid-8 offset-2 pad-3-vert">
+		<div class="grid-8 m-grid-10 s-grid-12 offset-2 m-offset-1 s-offset-0 s-pad-3-sides pad-3-vert">
 
 			<?php if( get_field('about_section_content') ): ?>
 	
@@ -91,7 +91,7 @@ if(is_user_logged_in() && !has_bought()) { ?>
 			<div class="grid-12">
 				<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
 
-				<div class="grid-10 offset-1 pad-3-vert">
+				<div class="grid-10 s-grid-12 offset-1 s-offset-0 pad-3-vert s-pad-3-sides">
 		
 					<?php if ( have_posts() ) : ?>
 
@@ -107,7 +107,7 @@ if(is_user_logged_in() && !has_bought()) { ?>
 
 					<?php endif; // end have_posts() check ?>
 
-						<p class="center shop-description">Please purchase the <a href="/shop/uncategorized/online-skin-care-consultation/">Virtual Online Consult</a> to view this content. Thank you!</p>
+						<p class="center shop-description">Please purchase the <a href="/shop/uncategorized/online-skin-care-consultation/">Online Skin Care Consult</a> to view this content. Thank you!</p>
 
 				</div>
 
@@ -124,7 +124,7 @@ if(!is_user_logged_in()) { ?>
 	<div class="grid-12">
 		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
 
-		<div class="grid-10 offset-1 pad-3-vert">
+		<div class="grid-10 s-grid-12 offset-1 s-offset-0 pad-3-vert s-pad-3-sides">
 		
 			<?php if ( have_posts() ) : ?>
 

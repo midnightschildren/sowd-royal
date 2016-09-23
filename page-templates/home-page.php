@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 		
-		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-3-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides">
+		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-3-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides l-grid-8 l-offset-2">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -103,7 +103,6 @@ get_header(); ?>
                         <div data-mh="my-group" class="fpdesc pad-3">
                         <h6 class="center hsslate">hannah says</h6>	
                         <div class="pad-2-vert"><?php the_content();?></div>
-                        	
                         </div>                                        
                         </li>
                 <?php

@@ -11,12 +11,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
-
-	<div class="grid-12">
-		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
-	</div>	
-		
+	<div id="primary" class="site-content row" role="main">	
 		
 	
 
@@ -37,7 +32,7 @@ get_header(); ?>
 	
 			
 		</div>	
-		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
+		<div class="grid-6 m-grid-12 s-grid-12 offset-3 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 
 			<?php the_content(); ?>	
 

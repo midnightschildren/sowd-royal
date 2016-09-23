@@ -27,5 +27,5 @@ if ( ! $messages ){
 ?>
 
 <?php foreach ( $messages as $message ) : ?>
-	<div class="grid-8 offset-2"><div class="woocommerce-message spb pad-2-top"><?php echo wp_kses_post( $message ); ?></div></div>
+	<div class="grid-8 offset-2"><div class="grid-12 woocommerce-message spb pad-2-top"><?php echo wp_kses_post( $message ); ?></div></div>
 <?php endforeach; ?>

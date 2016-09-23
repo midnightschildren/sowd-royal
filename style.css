@@ -159,7 +159,7 @@ body.admin-bar .padsp  {
 	background-color: #e3f5dd;
 }
 
-.page-template-terms-page .site-content {
+.page-template-terms-page .site-content, .page-template-list-page .site-content {
 	padding: 0;
 }
 
@@ -854,6 +854,38 @@ a.brgray, .brgray, .brgray a {
 .gform_wrapper .field_description_below .gfield_description {
     padding-top: 16px;
     white-space: normal;
+}
+
+.mc-field-group ul {
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+#mc_embed_signup_scroll input[type="submit"] {
+	letter-spacing: .3em;
+}
+
+div.mc-field-group.input-group > ul > li > label {
+	margin-left: 5px;
+}
+
+.mc-field-group label {
+	font-weight: 400;
+    font-size: 21px;
+    font-size: 1.3125em;
+}
+
+.mc-field-group input {
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.mc-field-group input[type="checkbox"] {
+	width: auto;
+	margin-bottom: 1em;
+    vertical-align: baseline;
+    margin-left: 2em;
+    font-size: 21px;
 }
 
 input[type="search"] {
@@ -3354,6 +3386,11 @@ h1.page-title {
     color: #30333c;
 }
 
+.woocommerce table.shop_table.customer_details td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .woocommerce table.shop_table {
     border-top: 1px solid #ddd8c3;
     border-right: none;
@@ -3458,6 +3495,7 @@ h1.page-title {
 .woocommerce table.shop_table .product-purchase-note td {
 	border-top: none;
 	padding-bottom: 1.5em;
+	width: 100%;
 }
 
 .woocommerce-cart .cart-collaterals .cart_totals tr.order-total th, .woocommerce-cart .cart-collaterals .cart_totals tr.order-total td{
@@ -4424,7 +4462,7 @@ abbr[title] {
     float: left;
     padding-right: 1em;
 	}
-
+}
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
 	.grid_1_of_12,
@@ -4659,6 +4697,20 @@ abbr[title] {
     font-size: .875rem;
     line-height: 1.35714286;
     letter-spacing: .3em;
+	}
+
+	.product-purchase-note .clink a {
+	padding: 0em;	
+	}
+
+	.product-purchase-note .clink {
+		    background-color: #e4e0cf;
+		    padding: .5em;
+		    text-align: center;
+	}
+
+	.woocommerce table.shop_table.customer_details td,  .woocommerce table.shop_table.customer_details th{
+		display:block; box-sizing:border-box; clear:both
 	}
 
 	.desk_product_menu {

@@ -1486,6 +1486,22 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 }
 
 
+// rename the coupon field on the cart page
+function woocommerce_rename_coupon_field_on_cart( $translated_text, $text, $text_domain ) {
+
+	// bail if not modifying frontend woocommerce text
+	if ( is_admin() || 'woocommerce' !== $text_domain ) {
+		return $translated_text;
+	}
+
+	if ( 'Apply Coupon' === $text ) {
+		$translated_text = 'Apply Gift Certificate';
+	}
+
+	return $translated_text;
+}
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
+
 /**
  * Set the number of products to display on the WooCommerce shop page
  *

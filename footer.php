@@ -149,6 +149,12 @@ jQuery(document).ready(function() {
 	});
 
 	jQuery('.ucol').matchHeight();
+    jQuery('.woocommerce-MyAccount-navigation-link--wc-smart-coupons a').text('Gift Certificates');
+    jQuery('#generated_coupon_data_container h2').text('Gift Certificates Received');
+    jQuery(".page-template-utility-page h1").text(function () {
+    return jQuery(this).text().replace("Coupons", "Gift Certificates"); 
+    });
+    jQuery("Input#coupon_code").attr("placeholder", "Enter Code").val("").focus().blur();
 });
 
 jQuery(window).resize(function() {

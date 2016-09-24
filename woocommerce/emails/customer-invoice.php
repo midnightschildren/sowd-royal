@@ -26,8 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php if ( $order->has_status( 'pending' ) ) : ?>
-	<p><?php printf( __( 'You\'ve had a chance to experience the benefits of your 3 Day Turnaround Kit, stay on track with your skin care goals and save 20%% on your custom skin care routine.') ); ?> </p>
-	<p><?php printf( __( 'Your package will ship as soon as you confirm your payment details: %s', 'woocommerce' ), get_bloginfo( 'name', 'display' ), '<a href="' . esc_url( $order->get_checkout_payment_url() ) . '">' . __( 'confirm payment', 'woocommerce' ) . '</a>' ); ?></p>
+	<p><?php printf( __( 'You\'ve had a chance to experience the benefits of your 3 Day Turnaround Kit, stay on track with your skin care goals and save 20%% on your custom skin care routine.</p><p>Your package will ship as soon as you confirm your payment details: %s', 'woocommerce' ),  '<a href="' . esc_url( $order->get_checkout_payment_url() ) . '">' . __( 'confirm payment', 'woocommerce' ) . '</a>' ); ?></p>
 <?php endif; ?>
 
 <?php

@@ -4426,6 +4426,10 @@ abbr[title] {
 		display: block;
 	}
 
+	.woocommerce-account .woocommerce-MyAccount-content {
+		padding: 2em;
+	}
+
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product {
     width: 47.5%;
     float: left;

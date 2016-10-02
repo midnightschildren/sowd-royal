@@ -629,6 +629,7 @@ a.brgray, .brgray, .brgray a {
 
 .woocommerce ul.products {
 	padding: 2em;
+	margin: 0em;
 }
 
 .woocommerce ul.products li.product a img {
@@ -660,8 +661,8 @@ a.brgray, .brgray, .brgray a {
     margin: 0;
     text-align: center;
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 15px;
+	font-size: .9375rem;
 	line-height: 1.47058824;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -746,14 +747,14 @@ a.brgray, .brgray, .brgray a {
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
     margin-bottom: 0px;
     margin-bottom: 0rem;
-    font-size: 15px;
-    font-size: .9375rem;
+    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: .3em;
     color: #8a8676;
     background-color: #e4e0cf;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
 }
 
@@ -1058,8 +1059,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 { 
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 45px;
-	font-size: 2.8125rem;
+	font-size: 40px;
+	font-size: 2.5rem;
 	line-height: 1.222222222;
 }
 
@@ -3002,8 +3003,8 @@ li span.dots {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 13px;
-	font-size: .8125rem;
+	font-size: 12px;
+	font-size: .75rem;
 	line-height: 2.30769231;
 	letter-spacing: .3em;
 	text-transform:uppercase;

@@ -397,8 +397,8 @@ body.admin-bar .padsp  {
 
 .testimonial-content p, .online-consult-content p {
 	letter-spacing: .035em;
-	font-size: 24px;
-	font-size: 1.5em;
+	font-size: 22px;
+	font-size: 1.375em;
 	line-height: 1.33333333;
 	margin-bottom: .5rem;
 }
@@ -459,8 +459,8 @@ address {
 
 .hours p, .shop-description {
 	letter-spacing: .035em;
-	font-size: 27px;
-	font-size: 1.6875em;
+	font-size: 24px;
+	font-size: 1.5em;
 	line-height: 1.22222223;
 	color: #30333c;
 }
@@ -471,8 +471,8 @@ address {
 
 .b_info p, .fpdesc p {
 	letter-spacing: .035em;
-	font-size: 21px;
-	font-size: 1.3125em;
+	font-size: 20px;
+	font-size: 1.25em;
 	line-height: 1.28571429;
 	color: #30333c;
 }
@@ -555,8 +555,8 @@ a.brgray, .brgray, .brgray a {
 
 #text-2 p {
 	color: #30333c;
-	font-size: 21px;
-	font-size: 1.3125rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.28571429;
 	letter-spacing: .05em;
 }
@@ -573,16 +573,16 @@ a.brgray, .brgray, .brgray a {
 
 .price {
 	color: #877f7c;
-	font-size: 21px;
-	font-size: 1.3125rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.71428571;
 	letter-spacing: .035em;
 }
 
 .duration {
 	color: #c4c2ba;
-	font-size: 19px;
-	font-size: 1.1875rem;
+	font-size: 18px;
+	font-size: 1.125rem;
 	line-height: 1.89473684;
 	letter-spacing: .035em;
 	float: left;
@@ -1083,8 +1083,8 @@ h3 {
 h4 { 
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 26px;
+	font-size: 1.625rem;
 	line-height: 1.2;
 	letter-spacing: .025em;
 }
@@ -1156,8 +1156,8 @@ h5 {
 }
 
 .medium, .term-description p{
-	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.33333333;
 }
 

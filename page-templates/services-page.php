@@ -39,7 +39,7 @@ get_header(); ?>
 			<?php endif; ?>
 			
 		</div>	
-		<div class="col grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 m-pad-3-sides s-pad-2-sides">
+		<div class="col grid-8 pad-4-bottom m-grid-12 s-grid-12 offset-2 m-offset-0 m-pad-3-sides s-pad-2-sides">
 			<?php $custom_query = new WP_Query(array('post_type' => 'service', 'posts_per_page' => 0, 'orderby' => 'menu_order', 'order' => 'ASC'  ));
 			while($custom_query->have_posts()) : $custom_query->the_post(); ?>
 			<div class="pad-3-top pad-2-bottom">
@@ -106,11 +106,11 @@ get_header(); ?>
 
 	<div class="business-content row">
 
-		<div class="grid-8 s-grid-12 offset-2 s-offset-0 s-pad-2-sides pad-3-vert center">
+		<div class="grid-8 s-grid-12 offset-2 s-offset-0 s-pad-2-sides pad-4-vert center">
 
 		<?php if( get_field('services_section_2_title') ): ?>
 	
-			<h5 class="hsslate pad-2-vert"><?php the_field('services_section_2_title'); ?></h5>
+			<h5 class="hsslate pad-3-vert"><?php the_field('services_section_2_title'); ?></h5>
 	
 		<?php endif; ?>	
 
@@ -128,13 +128,13 @@ get_header(); ?>
 
 		<?php if( get_field('services_section_2b_title') ): ?>
 	
-			<h5 class="hsslate pad-2-vert"><?php the_field('services_section_2b_title'); ?></h5>
+			<h5 class="hsslate pad-3-vert"><?php the_field('services_section_2b_title'); ?></h5>
 	
 		<?php endif; ?>	
 
 		<?php if( get_field('services_section_2b_content') ): ?>
 	
-			<div class="hours"><?php the_field('services_section_2b_content'); ?></div>
+			<div class="hours pad-3-bottom"><?php the_field('services_section_2b_content'); ?></div>
 	
 		<?php endif; ?>	
 

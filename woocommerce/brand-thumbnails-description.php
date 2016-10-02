@@ -6,7 +6,10 @@
 <div class="brand-page-content row">
 
 
-	<?php foreach ( $brands as $index => $brand ) :
+	<?php 
+	$i = 0;
+	$c = count($brands);
+	foreach ( $brands as $index => $brand ) :
 
 		$thumbnail = get_brand_thumbnail_url( $brand->term_id, apply_filters( 'woocommerce_brand_thumbnail_size', 'Large' ) );
 
@@ -15,16 +18,17 @@
 
 		$class = '';
 
-		if ( $index == 0 || $index % $columns == 0 )
+		if ( $i == 0 )
 			$class = 'first';
-		elseif ( ( $index + 1 ) % $columns == 0 )
+		elseif ( $i == $c -1 )
 			$class = 'last';
-
+		$i++;
+		
 		$width = floor( ( ( 100 - ( ( $columns - 1 ) * 2 ) ) / $columns ) * 100 ) / 100;
 		?>
-		<div class="grid-10 m-grid-12 s-grid-12 offset-1 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
-		<div class="row brand-row">
-		<div class="grid-6 m-grid-12 s-grid-12 pad-3  <?php echo $class; ?>">
+		<div class="grid-10 l-grid-8 m-grid-12 s-grid-12 offset-1 l-offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
+		<div class="row brand-row <?php echo $class; ?>">
+		<div class="grid-6 m-grid-12 s-grid-12 pad-3">
 				<a href="<?php echo get_term_link( $brand->slug, 'product_brand' ); ?>" title="<?php echo $brand->name; ?>" class="term-thumbnail">
 					<img src="<?php echo $thumbnail; ?>" alt="<?php echo $brand->name; ?>" />
 				</a>

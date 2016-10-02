@@ -1502,6 +1502,17 @@ function woocommerce_rename_coupon_field_on_cart( $translated_text, $text, $text
 }
 add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
 
+// continue shopping button
+
+add_action( 'woocommerce_after_cart_totals', 'tl_continue_shopping_button' );
+function tl_continue_shopping_button() {
+ $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
+ 
+ echo '<div class="wc-proceed-to-checkout continue-shopping">';
+ echo '<a href="'.$shop_page_url.'" class="checkout-button button alt wc-forward">Continue Shopping</a>';
+ echo '</div>';
+}
+
 /**
  * Set the number of products to display on the WooCommerce shop page
  *

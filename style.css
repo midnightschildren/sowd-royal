@@ -24,6 +24,8 @@ Text Domain: quark
 hyphens:none;
 }
 
+
+
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
 body { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
@@ -195,6 +197,10 @@ body.admin-bar .padsp  {
 
 .brand-row {
 	border-bottom: 1px solid #e2e4e4;
+}
+
+.brand-row.last {
+	border-bottom: none;
 }
 
 .blog-posts-content {
@@ -382,8 +388,8 @@ body.admin-bar .padsp  {
 
 .home .entry-content p {
 	letter-spacing: .035em;
-	font-size: 30px;
-	font-size: 1.875em;
+	font-size: 24px;
+	font-size: 1.5em;
 	line-height: 1.66666667;
 	text-align: center;
 	color: #30333c;
@@ -533,7 +539,7 @@ a.brgray, .brgray, .brgray a {
 
 .circle h5 {
 	line-height: 1.47058824;
-	margin-top: -25px;
+	margin-top: -22px;
 	letter-spacing: .15em;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -662,14 +668,15 @@ a.brgray, .brgray, .brgray a {
 }
 
 .featured-content .woocommerce ul.products li.product h3 {
-    padding: .25em 1em;
+    padding: .25em 1em 2em 1em;
     margin: 0;
     text-align: center;
     font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-	font-size: 27px;
-	font-size: 1.6875rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.22222222;
 	letter-spacing: .05em;
+	background-color: #ffffff;
 
 }
 
@@ -826,7 +833,7 @@ a.brgray, .brgray, .brgray a {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	line-height: 18px;
+	line-height: 16px;
 	margin: 0px;
 	padding: 0px;
 	position: relative;
@@ -975,7 +982,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	font: 16px/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-	font-size: 1rem;
+	font-size: 1em;
 	font-style: normal;
 	font-weight: 400;
 	text-align: left;
@@ -1086,8 +1093,8 @@ h5 {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 15px;
+	font-size: .9375em;
 	line-height: 1.88235294;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -1169,6 +1176,10 @@ h5 {
 	z-index: 99;
     position: relative;
     background-color: #fffdf5;
+}
+
+.featured-content .br_title {
+	background-color: #ffffff;
 }
 
 .loop_cat_button {
@@ -1484,8 +1495,8 @@ img.wp-smiley, .rsswidget img {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 15px;
-	font-size: .9375rem; 
+	font-size: 14px;
+	font-size: .875rem; 
 	line-height: 1.2;
 	margin: 0;
 	vertical-align: middle;
@@ -2697,7 +2708,7 @@ form label.error {
 	font-size: 1rem;
 	margin: 0 auto;
 	padding: 30px 0 0 0;
-	padding: 1.875rem 0 0 0;
+	padding: 3em 0 0 0;
 	color: #999;
 }
 
@@ -2980,8 +2991,8 @@ li span.dots {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 15px;
-	font-size: .9375rem;
+	font-size: 14px;
+	font-size: .875rem;
 	line-height: 1.2;
 	letter-spacing: .3em;
 	text-transform:uppercase;
@@ -3426,6 +3437,11 @@ h1.page-title {
     padding: 1em 0;
     width: 40%;
     float: right;
+}
+.woocommerce-cart .continue-shopping {
+	float: right;
+    clear: both;
+    padding: 0em;
 }
 
 .woocommerce-cart .cart-collaterals .cart_totals table {
@@ -4097,7 +4113,8 @@ abbr[title] {
 .woocommerce div.post-2002 .woocommerce-tabs ul.tabs li.reviews_tab,
 .woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.description_tab,
 .woocommerce div.post-1938 .woocommerce-tabs ul.tabs li.reviews_tab, 
-.woocommerce div.post-1872 .woocommerce-tabs ul.tabs li.description_tab  {
+.woocommerce div.post-1872 .woocommerce-tabs ul.tabs li.description_tab,
+.woocommerce div.post-1872 .woocommerce-Tabs-panel--description p {
 	display: none;
 }
 
@@ -4490,6 +4507,12 @@ abbr[title] {
     width: 100%;
     float: right;
 	}
+
+	.woocommerce-cart .continue-shopping {
+	float: right;
+    clear: both;
+    padding: 0em;
+}
 
 	#menu-item-1731 input.search-field {
 	margin: 0 auto;

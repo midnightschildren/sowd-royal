@@ -230,6 +230,14 @@
 .pad-3-sides { padding-left: 2em; padding-right: 2em; }
 .pad-3-vert { padding-top: 2em; padding-bottom: 2em; }
 
+.pad-4 { padding: 3em; }
+.pad-4-left { padding-left: 3em; }
+.pad-4-right { padding-right: 3em; }
+.pad-4-top { padding-top: 3em; }
+.pad-4-bottom { padding-bottom: 3em; }
+.pad-4-sides { padding-left: 3em; padding-right: 3em; }
+.pad-4-vert { padding-top: 3em; padding-bottom: 3em; }
+
 .flow-opposite {
     float: right
 }

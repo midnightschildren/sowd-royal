@@ -13,14 +13,14 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 		
-		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-3-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides l-grid-8 l-offset-2">
+		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-4-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides l-grid-8 l-offset-2">
 
 			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-				<div class="entry-content">
+				<div class="entry-content pad-2-vert">
 					<?php the_content(); ?>
 					<?php wp_link_pages( array(
 					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'quark' ),
@@ -53,9 +53,9 @@ get_header(); ?>
 
 	<div id="testimonials" class="testimonial-content row">
 
-	<div class="grid-12 pad-3-vert">	
+	<div class="grid-12 pad-4-vert">	
 
-		<div class="grid-12 pad-3-vert s-pad-2-vert">
+		<div class="grid-12 pad-4-vert s-pad-2-vert">
 			<?php if( get_field('testimonial_section_title') ): ?>
 	
 			<h5 class="center hsblue"><?php the_field('testimonial_section_title'); ?></h5>
@@ -92,7 +92,7 @@ get_header(); ?>
 			<ul class="products">
 
 			<?php
-     $args = array( 'post_type' => 'product', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
+     $args = array( 'post_type' => 'product', 'orderby' => 'menu_order', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
      $loop = new WP_Query( $args );
      while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
@@ -124,7 +124,7 @@ get_header(); ?>
 			<ul class="products">
 
 			<?php
-     $args = array( 'post_type' => 'product', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
+     $args = array( 'post_type' => 'product', 'orderby' => 'menu_order', 'meta_key' => '_featured','posts_per_page' => 8,'columns' => '2', 'meta_value' => 'yes' );
      $loop = new WP_Query( $args );
      while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 

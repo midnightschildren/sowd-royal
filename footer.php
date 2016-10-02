@@ -17,7 +17,7 @@
 	<div id="footercontainer">
 
 		<footer class="site-footer row" role="contentinfo">
-			<div class="offset-1 grid-10 l-grid-8 l-offset-2 pad-3-vert footer_response">
+			<div class="offset-1 grid-10 l-grid-8 l-offset-2 pad-4-vert footer_response">
 
 			<?php
 			// Count how many footer sidebars are active so we can work out how many containers we need
@@ -32,7 +32,7 @@
 			if ( $footerSidebars > 0 ) { ?>
 				<?php
 				// Work out the container class name based on the number of active footer sidebars
-				$containerClass = "grid-6 m-grid-12 s-grid-12 pad-3-vert s-padded";
+				$containerClass = "grid-6 m-grid-12 s-grid-12 pad-4-vert s-padded";
 
 				// Display the active footer sidebars
 				for ( $x=1; $x<=4; $x++ ) {

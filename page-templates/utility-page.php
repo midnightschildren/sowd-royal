@@ -29,7 +29,7 @@ get_header(); ?>
 
 	<div id="services" class="site-content row">
 
-	<div class="grid-12 pad-3-vert">	
+	<div class="grid-12 l-grid-10 l-offset-1 pad-3-vert">	
 		<div class="center brand_bc pad-3-bottom"><a href="http://hannahsowdinc.wpengine.com/shop/">Shop</a> / <?php the_title(); ?></div>
 		<?php if ( have_posts() ) : ?>
 

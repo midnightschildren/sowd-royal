@@ -16,10 +16,7 @@ global $product;
 if(is_user_logged_in() && has_bought()) { ?>
 	 
 		<div id="primary" class="site-content row" role="main">
-
-	<div class="grid-12">
-		<?php if ( function_exists( 'envira_gallery' ) ) { envira_gallery( '78' ); } ?>
-	</div>	
+	
 	
 
 	</div><!-- /#primary.site-content.row -->

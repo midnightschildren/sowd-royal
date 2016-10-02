@@ -37,7 +37,7 @@ get_header(); ?>
 	
 			
 		</div>	
-		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
+		<div class="grid-8 l-grid-6 m-grid-12 s-grid-12 offset-2 l-offset-3 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 
 			<?php the_content(); ?>	
 
@@ -69,7 +69,7 @@ get_header(); ?>
 
 			</div>
 
-		<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
+		<div class="grid-8 l-grid-6 m-grid-12 s-grid-12 offset-2 l-offset-3 m-offset-0 s-offset-0 pad-3-vert m-pad-3-sides s-pad-3-sides">
 
 			<?php if( get_field('about_section_content') ): ?>
 	

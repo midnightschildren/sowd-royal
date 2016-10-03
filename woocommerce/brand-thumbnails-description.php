@@ -38,7 +38,7 @@
 				<?php echo wpautop( wptexturize( $brand->description ) ); ?>
 			</div>
 			<div class="center pad-2-vert">
-				<a href="<?php echo get_term_link( $brand->slug, 'product_brand' ); ?>" class="vp-button pad-2" title="<?php echo $brand->name; ?>"> View Products</a>
+				<a href="<?php echo get_term_link( $brand->slug, 'product_brand' ); ?>" class="vp-button pad-2-vert pad-3-sides" title="<?php echo $brand->name; ?>"> View Products</a>
 			</div>
 		</div>
 		</div>

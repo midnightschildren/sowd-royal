@@ -686,8 +686,8 @@ a.brgray, .brgray, .brgray a {
     margin: 0;
     text-align: center;
     font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-	font-size: 27px;
-	font-size: 1.6875rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 1.22222222;
 	text-transform: none;
 	letter-spacing: .05em;
@@ -1105,8 +1105,8 @@ h5 {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 15px;
-	font-size: .9375rem;
+	font-size: 14px;
+	font-size: .875rem;
 	line-height: 1.2;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -3232,8 +3232,8 @@ h1.page-title {
 	font-weight: 400;
 	color: #333;
 	margin-top: 0;
-	font-size: 48px;
-	font-size: 3rem;
+	font-size: 40px;
+	font-size: 2.5rem;
 	line-height: 1.25;
 	text-transform: none;
 }

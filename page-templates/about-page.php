@@ -63,7 +63,7 @@ get_header(); ?>
 
 				<?php if( get_field('about_section_title') ): ?>
 	
-					<h5 class="center bluegreen pad-2-vert s-padded-none s-pad-2-top"><?php the_field('about_section_title'); ?></h5>
+					<h5 class="center bluegreen  s-padded-none s-pad-2-top"><?php the_field('about_section_title'); ?></h5>
 	
 				<?php endif; ?>
 

@@ -63,7 +63,7 @@ get_header(); ?>
 
 	<div id="terms" class="terms-content row">
 
-	<div class="grid-12 pad-3-vert">	
+	<div class="grid-12 pad-4-vert">	
 
 	<?php if( get_field('terms_info') ): ?>	
 

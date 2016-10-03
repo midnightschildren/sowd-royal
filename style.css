@@ -3559,12 +3559,13 @@ h1.page-title {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd8c3;
+    color: #ddd8c3;
     padding: 6px 6px 5px;
     margin: 0 4px 0 0;
     outline: 0;
-    line-height: 1.3;
+    line-height: 1.5;
     width: 125px;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .woocommerce table.shop_table td {
@@ -3606,9 +3607,9 @@ h1.page-title {
 	
     text-align: center;
     margin-bottom: 1em;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #e4e0cf;
-    padding: .75em;
+    padding: .925em 2em;
     color: #8a8676;
     border: none;
     letter-spacing: .3em;
@@ -3661,7 +3662,7 @@ h1.page-title {
  }
 
 .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled] {
-	padding: .75em;
+	padding: .925em 2em;
 	opacity: 1;
 	color: #8a8676;
 }
@@ -3679,9 +3680,9 @@ h1.page-title {
     display: block;
     text-align: center;
     margin-bottom: 1em;
-    font-size: 1.25rem;
+    font-size: .875em;
     background-color: #e4e0cf;
-    padding: 1em;
+    padding: 1.25em;
     color: #8a8676;
     border: none;
     letter-spacing: .3em;

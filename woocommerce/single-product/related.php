@@ -48,7 +48,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="related products pad-3-vert grid-10 s-grid-12 offset-1 s-offset-0 s-pad-3-sides">
 
-		<h2 class="center"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<h5 class="center hsslate pad-2-vert"><?php _e( 'Related Products', 'woocommerce' ); ?></h5>
 
 		<?php woocommerce_product_loop_start(); ?>
 

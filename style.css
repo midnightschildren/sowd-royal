@@ -3255,8 +3255,8 @@ h1.page-title {
 
 .woocommerce .quantity span {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
-	font-size: 15px;
-	font-size: .9375rem;
+	font-size: 14px;
+	font-size: .875rem;
 	line-height: 1.2;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -3328,8 +3328,8 @@ h1.page-title {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.41176471;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -3341,8 +3341,8 @@ h1.page-title {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.88235294;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -3380,8 +3380,8 @@ h1.page-title {
     font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
-	font-size: 15px;
-	font-size: .9375rem;
+	font-size: 14px;
+	font-size: .875rem;
 	line-height: 1.2;
 	text-transform: uppercase;
 	letter-spacing: .3em;
@@ -3796,15 +3796,15 @@ h1.page-title {
 .woocommerce #reviews h3 {
     margin: 0;
     letter-spacing: .035em;
-    font-size: 27px;
-    font-size: 1.6875rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.18518519;
 }
 
 .contribution-type-selector {
 	letter-spacing: .035em;
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.25;
 }
 
@@ -3960,8 +3960,8 @@ abbr[title] {
 
 .tab-content p {
     letter-spacing: .035em;
-    font-size: 21px;
-    font-size: 1.3125em;
+    font-size: 18px;
+    font-size: 1.125em;
     line-height: 1.42857143;
 }
 
@@ -4032,8 +4032,8 @@ abbr[title] {
 	margin-bottom: 0px;
 	margin-bottom: 0rem;
 	font-weight: 400;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 15px;
+	font-size: .9375rem;
 	line-height: 1.76470588;
 	text-transform: uppercase;
 	letter-spacing: .3em;

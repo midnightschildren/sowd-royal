@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
 		
-		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-4-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides l-grid-8 l-offset-2">
+		<div class="offset-1 m-offset-0 s-offset-0 grid-10 m-grid-12 s-grid-12 pad-4-vert m-pad-3-vert s-pad-2-vert pad-2-sides m-pad-3-sides s-pad-2-sides l-grid-8 l-offset-2">
 
 			<?php if ( have_posts() ) : ?>
 

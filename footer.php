@@ -17,7 +17,7 @@
 	<div id="footercontainer">
 
 		<footer class="site-footer row" role="contentinfo">
-			<div class="offset-1 grid-10 l-grid-8 l-offset-2 pad-4-vert footer_response">
+			<div class="offset-1 grid-10 l-grid-8 l-offset-2 pad-4-vert s-pad-2-vert footer_response">
 
 			<?php
 			// Count how many footer sidebars are active so we can work out how many containers we need

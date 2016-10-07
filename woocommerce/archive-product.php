@@ -66,7 +66,7 @@ get_header( 'shop' ); ?>
 				</div>	
 
 					<?php if( get_field('shop_title', 21) ): ?>
-						<div class="grid-12 pad-4-vert s-pad-3-sides">
+						<div class="grid-12 pad-4-vert s-pad-2-vert s-pad-3-sides">
 							<h1 class="center shop-title"><?php the_field('shop_title', 21); ?></h1>
 						</div>
 					<?php endif; ?>
@@ -75,7 +75,7 @@ get_header( 'shop' ); ?>
 
 						<div class="grid-8 m-grid-12 s-grid-12 offset-2 m-offset-0 s-offset-0 pad-3-top pad-4-bottom m-pad-3-sides s-pad-3-sides">
 	
-							<p class="center shop-description pad-4-bottom"><?php the_field('shop_description', 21); ?></p>
+							<p class="center shop-description pad-4-bottom s-padded-bottom"><?php the_field('shop_description', 21); ?></p>
 
 						</div>
 	
@@ -150,7 +150,7 @@ get_header( 'shop' ); ?>
 	?>
 <div class="online-consult-content row">
 	<div class="grid-12 pad-3-vert">
-	<div class="grid-12 s-grid-10 s-offset-1 pad-4-vert center">
+	<div class="grid-12 s-grid-10 s-offset-1 pad-4-vert s-pad-2-vert center">
 
 		<?php if( get_field('consult_section_title', 21) ): ?>
 	

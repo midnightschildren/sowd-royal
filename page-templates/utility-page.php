@@ -35,7 +35,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<div class="grid-12 pad-4-vert">
+		<div class="grid-12 pad-4-vert s-pad-3-vert">
 			
 	
 			<h1 class="center"><?php the_title(); ?></h1>

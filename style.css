@@ -170,7 +170,7 @@ td { vertical-align: top; }
 	background-color: #faf4e1;
 }
 
-.home .testimonial-content, .services-content {
+.home .testimonial-content {
 	background-color: #fffdf5;
 	margin: 0;
 }
@@ -180,12 +180,12 @@ td { vertical-align: top; }
 	margin: 0;
 }
 
-.terms-content, .about_hannah-content {
+.terms-content {
 	background-color: #fffdf5;
 	margin: 0;
 }
 
-.brand-page-content {
+.brand-page-content, .services-content, .about_hannah-content, .related-content {
 	background-color: #ffffff;
 	margin: 0;
 }
@@ -639,6 +639,7 @@ a.brgray, .brgray, .brgray a {
 .woocommerce ul.products {
 	padding: 2em;
 	margin: 0em;
+	background-color: #ffffff;
 }
 
 .woocommerce ul.products li.product a img {
@@ -702,7 +703,6 @@ a.brgray, .brgray, .brgray a {
 	letter-spacing: .05em;
 	z-index: 99;
     position: relative;
-    background-color: #fffdf5;
 }
 
 .woocommerce ul.products li.product {
@@ -1148,6 +1148,11 @@ h5 {
 	color: #b9b6ad;
 }
 
+.tax-product_cat .brand_bc a, .tax-product_cat .brand_bc a:visited, .tax-product_cat.woocommerce .woocommerce-breadcrumb a,
+.tax-product_cat.woocommerce .woocommerce-breadcrumb a:visited, .tax-product_cat.woocommerce .woocommerce-breadcrumb {
+	color: #96b9bc;
+}
+
 .woocommerce .woocommerce-breadcrumb {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
 	margin-bottom: 0px;
@@ -1185,7 +1190,6 @@ h5 {
 	padding-top: 1.5em;
 	z-index: 99;
     position: relative;
-    background-color: #fffdf5;
 }
 
 .featured-content .br_title {
@@ -3040,6 +3044,11 @@ li span.dots {
 	margin: 0 0 0 1.25rem;
 }
 
+#menu-item-24 a {
+	color: #5abd8b;
+	text-decoration: none;
+}
+
 .menu-product-nav-container ul li {
 	float: none;
 	position: relative;
@@ -3135,7 +3144,7 @@ li span.dots {
 }
 
 .main-navigation li:hover > a {
-	color: #5abd8b; /* Nav bar link color on hover */
+	text-decoration: underline; /* Nav bar link color on hover */
 }
 
 .main-navigation ul ul :hover > a {
@@ -3144,7 +3153,7 @@ li span.dots {
 }
 
 .main-navigation ul ul a:hover {
-	color: #5abd8b; /* Nav bar dropdown link color on hover */
+	text-decoration: underline; /* Nav bar dropdown link color on hover */
 }
 
 .main-navigation ul li:hover > ul {
@@ -3160,7 +3169,7 @@ li span.dots {
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current_page_parent > a {
-	color: #5abd8b; /* Nav bar link color for current menu item or ancestor */
+	text-decoration: underline; /* Nav bar link color for current menu item or ancestor */
 }
 
 .main-navigation ul .divider {
@@ -4650,6 +4659,11 @@ abbr[title] {
 	.woocommerce div.product .tab-content .woocommerce-tabs ul.tabs li {
 	width: 100%;	
 	}
+
+	.alignleft, .alignright {
+    display: block;
+    float: none;
+    margin: 0 auto;
 
 }
 

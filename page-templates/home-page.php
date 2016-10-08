@@ -85,9 +85,9 @@ get_header(); ?>
 	</div>	
 
 	<div id="featured" class="featured-content row">
-		<div class="grid-12 pad-3-vert">
-			<div class="grid-12 pad-3-top pad-2-bottom"><h5 class="center pinkorange">featured products</h5></div>
-			<div class="offset-1 grid-10 m-offset-0 m-grid-12 m-pad-3-sides">
+		<div class="grid-12 pad-4-vert">
+			<div class="grid-12 pad-2-vert"><h5 class="center pinkorange">featured products</h5></div>
+			<div class="offset-1 pad-4-vert grid-10 m-offset-0 m-grid-12 m-pad-3-sides">
 			<div class="rpf woocommerce columns-2">
 			<ul class="products">
 

@@ -71,7 +71,7 @@
 
 
 			<div class="col grid-12 padsp center">
-				<div class="cart_nav"><a href="http://hannahsowdinc.wpengine.com/cart/"><img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" /></a></div>
+				<div class="cart_nav"><a href="https://hannahsowd.com/cart/"><img src="<?php echo get_template_directory_uri(); ?>/images/cart.svg" /></a></div>
 				<div class="rpm center"><?php echo do_shortcode('[responsive_menu_pro]'); ?></div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'quark' ); ?></h3>

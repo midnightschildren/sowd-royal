@@ -37,7 +37,7 @@ if ( ! empty( $breadcrumb ) ) {
 
 		} else {
 			if ($link_tit ='Brands' && sizeof( $breadcrumb ) !== $key +1 ){ ;
-			echo '<a href="http://hannahsowdinc.wpengine.com/brand/">'. esc_html( $crumb[0] ) .'</a>';	
+			echo '<a href="https://hannahsowd.com/brand/">'. esc_html( $crumb[0] ) .'</a>';	
 				}else {
 			echo esc_html( $crumb[0] );
 			}

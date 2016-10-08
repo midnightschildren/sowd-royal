@@ -1,6 +1,6 @@
 /*
 Theme Name: Sowd-Royal
-Theme URI: http://hannahsowdinc.wpengine.com
+Theme URI: http://hannahsowd.com
 Author: Amarnath Ravva +Anthony Hortin
 Author URI: http://amarravva.com
 Description: Hannah Sowd website based on Quark theme & implementing RoyalAcadamy of Nuts & Bolts design.
@@ -3354,6 +3354,10 @@ h1.page-title {
 	color: #30333c;
 }
 
+.woocommerce-variation-price {
+	padding-bottom: 1em;
+}
+
 .woocommerce .single-content-product div.product p.price,
 .woocommerce .single-content-product div.product span.price {
 	font-family: 'News Cycle', Helvetica, Arial, sans-serif;
@@ -3754,8 +3758,13 @@ h1.page-title {
 	display: block;
 }
 
-.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+.woocommerce form.login, .woocommerce form.register {
     border: none;
+    margin: 2em 2em;
+}
+
+.woocommerce form.checkout_coupon {
+	border: none;
     margin: 2em 0em;
 }
 
